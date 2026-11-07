@@ -50,8 +50,8 @@ questions.
 
    | Variable | Default | What it does |
    |---|---|---|
-   | `PER_IP_DAY` | 20 | Questions per visitor per day that reach Claude |
-   | `DAILY_CAP` | 1000 | Questions per day in total that reach Claude |
+   | `PER_IP_DAY` | 10 | Questions per visitor per day that reach Claude |
+   | `DAILY_CAP` | 50 | Questions per day in total that reach Claude; 50 keeps the bill under about $3 a month |
    | `CACHE_TTL` | 0 | 0 keeps saved answers until the data is rebuilt; or seconds |
    | `PREWARM_TOKEN` | (secret) | Lets `prewarm.mjs` fill the cache; see the worker README |
    | `MODEL` | claude-haiku-5-5 | Which Claude model answers |

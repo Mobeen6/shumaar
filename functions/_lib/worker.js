@@ -117,8 +117,8 @@ export default {
     // 2. Limits (only questions that reach Claude count).
     const ip = req.headers.get("cf-connecting-ip") || "anon";
     const prewarm = env.PREWARM_TOKEN && req.headers.get("x-prewarm") === env.PREWARM_TOKEN; // lets prewarm.mjs fill the cache past the per-visitor limit
-    if (!prewarm && !(await bump(env.ASK_KV, `r:${today()}:${ip}`, +(env.PER_IP_DAY || 20)))) return json({ code: "daily_limit" }, 429, cors);
-    if (!(await bump(env.ASK_KV, `g:${today()}`, +(env.DAILY_CAP || 1000)))) return json({ code: "daily_limit" }, 429, cors);
+    if (!prewarm && !(await bump(env.ASK_KV, `r:${today()}:${ip}`, +(env.PER_IP_DAY || 10)))) return json({ code: "daily_limit" }, 429, cors);
+    if (!prewarm && !(await bump(env.ASK_KV, `g:${today()}`, +(env.DAILY_CAP || 50)))) return json({ code: "daily_limit" }, 429, cors);
 
     // 3. Ask Claude.
     try {
