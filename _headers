@@ -1,0 +1,9 @@
+/*.json
+  Cache-Control: public, max-age=3600
+/*.geojson
+  Cache-Control: public, max-age=86400
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+/tools/*
+  X-Robots-Tag: noindex

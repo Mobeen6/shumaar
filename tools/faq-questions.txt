@@ -1,0 +1,52 @@
+# Questions the quick answer cannot fully cover. prewarm.mjs asks each once and saves the answer,
+# so every later visitor who asks it (or a rewording with the same key words) costs nothing.
+why is inflation so high
+why is electricity so expensive
+why is pakistan's debt so high
+why are so many children out of school
+why is female labour force participation so low
+why is pakistan poor
+why is balochistan poor
+what explains poverty in balochistan
+why is literacy low in balochistan
+why is stunting so high
+why is the rupee falling
+why do exports not grow
+why is tax collection low
+why does pakistan keep going to the imf
+why is there smog in lahore
+why are there so many power outages
+why is gas so expensive
+why do so few women work
+why is child mortality high
+why is the fertility rate high
+what causes the circular debt
+impact of floods on poverty
+effect of remittances on households
+relationship between literacy and poverty
+does education reduce poverty
+does solar reduce electricity bills
+how does air pollution affect health
+which districts are improving fastest
+which districts got worse
+where is poverty falling fastest
+which province improved most in education
+is punjab richer than sindh
+is pakistan doing better than bangladesh
+how does pakistan compare with india on health
+how does karachi compare with lahore
+is karachi poorer than lahore
+where should government invest in schools
+which districts need the most help
+what are pakistan's biggest problems
+summarise pakistan's economy
+summarise education in pakistan
+summarise health in pakistan
+what changed in the 2023 census
+how many people moved to cities
+who owes pakistan money
+how much does pakistan pay in interest
+can pakistan repay its debt
+how bad was the 2022 flood
+what is the state of women in pakistan
+how are pakistan's young people doing
