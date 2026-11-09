@@ -42,7 +42,7 @@ async function callClaude(env, messages, final) {
     headers: { "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
     body: JSON.stringify({
       model: env.MODEL || "claude-haiku-5-5",
-      max_tokens: +(env.MAX_TOKENS || 500),
+      max_tokens: +(env.MAX_TOKENS || 1500),
       system: SYSTEM,
       tools: API_TOOLS,
       messages,
