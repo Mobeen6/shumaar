@@ -63,8 +63,20 @@ async function answer(env, q) {
     usage.in += u.input_tokens || 0; usage.out += u.output_tokens || 0;
     usage.cache_read += u.cache_read_input_tokens || 0; usage.cache_write += u.cache_creation_input_tokens || 0;
     const uses = (res.content || []).filter((c) => c.type === "tool_use");
+    const text = (res.content || []).filter((c) => c.type === "text").map((c) => c.text).join("\n").trim();
+    usage.stops = (usage.stops || "") + (res.stop_reason || "?")[0];
     if (res.stop_reason !== "tool_use" || !uses.length || round === 4) {
-      const text = (res.content || []).filter((c) => c.type === "text").map((c) => c.text).join("\n").trim();
+      // Empty or cut-off reply: ask once more for a written answer, with tools switched off.
+      if ((!text || res.stop_reason === "max_tokens") && !usage.retried) {
+        usage.retried = true;
+        if (res.content && res.content.length && !uses.length) messages.push({ role: "assistant", content: res.content });
+        else if (uses.length) { messages.push({ role: "assistant", content: res.content }); messages.push({ role: "user", content: uses.map((tu) => ({ type: "tool_result", tool_use_id: tu.id, content: "Not run: answer now with what you have." })).concat([{ type: "text", text: "Write the answer now." }]) }); }
+        if (!uses.length) messages.push({ role: "user", content: text ? "Your answer was cut off. Write the complete answer again, shorter." : "Write the answer now, in short paragraphs, from the tool results above." });
+        const fin = await callClaude(env, messages, true);
+        const t2 = (fin.content || []).filter((c) => c.type === "text").map((c) => c.text).join("\n").trim();
+        usage.stops += "|" + (fin.stop_reason || "?")[0];
+        return { text: t2 || text, usage };
+      }
       return { text, usage };
     }
     messages.push({ role: "assistant", content: res.content });
@@ -140,7 +152,7 @@ export default {
     // 3. Ask Claude.
     try {
       const { text, usage } = await answer(env, q);
-      if (!text) return json({ code: "empty_completion" }, 502, cors);
+      if (!text) return json({ code: "empty_completion", ...(prewarm ? { usage } : {}) }, 502, cors);
       const ttl = +(env.CACHE_TTL ?? 0);
       ctx.waitUntil(env.ASK_KV.put(key, text, ttl >= 60 ? { expirationTtl: ttl } : {}));
       console.log(JSON.stringify({ q: normQ(q), key, usage }));
