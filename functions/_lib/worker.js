@@ -105,6 +105,9 @@ export default {
     if (url.pathname.endsWith("/sig")) return json({ sig: AskCore.sig(url.searchParams.get("q") || "") }, 200, cors);
     if (req.method !== "POST" || !url.pathname.endsWith("/ask")) return json({ code: "not_found" }, 404, cors);
 
+    // Ask not configured yet (no KV store or API key): the page falls back to its own answers.
+    if (!env.ASK_KV || !env.ANTHROPIC_API_KEY) return json({ code: "unavailable" }, 503, cors);
+
     let q = "";
     try { q = String((await req.json()).q || "").trim(); } catch (e) {}
     if (!q || q.length > 300) return json({ code: "bad_question" }, 400, cors);
