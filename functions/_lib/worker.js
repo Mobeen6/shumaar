@@ -102,7 +102,7 @@ export default {
       return json(r.body, r.status, head);
     }
     if (req.method === "OPTIONS") return new Response(null, { headers: cors });
-    if (url.pathname.endsWith("/health")) return json({ ok: !!(env.ANTHROPIC_API_KEY && env.ASK_KV), log: !!env.DB, data: BUNDLE.built }, 200, cors);
+    if (url.pathname.endsWith("/health")) return json({ ok: !!(env.ANTHROPIC_API_KEY && env.ASK_KV), log: !!env.DB, has: { key: !!env.ANTHROPIC_API_KEY, kv: !!env.ASK_KV, db: !!env.DB, token: !!env.PREWARM_TOKEN }, data: BUNDLE.built }, 200, cors);
     // Question log and feedback (from the page), and the private stats page.
     if (url.pathname.endsWith("/log") || url.pathname.endsWith("/fb")) {
       if (req.method !== "POST") return json({ code: "not_found" }, 404, cors);
