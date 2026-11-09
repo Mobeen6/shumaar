@@ -366,7 +366,7 @@ label.chk{flex-direction:row!important;align-items:center;gap:6px!important;text
 .guide .gtab:hover b{color:var(--accent)}
 @media (max-width:640px){.guide{padding:16px}.guide .gstats span{flex-basis:45%}.guide .gstats span:nth-child(odd){border-left:0;padding-left:0}}
 .mfind{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px}
-.mfind input{flex:1 1 240px;min-width:0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--sheet);color:var(--ink);font:inherit}
+.mfind input{flex:1 1 240px;min-width:0;padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:var(--sheet);color:var(--ink);font:inherit}
 .mfind .chip[aria-pressed="true"]{background:var(--ink);color:var(--sheet);border-color:var(--ink)}
 
 @media (min-width:641px){.views{flex-wrap:wrap;overflow:visible}.views button{padding:7px 11px}}
@@ -610,6 +610,7 @@ form.ask{position:relative}
 @media (max-width:899px){.top .views{width:100%;overflow-x:auto;scrollbar-width:none;margin:4px 0 0}.top .views::-webkit-scrollbar{display:none}.views .vtop,.views .vgbtn{padding:8px 10px;font-size:13.5px}
   .vmenu{left:max(10px, env(safe-area-inset-left, 0px))!important;right:max(10px, env(safe-area-inset-right, 0px));grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}}
 @media (max-width:480px){.vmenu{grid-template-columns:minmax(0,1fr)!important}.views .vcur{display:none}.views .vtop,.views .vgbtn{padding:7px 4px;gap:1px;font-size:12.5px}.views .vch{width:9px;height:9px;margin-left:-1px}.top .views{gap:0;justify-content:space-between;padding:2px}}
+.fbbar{margin-top:18px;padding-top:12px;border-top:1px solid var(--rule);display:grid;gap:10px;font-size:14px;color:var(--muted)}.fbrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.fbbtn{font:inherit;font-size:13px;padding:4px 14px;border:1px solid var(--rule);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}.fbbtn:hover{border-color:var(--accent)}.fbnote{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}.fbnote label{display:grid;gap:6px;flex:1 1 260px;min-width:0}.fbnote textarea{font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--rule);border-radius:8px;background:transparent;color:inherit;resize:vertical;width:100%;box-sizing:border-box}
 </style>
 
 <header class="top">
@@ -2912,6 +2913,7 @@ $("#askForm").addEventListener("submit",e=>{
   const r=askRoute(raw); window.ASK_LAST=r; const loc=localHard(raw,r); let done=false; try{ done=!!(loc&&loc.render&&loc.render()); }catch(e){ console.error(e); } if(!done) askRender(r,raw);
   try{ if(!loc&&r.kind!=="none"&&r.kind!=="profile"&&(r.conf||0)<6.5){ const cur=r.ind?r.ind.id:r.code; const near=nearList(raw,6).filter(o=>o.id!==cur).slice(0,4); if(near.length) $("#answer").insertAdjacentHTML("beforeend",`<div class="didmean"><span>Not what you meant? Try</span><div class="chips near">${near.map(nearChip).join("")}</div></div>`); } }catch(e){}
   aiAfterRoute(raw,r,loc);
+  try{ const kind=(!done&&r.kind==="none")?"none":"quick"; logPost("api/log",{q:raw,kind,match:loc?loc.t:(r.ind?r.ind.id:(r.code||r.kind)),conf:r.conf||null}); fbBar(raw,kind); }catch(e){}
 });
 /* AskCore: Claude's tools over Shumaar's data. Shared by the page (claude.ai) and the Cloudflare Worker (own site). */
 const AskCore=(()=>{
@@ -3029,7 +3031,18 @@ if(typeof module!=="undefined") module.exports=AskCore;
 /* ---------- Claude fallback for Ask: used only when keyword matching is unsure ---------- */
 const MU_AV=`<span class="mu-face"><svg class="mu-av" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" fill="#e1efea"/><g class="mu-pen"><path d="M41.5 25l6.4 12.2" stroke="#b5761c" stroke-width="2.3" stroke-linecap="round"/><path d="M47.6 36.6l1 1.9" stroke="#3b2f22" stroke-width="2.3" stroke-linecap="round"/></g><path d="M10 64c1-11 9-17 22-17s21 6 22 17z" fill="#f4efe6"/><path d="M10 64c1-10 7-15 15-16.5L28 64zM54 64c-1-10-7-15-15-16.5L36 64z" fill="#1d6b5a"/><path d="M28.5 47.5 32 53l3.5-5.5" fill="none" stroke="#c9bfae" stroke-width="1.2" stroke-linejoin="round"/><path d="M27.5 41h9v7.5c-2.7 1.6-6.3 1.6-9 0z" fill="#c98f62"/><ellipse cx="18.6" cy="31.5" rx="2.6" ry="3.6" fill="#d39c6f"/><ellipse cx="45.4" cy="31.5" rx="2.6" ry="3.6" fill="#d39c6f"/><path d="M19.5 28c0-8 5.6-12.5 12.5-12.5S44.5 20 44.5 28v4c0 7.5-5.6 12.5-12.5 12.5S19.5 39.5 19.5 32z" fill="#e0aa7c"/><path d="M19 22.5c0-5.2 1.2-9 2.4-10.5h21.2c1.2 1.5 2.4 5.3 2.4 10.5-4-1.4-8.4-2-13-2s-9 .6-13 2z" fill="#4a4f55"/><path d="M22 15.5h20M21 19h22" stroke="#5d6369" stroke-width="1.1" stroke-dasharray="1.6 1.4"/><path d="M23.8 26.2c1.6-1 3.6-1.1 5.2-.3M35 25.9c1.6-.8 3.6-.7 5.2.3" stroke="#4a3a2c" stroke-width="1.3" stroke-linecap="round" fill="none"/><g fill="#fff" fill-opacity=".35" stroke="#2b2f33" stroke-width="1.4"><circle cx="26.6" cy="31" r="4.2"/><circle cx="37.4" cy="31" r="4.2"/></g><path d="M30.8 30.6c.8-.6 1.6-.6 2.4 0M22.4 30.4l-3.2-1M41.6 30.4l3.2-1" stroke="#2b2f33" stroke-width="1.3" fill="none" stroke-linecap="round"/><g class="mu-eyes" fill="#2b2118"><circle cx="26.6" cy="31.4" r="1.25"/><circle cx="37.4" cy="31.4" r="1.25"/></g><path d="M24.4 29.4l1.6-1.4" stroke="#fff" stroke-width="1" stroke-linecap="round"/><path d="M32 32.5c-.5 1.6-.9 3-.2 3.6" stroke="#b9805a" stroke-width="1.1" fill="none" stroke-linecap="round"/><path d="M26.8 38.1c1.8-1.5 3.6-1.6 5.2-.6 1.6-1 3.4-.9 5.2.6-1.9.9-3.6.9-5.2.1-1.6.8-3.3.8-5.2-.1z" fill="#5a4636"/><path d="M29.6 40.4c1.5.9 3.3.9 4.8 0" stroke="#9c5f43" stroke-width="1.1" fill="none" stroke-linecap="round"/></svg></span>`;
 let ASK_URL=""; // on your own site this becomes "api/ask" when the Cloudflare Pages function answers /api/health
-try{ if(!window.claude&&/^https?:/.test(location.protocol)) fetch("api/health").then(r=>r.ok?r.json():null).then(j=>{ if(j&&j.ok){ ASK_URL="api/ask"; aiOffer(); } }).catch(()=>{}); }catch(e){}
+let LOG_ON=null, LOG_Q=[]; // on your own site, questions and feedback go to api/log and api/fb (no personal data)
+try{ if(!window.claude&&/^https?:/.test(location.protocol)) fetch("api/health").then(r=>r.ok?r.json():null).then(j=>{ LOG_ON=!!(j&&j.log); if(LOG_ON) LOG_Q.forEach(f=>f()); LOG_Q=[]; if(j&&j.ok){ ASK_URL="api/ask"; aiOffer(); } }).catch(()=>{ LOG_ON=false; }); else LOG_ON=false; }catch(e){ LOG_ON=false; }
+function logPost(path,o){ const go=()=>{ try{ fetch(path,{method:"POST",keepalive:true,headers:{"content-type":"application/json"},body:JSON.stringify(o)}).catch(()=>{}); }catch(e){} }; if(LOG_ON) go(); else if(LOG_ON===null) LOG_Q.push(go); }
+function fbBar(raw,kind){ const show=()=>{ const a=$("#answer"); if(!a||a.querySelector(".fbbar")) return;
+  const ask=kind==="none"?"Tell us what you were looking for, and we'll try to add it.":"What were you looking for?";
+  a.insertAdjacentHTML("beforeend",`<div class="fbbar" data-q="${esc(raw)}" data-k="${kind}"><div class="fbrow"><span>Was this useful?</span><button type="button" class="fbbtn" data-v="up">Yes</button><button type="button" class="fbbtn" data-v="down">No</button></div><form class="fbnote"${kind==="none"?"":" hidden"}><label>${ask}<textarea maxlength="600" rows="2" placeholder="e.g. district-wise electricity prices"></textarea></label><button type="submit" class="fbbtn">Send</button></form></div>`); };
+  if(LOG_ON) show(); else if(LOG_ON===null) LOG_Q.push(show); }
+document.addEventListener("click",e=>{ const b=e.target.closest(".fbbar .fbbtn[data-v]"); if(!b) return; const bar=b.closest(".fbbar");
+  logPost("api/fb",{q:bar.dataset.q,vote:b.dataset.v,kind:bar.dataset.k}); bar.querySelector(".fbrow").innerHTML=`<span>Thanks${b.dataset.v==="up"?"!":". "}</span>`;
+  if(b.dataset.v==="down"){ const f=bar.querySelector(".fbnote"); f.hidden=false; f.querySelector("textarea").focus(); } });
+document.addEventListener("submit",e=>{ const f=e.target.closest(".fbnote"); if(!f) return; e.preventDefault(); const t=f.querySelector("textarea").value.trim(); if(!t) return;
+  const bar=f.closest(".fbbar"); logPost("api/fb",{q:bar.dataset.q,vote:"note",note:t,kind:bar.dataset.k}); f.outerHTML=`<p class="note">Thanks, noted.</p>`; });
 let AI_SAMPLE=null, AI_BUNDLE=null, AI_CTL=null;
 try{ if(window.claude&&claude.use) claude.use("sample").then(s=>{ AI_SAMPLE=s||null; aiOffer(); }).catch(()=>{}); }catch(e){}
 const aiAvailable=()=>!!(AI_SAMPLE||ASK_URL);

@@ -10,6 +10,7 @@
 import AskCore from "./askcore.js";
 import BUNDLE from "./askdata.json";
 import { makeDataApi } from "./dataapi.js";
+import { logQuestion, logFeedback, statsPage } from "./log.js";
 const DATA = makeDataApi(BUNDLE);
 
 const CATALOG = AskCore.catalog(BUNDLE);
@@ -101,7 +102,20 @@ export default {
       return json(r.body, r.status, head);
     }
     if (req.method === "OPTIONS") return new Response(null, { headers: cors });
-    if (url.pathname.endsWith("/health")) return json({ ok: !!(env.ANTHROPIC_API_KEY && env.ASK_KV), data: BUNDLE.built }, 200, cors);
+    if (url.pathname.endsWith("/health")) return json({ ok: !!(env.ANTHROPIC_API_KEY && env.ASK_KV), log: !!env.DB, data: BUNDLE.built }, 200, cors);
+    // Question log and feedback (from the page), and the private stats page.
+    if (url.pathname.endsWith("/log") || url.pathname.endsWith("/fb")) {
+      if (req.method !== "POST") return json({ code: "not_found" }, 404, cors);
+      if (!env.DB) return json({ ok: false }, 200, cors);
+      let o = {}; try { o = await req.json(); } catch (e) {}
+      try { await (url.pathname.endsWith("/fb") ? logFeedback : logQuestion)(env.DB, o || {}); } catch (e) { console.log("log error", e.message); }
+      return json({ ok: true }, 200, cors);
+    }
+    if (url.pathname.endsWith("/stats")) {
+      if (!env.DB || !env.PREWARM_TOKEN || url.searchParams.get("token") !== env.PREWARM_TOKEN) return new Response("Not found", { status: 404 });
+      const days = Math.min(Math.max(+url.searchParams.get("days") || 30, 1), 3650);
+      return new Response(await statsPage(env.DB, days), { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex" } });
+    }
     if (url.pathname.endsWith("/sig")) return json({ sig: AskCore.sig(url.searchParams.get("q") || "") }, 200, cors);
     if (req.method !== "POST" || !url.pathname.endsWith("/ask")) return json({ code: "not_found" }, 404, cors);
 
@@ -115,7 +129,7 @@ export default {
     // 1. Saved answer?
     const key = cacheKey(q);
     const hit = await env.ASK_KV.get(key);
-    if (hit) return json({ text: hit, cached: true }, 200, cors);
+    if (hit) { ctx.waitUntil(logQuestion(env.DB, { q, kind: "munshi_saved" }).catch(() => {})); return json({ text: hit, cached: true }, 200, cors); }
 
     // 2. Limits (only questions that reach Claude count).
     const ip = req.headers.get("cf-connecting-ip") || "anon";
@@ -130,9 +144,11 @@ export default {
       const ttl = +(env.CACHE_TTL ?? 0);
       ctx.waitUntil(env.ASK_KV.put(key, text, ttl >= 60 ? { expirationTtl: ttl } : {}));
       console.log(JSON.stringify({ q: normQ(q), key, usage }));
+      if (!prewarm) ctx.waitUntil(logQuestion(env.DB, { q, kind: "munshi" }).catch(() => {}));
       return json({ text, cached: false }, 200, cors);
     } catch (e) {
       console.log("error", e.message);
+      ctx.waitUntil(logQuestion(env.DB, { q, kind: "munshi_error" }).catch(() => {}));
       return json({ code: e.code || "upstream_error" }, 502, cors);
     }
   },
