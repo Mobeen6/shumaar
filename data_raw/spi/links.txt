@@ -1,0 +1,5 @@
+https://www.pbs.gov.pk/spi ERR HTTP Error 404: Not Found
+https://www.pbs.gov.pk/spi-detail ERR HTTP Error 404: Not Found
+https://www.pbs.gov.pk/ ok 401428
+https://www.pbs.gov.pk/weekly-sensitive-price-indicator-spi-for-the-week-ended-on-05-11-2026/
+https://www.pbs.gov.pk/weekly-sensitive-price-indicator-spi-for-the-week-ended-on-12-11-2026/
