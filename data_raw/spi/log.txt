@@ -1,0 +1,116 @@
+2026-11-12 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-12.11.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_12.11.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_12.11.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_12.11.2026.pdf
+  got data_raw/spi/2026-11-12__3.-SPI-Report-12.11.2026.xlsx
+  got data_raw/spi/2026-11-12__Annex_12.11.2026.pdf
+  got data_raw/spi/2026-11-12__Annex_12.11.2026.xlsx
+  got data_raw/spi/2026-11-12__Executive-Summary-SPI-Report_12.11.2026.pdf
+2026-11-05 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_05.11.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_05.11.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/SPI-Executive-Summary-Report-05.11.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/SPI-Report-05.11.2026.xlsx
+  got data_raw/spi/2026-11-05__Annex_05.11.2026.xlsx
+  got data_raw/spi/2026-11-05__Annex_05.11.pdf
+  got data_raw/spi/2026-11-05__SPI-Executive-Summary-Report-05.11.2026.pdf
+  got data_raw/spi/2026-11-05__SPI-Report-05.11.2026.xlsx
+2026-10-29 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-29.10.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_29.10.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_29.10.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_29.10.2026.pdf
+  got data_raw/spi/2026-10-29__3.-SPI-Report-29.10.2026.xlsx
+  got data_raw/spi/2026-10-29__Annex_29.10.2026.pdf
+  got data_raw/spi/2026-10-29__Annex_29.10.2026.xlsx
+  got data_raw/spi/2026-10-29__Executive-Summary-SPI-Report_29.10.2026.pdf
+2026-10-22 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_22.10.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_22.10.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_22.10.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/SPI-Report-22.10.2026.xlsx
+  got data_raw/spi/2026-10-22__Annex_22.10.2026.pdf
+  got data_raw/spi/2026-10-22__Annex_22.10.2026.xlsx
+  got data_raw/spi/2026-10-22__Executive-Summary-SPI-Report_22.10.2026.pdf
+  got data_raw/spi/2026-10-22__SPI-Report-22.10.2026.xlsx
+2026-10-15 page HTTP Error 404: Not Found
+2026-10-08 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-08.10.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_08.10.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_08.10.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_08.10.2026.pdf
+  got data_raw/spi/2026-10-08__3.-SPI-Report-08.10.2026.xlsx
+  got data_raw/spi/2026-10-08__Annex_08.10.2026.pdf
+  got data_raw/spi/2026-10-08__Annex_08.10.2026.xlsx
+  got data_raw/spi/2026-10-08__Executive-Summary-SPI-Report_08.10.2026.pdf
+2026-10-01 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-01.10.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_01.10.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_01.10.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_01.10.2026.pdf
+  got data_raw/spi/2026-10-01__3.-SPI-Report-01.10.2026.xlsx
+  got data_raw/spi/2026-10-01__Annex_01.10.2026.pdf
+  got data_raw/spi/2026-10-01__Annex_01.10.2026.xlsx
+  got data_raw/spi/2026-10-01__Executive-Summary-SPI-Report_01.10.2026.pdf
+2026-09-24 page HTTP Error 404: Not Found
+2026-09-17 page HTTP Error 404: Not Found
+2026-09-10 page HTTP Error 404: Not Found
+2026-09-03 page HTTP Error 404: Not Found
+2026-08-27 page HTTP Error 404: Not Found
+2026-08-20 page HTTP Error 404: Not Found
+2026-08-13 page HTTP Error 404: Not Found
+2026-08-06 page HTTP Error 404: Not Found
+2026-07-30 page HTTP Error 404: Not Found
+2026-07-23 page HTTP Error 404: Not Found
+2026-07-16 page HTTP Error 404: Not Found
+2026-07-09 page HTTP Error 404: Not Found
+2026-07-02 page HTTP Error 404: Not Found
+2026-06-25 page HTTP Error 404: Not Found
+2026-06-18 page HTTP Error 404: Not Found
+2026-06-11 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-11.06.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_11.06.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_11.06.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_11.06.2026.pdf
+  got data_raw/spi/2026-06-11__3.-SPI-Report-11.06.2026.xlsx
+  got data_raw/spi/2026-06-11__Annex_11.06.2026.pdf
+  got data_raw/spi/2026-06-11__Annex_11.06.2026.xlsx
+  got data_raw/spi/2026-06-11__Executive-Summary-SPI-Report_11.06.2026.pdf
+2026-06-04 page HTTP Error 404: Not Found
+2026-05-28 page HTTP Error 404: Not Found
+2026-05-21 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-21.05.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_21.05.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_21.05.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_21.05.2026.pdf
+  got data_raw/spi/2026-05-21__3.-SPI-Report-21.05.2026.xlsx
+  got data_raw/spi/2026-05-21__Annex_21.05.2026.pdf
+  got data_raw/spi/2026-05-21__Annex_21.05.2026.xlsx
+  got data_raw/spi/2026-05-21__Executive-Summary-SPI-Report_21.05.2026.pdf
+2026-05-14 page HTTP Error 404: Not Found
+2026-05-07 page HTTP Error 404: Not Found
+2026-04-30 page HTTP Error 404: Not Found
+2026-04-23 page HTTP Error 404: Not Found
+2026-04-16 page HTTP Error 404: Not Found
+2026-04-09 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-09.04.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_09.04.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_09.04.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_09.04.2026.pdf
+  got data_raw/spi/2026-04-09__3.-SPI-Report-09.04.2026.xlsx
+  got data_raw/spi/2026-04-09__Annex_09.04.2026.pdf
+  got data_raw/spi/2026-04-09__Annex_09.04.2026.xlsx
+  got data_raw/spi/2026-04-09__Executive-Summary-SPI-Report_09.04.2026.pdf
+2026-04-02 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-02.04.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_02.04.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_02.04.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_02.04.2026.pdf
+  got data_raw/spi/2026-04-02__3.-SPI-Report-02.04.2026.xlsx
+  got data_raw/spi/2026-04-02__Annex_02.04.2026.pdf
+  got data_raw/spi/2026-04-02__Annex_02.04.2026.xlsx
+  got data_raw/spi/2026-04-02__Executive-Summary-SPI-Report_02.04.2026.pdf
+2026-03-26 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-26.03.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_26.03.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_26.03.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/SPI-Executive-Summary-SPI-Report_26.03.2026.pdf
+  got data_raw/spi/2026-03-26__3.-SPI-Report-26.03.2026.xlsx
+  got data_raw/spi/2026-03-26__Annex_26.03.2026.pdf
+  got data_raw/spi/2026-03-26__Annex_26.03.2026.xlsx
+  got data_raw/spi/2026-03-26__SPI-Executive-Summary-SPI-Report_26.03.2026.pdf
+2026-03-19 page HTTP Error 404: Not Found
+2026-03-12 page HTTP Error 404: Not Found
+2026-03-05 page HTTP Error 404: Not Found
+2026-02-26 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-26.02.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_26.02.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_26.02.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf
+  got data_raw/spi/2026-02-26__3.-SPI-Report-26.02.2026.xlsx
+  got data_raw/spi/2026-02-26__Annex_26.02.2026.pdf
+  got data_raw/spi/2026-02-26__Annex_26.02.2026.xlsx
+  got data_raw/spi/2026-02-26__Executive-Summary-SPI-Report_26.02.2026.pdf
+2026-02-19 page HTTP Error 404: Not Found
+2026-02-12 page HTTP Error 404: Not Found
+2026-02-05 page HTTP Error 404: Not Found
+2026-01-29 page HTTP Error 404: Not Found
+2026-01-22 page HTTP Error 404: Not Found
+2026-01-15 page HTTP Error 404: Not Found
+2026-01-08 page HTTP Error 404: Not Found
+2026-01-01 page HTTP Error 404: Not Found
+2025-12-25 page HTTP Error 404: Not Found
+2025-12-18 page HTTP Error 404: Not Found
+2025-12-11 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-11.12.2025.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_11.12.2025.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_11.12.2025.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/SPI-Executive-Summary-SPI-Report_-11.12.2025.pdf
+  got data_raw/spi/2025-12-11__3.-SPI-Report-11.12.2025.xlsx
+  got data_raw/spi/2025-12-11__Annex_11.12.2025.pdf
+  got data_raw/spi/2025-12-11__Annex_11.12.2025.xlsx
+  got data_raw/spi/2025-12-11__SPI-Executive-Summary-SPI-Report_-11.12.2025.pdf
+2025-12-04 page HTTP Error 404: Not Found
+2025-11-27 page HTTP Error 404: Not Found
+2025-11-20 page HTTP Error 404: Not Found
+2025-11-13 page HTTP Error 404: Not Found
+2025-11-06 page HTTP Error 404: Not Found
+2025-10-30 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-30.10.2025.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_30.10.2025.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_30.10.2025.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/SPI-Executive-Summary-SPI-Report_30.10.2025.pdf
+  got data_raw/spi/2025-10-30__3.-SPI-Report-30.10.2025.xlsx
+  got data_raw/spi/2025-10-30__Annex_30.10.2025.pdf
+  got data_raw/spi/2025-10-30__Annex_30.10.2025.xlsx
+  got data_raw/spi/2025-10-30__SPI-Executive-Summary-SPI-Report_30.10.2025.pdf
+2025-10-23 page HTTP Error 404: Not Found
+2025-10-16 page HTTP Error 404: Not Found
+2025-10-09 page HTTP Error 404: Not Found
+2025-10-02 page HTTP Error 404: Not Found
+2025-09-25 page HTTP Error 404: Not Found
