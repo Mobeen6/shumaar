@@ -884,6 +884,21 @@ form.ask{position:relative}
       <svg id="trkRange" class="chart" role="img" aria-label="Each monthly indicator against its five-year range"></svg>
     </div>
   </div>
+  <h3 class="subh" id="spiH">Prices this week</h3>
+  <div class="panel" id="spiPanel">
+    <p class="maptitle" id="spiTitle">Prices of essentials, city by city</p>
+    <p class="note" style="margin:2px 0 10px" id="spiNote">Loading the latest weekly prices…</p>
+    <div class="mapctl" style="margin:0 0 10px;display:flex;flex-wrap:wrap;gap:10px"><label for="spiItem">Item<select id="spiItem"></select></label><label for="spiCity">City<select id="spiCity"></select></label></div>
+    <div class="two">
+      <div style="min-width:0"><p class="maptitle" id="spiBarT" style="font-size:13px"></p><div class="hbars" id="spiBars"></div></div>
+      <div style="min-width:0"><p class="maptitle" id="spiTrT" style="font-size:13px"></p><svg id="spiTrend" class="chart" role="img" aria-label="Weekly price trend"></svg></div>
+    </div>
+    <p class="maptitle" id="spiCiT" style="margin-top:16px"></p>
+    <p class="note" style="margin:2px 0 8px">The ten items furthest above and below the national average in this city this week. Items within 1% of the average, or not reported there, are left out.</p>
+    <div class="hbars" id="spiCityItems"></div>
+    <p class="note" style="margin-top:10px">Prices are the average of several shops in each city, collected every week for 51 essential items in 17 cities. Weeks missing from the trend are weeks whose reports were not on the PBS site in a readable form.</p>
+    <p class="note">Source: Pakistan Bureau of Statistics, weekly Sensitive Price Indicator.</p>
+  </div>
   <h3 class="subh">Every indicator, month by month</h3>
   <p class="hint">Click any card, or any row in the chart above, to see its full monthly history in the chart below ↓</p>
   <div class="trk" id="trkGrid"></div>
@@ -5708,6 +5723,54 @@ REG.nlCity=()=>[R("Lit-up land (NASA Black Marble)","Lit land, total","Pakistan"
 IND.push({id:"nl_city",theme:"Economy",lvl:"City",name:"Lit-up area of cities at night, 2026, km²",unit:"km²",g:NL.cities.slice(0,8).map(c=>c.n+(c.j.length?" +":"")),v:NL.cities.slice(0,8).map(c=>c.a1),hb:true,
   kw:["cities at night","city size","urban sprawl","urban growth","city growth","biggest cities","largest cities","lit area","lit-up area","black marble","urban expansion","lahore growth","karachi growth","how big is lahore","how big is karachi","merging cities","conurbation","lights from space"],src:"NASA Black Marble (VIIRS)",def:"Area brighter than 5 nW/cm²/sr at night, median of autumn 2012 and the September-October 2026; towns joined by continuous light counted together.",
   mean:(()=>{ const C=Object.fromEntries(NL.cities.map(c=>[c.n,c])); return `Lit-up land grew from about ${Math.round(NL.tot[0]).toLocaleString()} km² in 2012 to ${Math.round(NL.tot[1]).toLocaleString()} km² in 2026. Lahore, Gujranwala, Sheikhupura, Kasur, Muridke and Kamoke have run together into one lit belt of ${C.Lahore.a1.toLocaleString()} km² (×${C.Lahore.x} the same footprint's 2012 lit area), larger than Karachi (${C.Karachi.a1.toLocaleString()} km², ×${C.Karachi.x}). Islamabad-Rawalpindi grew ×${C.Islamabad.x} and Faisalabad ×${C.Faisalabad.x}.`; })(),why:"Lit area is a satellite measure of how far electrified built-up land reaches, useful where city boundaries and census areas lag behind growth. See the Satellite tab for the maps.",cav:"It tracks lit land, not population or income; brighter street lighting can add area without new building."});
+/* ---------- weekly prices (PBS SPI) ---------- */
+let SPI=null;
+const spiShort=n=>n.replace(/\(.*?\)/g,"").replace(/\b(DALDA\/HABIB|DALDA|NATIONAL\/SHAN|NATIONAL|Lipton Yellow Label|Philips|LIFEBUOY|Capstan|Gul Ahmed\/Al Karam|NIDO|Bata|Sufi)\b/gi,"").replace(/or Other (superior Quality|Similar Brand)/i,"").replace(/,?\s*\bor\b\s*$/i,"").replace(/\s*,\s*/g," ").replace(/\s+/g," ").trim();
+const spiDate=w=>new Date(w+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"});
+const SPI_KW={1:["atta","wheat flour","flour","aata"],2:["basmati","rice"],7:["chicken","broiler","murghi"],8:["milk","doodh"],11:["eggs","anday","egg"],13:["cooking oil"],14:["ghee"],21:["potato","aloo"],22:["onion","pyaz","piaz"],23:["tomato","tamatar"],24:["sugar","cheeni"],29:["tea","chai patti"],47:["petrol"],48:["diesel"],49:["lpg","gas cylinder"],6:["mutton"],5:["beef"],17:["daal masoor","masoor"],20:["chana","gram"],28:["garlic","lehsun"],41:["electricity price per unit","bijli unit"]};
+function spiFill(){
+  const d=SPI, w=d.weeks.at(-1), wi=d.weeks.length-1, iS=$("#spiItem"), cS=$("#spiCity");
+  const k=+iS.value, it=d.items[k], c=cS.value, pk=d.pk[w][k];
+  const rows=d.cities.map(ci=>[ci,d.p[w][ci][k]]).filter(r=>r[1]!=null).sort((a,b)=>b[1]-a[1]);
+  $("#spiBarT").textContent=`${spiShort(it.n)} (${it.u}), Rs, week to ${spiDate(w)}`;
+  hbars("#spiBars",rows,false);
+  $("#spiBars").querySelectorAll("span:not(.n)").forEach(sp=>{ if(sp.textContent===c) sp.style.fontWeight="700"; });
+  // trend: national average and selected city
+  const xs=d.weeks.map(x=>new Date(x+"T00:00:00")), nat=d.weeks.map(x=>d.pk[x][k]), cit=d.weeks.map(x=>(d.p[x][c]||[])[k]??null);
+  $("#spiTrT").textContent=`${spiShort(it.n)}: ${c} vs national average, Rs`;
+  const sv=d3.select("#spiTrend"); sv.selectAll("*").remove(); const W=420,H=230,pd={l:46,r:12,t:10,b:24}; sv.attr("viewBox",`0 0 ${W} ${H}`);
+  const x=d3.scaleTime().domain(d3.extent(xs)).range([pd.l,W-pd.r]); const all=nat.concat(cit).filter(v=>v!=null);
+  const y=d3.scaleLinear().domain([d3.min(all)*.95,d3.max(all)*1.03]).nice().range([H-pd.b,pd.t]);
+  y.ticks(5).forEach(t=>{ sv.append("line").attr("class","ax").attr("x1",pd.l).attr("x2",W-pd.r).attr("y1",y(t)).attr("y2",y(t)).attr("stroke-opacity",.6); sv.append("text").attr("x",pd.l-6).attr("y",y(t)+4).attr("text-anchor","end").text(fmt(t)); });
+  x.ticks(5).forEach(t=>sv.append("text").attr("x",x(t)).attr("y",H-6).attr("text-anchor","middle").text(t.toLocaleDateString("en-GB",{month:"short",year:"2-digit"})));
+  const ser=[{n:"Pakistan",v:nat,c:"--muted"},{n:c,v:cit,c:"--accent"}];
+  ser.forEach(s=>{ sv.append("path").attr("d",d3.line().defined(v=>v!=null).x((v,j)=>x(xs[j])).y(v=>y(v))(s.v)).attr("fill","none").attr("stroke",css(s.c)).attr("stroke-width",2);
+    sv.append("g").selectAll("circle").data(s.v.map((v,j)=>[v,j]).filter(a=>a[0]!=null)).join("circle").attr("cx",a=>x(xs[a[1]])).attr("cy",a=>y(a[0])).attr("r",2.5).attr("fill",css(s.c)); });
+  hoverX(sv,xs,x,y,ser,{fx:v=>spiDate(v.toISOString().slice(0,10)),fv:v=>"Rs "+fmt(v)});
+  // city vs national, all items
+  const ci=d.cities.includes(c)?d.p[w][c]:[], gaps=d.items.map((t,j)=>[spiShort(t.n),ci[j]!=null&&d.pk[w][j]?Math.round((ci[j]/d.pk[w][j]-1)*1000)/10:null]).filter(r=>r[1]!=null&&Math.abs(r[1])>=1).sort((a,b)=>b[1]-a[1]);
+  const gs=gaps.filter(r=>r[1]>0).slice(0,10).concat(gaps.filter(r=>r[1]<0).slice(-10)); gaps.length=0; gaps.push(...gs);
+  $("#spiCiT").textContent=`${c}: % above or below the national average, week to ${spiDate(w)}`;
+  hbars("#spiCityItems",gaps,true,1);
+  const prev=d.weeks.length>1?d.pk[d.weeks.at(-2)][k]:null, first=d.pk[d.weeks[0]][k];
+  const cheap=rows.at(-1), dear=rows[0];
+  $("#spiNote").textContent=`Week to ${spiDate(w)}. ${spiShort(it.n)} (${it.u}) averages Rs ${fmt(pk)} nationally`+(prev?`, ${pk>=prev?"up":"down"} ${fmt(Math.abs((pk/prev-1)*100))}% on the previous report`:"")+`. Dearest in ${dear[0]} (Rs ${fmt(dear[1])}), cheapest in ${cheap[0]} (Rs ${fmt(cheap[1])}).`;
+}
+function spiInit(d){ SPI=d; const iS=$("#spiItem"), cS=$("#spiCity");
+  iS.innerHTML=d.items.map((t,j)=>`<option value="${j}">${esc(spiShort(t.n))} (${esc(t.u)})</option>`).join(""); iS.value="0";
+  cS.innerHTML=d.cities.map(c=>`<option>${esc(c)}</option>`).join(""); cS.value="Lahore";
+  iS.onchange=cS.onchange=spiFill; spiFill();
+  const w=d.weeks.at(-1);
+  d.items.forEach((t,j)=>{ const sh=spiShort(t.n), kw=(SPI_KW[t.id]||[sh.toLowerCase()]).flatMap(k=>[k+" price",k+" prices","price of "+k,k+" rate","rate of "+k,"cost of "+k,k+" ki qeemat"]);
+    const rows=d.cities.map(c=>[c,d.p[w][c][j]]).filter(r=>r[1]!=null).sort((a,b)=>b[1]-a[1]);
+    if(!rows.length||IND.some(i=>i.id==="spi_"+t.id)) return;
+    IND.push({id:"spi_"+t.id,theme:"Economy",lvl:"City",name:`Price of ${sh.toLowerCase()} (${t.u}) by city, week to ${spiDate(w)}, Rs`,unit:"Rs",g:rows.map(r=>r[0]),v:rows.map(r=>r[1]),hb:true,kw,
+      src:"PBS weekly Sensitive Price Indicator",def:`Average shop price of ${sh.toLowerCase()} (${t.u}) in each of the 17 SPI cities.`,
+      mean:`In the week to ${spiDate(w)}, ${sh.toLowerCase()} (${t.u}) averaged Rs ${fmt(d.pk[w][j])} nationally. Dearest in ${rows[0][0]} (Rs ${fmt(rows[0][1])}), cheapest in ${rows.at(-1)[0]} (Rs ${fmt(rows.at(-1)[1])}).`,
+      why:"The SPI is published every week, so it is the earliest official read on prices of everyday essentials. The full weekly comparison is on the This month tab.",cav:"Prices are averages of a few shops per city; brands and quality can differ between cities."}); });
+}
+fetch("spi.json").then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.weeks&&d.weeks.length) spiInit(d); else $("#spiNote").textContent="Weekly prices could not be loaded."; }).catch(()=>{ $("#spiNote").textContent="Weekly prices could not be loaded."; });
+REG.spiBars=()=>SPI?SPI.weeks.flatMap(w=>SPI.items.flatMap((t,j)=>[R("Weekly SPI price","Average price, "+t.n+" ("+t.u+")","Pakistan",w,SPI.pk[w][j],"Rs","PBS weekly Sensitive Price Indicator")].concat(SPI.cities.map(c=>R("Weekly SPI price","Average price, "+t.n+" ("+t.u+")",c,w,SPI.p[w][c][j],"Rs","PBS weekly Sensitive Price Indicator"))))).filter(r=>r[4]!=null):[];
 document.querySelectorAll(".view .panel").forEach(p=>{
   if(p.querySelector(".csvbtn")||p.closest(".explorer")) return;
   const key=Object.keys(REG).find(k=>p.querySelector("#"+k)) || (p.querySelector("#map")?"map":null) || (p.querySelector(".hbars,.intbars,dl.kv,.pair")?"dom":null);
