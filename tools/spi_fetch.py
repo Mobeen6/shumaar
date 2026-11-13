@@ -1,27 +1,25 @@
-"""Fetch PBS weekly SPI reports (official) into data_raw/spi/. Lists links found in data_raw/spi/links.txt."""
-import re, os, sys, urllib.request, html
+"""Fetch PBS weekly SPI reports (official) into data_raw/spi/.
+PBS posts one page per week: /weekly-sensitive-price-indicator-spi-for-the-week-ended-on-DD-MM-YYYY/
+Each page links the report files. Usage: python tools/spi_fetch.py [weeks_back]"""
+import re, os, sys, urllib.request, html, datetime as dt
 HDR={'Accept':'text/html,application/pdf,*/*'}
-def get(u):
-    return urllib.request.urlopen(urllib.request.Request(u,headers=HDR),timeout=60).read()
-os.makedirs('data_raw/spi',exist_ok=True)
-pages=['https://www.pbs.gov.pk/spi','https://www.pbs.gov.pk/spi-detail','https://www.pbs.gov.pk/']
-links=set(); log=[]
-for p in pages:
-    try:
-        t=get(p).decode('utf8','ignore'); log.append(f'{p} ok {len(t)}')
-        for h in re.findall(r'href=["\']([^"\']+)["\']',t):
-            h=html.unescape(h)
-            if 'spi' in h.lower(): links.add(h if h.startswith('http') else 'https://www.pbs.gov.pk'+('' if h.startswith('/') else '/')+h)
-    except Exception as e: log.append(f'{p} ERR {e}')
-open('data_raw/spi/links.txt','w').write('\n'.join(log+sorted(links)))
-def key(u):
-    m=re.search(r'(\d{1,2})[._-](\d{1,2})[._-](20\d\d)',u)
-    return (int(m[3]),int(m[2]),int(m[1])) if m else (0,0,0)
-pdfs=sorted([u for u in links if u.lower().endswith(('.pdf','.xlsx','.xls'))],key=key,reverse=True)
-n=0
-for u in pdfs[:int(sys.argv[1]) if len(sys.argv)>1 else 6]:
-    fn='data_raw/spi/'+re.sub(r'[^A-Za-z0-9._-]','_',u.rsplit('/',1)[1])
-    if os.path.exists(fn): continue
-    try: open(fn,'wb').write(get(u)); n+=1; print('got',fn)
-    except Exception as e: print('fail',u,e)
-print('new files',n)
+def get(u): return urllib.request.urlopen(urllib.request.Request(u,headers=HDR),timeout=60).read()
+D='data_raw/spi'; os.makedirs(D,exist_ok=True)
+weeks=int(sys.argv[1]) if len(sys.argv)>1 else 4
+log=[]
+# week-ended dates are Thursdays; start from the latest Thursday on or before today
+t=dt.date.today(); t-=dt.timedelta(days=(t.weekday()-3)%7)
+for i in range(weeks):
+    d=t-dt.timedelta(weeks=i); tag=d.strftime('%Y-%m-%d')
+    if any(f.startswith(tag) for f in os.listdir(D)): continue
+    page=f"https://www.pbs.gov.pk/weekly-sensitive-price-indicator-spi-for-the-week-ended-on-{d:%d-%m-%Y}/"
+    try: h=get(page).decode('utf8','ignore')
+    except Exception as e: log.append(f'{tag} page {e}'); continue
+    files=sorted({html.unescape(x) for x in re.findall(r'href=["\']([^"\']+\.(?:pdf|xlsx?|docx?))["\']',h,re.I)})
+    log.append(f'{tag} page ok, {len(files)} files: '+' | '.join(files))
+    for u in files:
+        if not u.startswith('http'): u='https://www.pbs.gov.pk'+u
+        fn=f"{D}/{tag}__"+re.sub(r'[^A-Za-z0-9._-]','_',u.rsplit('/',1)[1])
+        try: open(fn,'wb').write(get(u)); log.append(f'  got {fn}')
+        except Exception as e: log.append(f'  fail {u} {e}')
+open(f'{D}/log.txt','a').write('\n'.join(log)+'\n'); print('\n'.join(log))
