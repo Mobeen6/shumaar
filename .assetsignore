@@ -6,3 +6,6 @@ wrangler.jsonc
 .assetsignore
 .gitignore
 README.md
+data_raw
+tools
+.github
