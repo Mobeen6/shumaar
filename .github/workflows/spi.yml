@@ -20,5 +20,6 @@ jobs:
       - run: |
           git config user.name "shumaar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data_raw spi.json 2>/dev/null || true
+          git add data_raw || true
+          [ -f spi.json ] && git add spi.json || true
           git diff --cached --quiet || (git commit -m "SPI: weekly PBS update" && git push)
