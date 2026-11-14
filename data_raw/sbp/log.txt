@@ -1,0 +1,12 @@
+ok Homeremit_Arch.xlsx 213473
+ok BPM6_Ach_M.xlsx 73516
+ok M3-Arch.xlsx 3087636
+ok BroadMoney_M2_Arch.xls 1068032
+ok Forex_Arch.xlsx 83829
+ok ORA_Arch.xlsx 13749
+ok BFER_Daily_Arch.xlsx 775238
+ok Lendingdepositrates_Arch.xls 503808
+ok IR-Corridor-Hist.xls 220672
+ok ExportsImports-Goods-Arch.xlsx 167275
+ok QGDP.xlsx 58122
+ok GDP_table.xlsx 29395
