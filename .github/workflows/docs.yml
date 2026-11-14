@@ -15,5 +15,6 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: pip install pandas openpyxl xlrd pdfplumber
-      - run: python tools/docs_fetch.py
+      - run: sudo apt-get install -y -q poppler-utils
+      - run: timeout 45m python tools/docs_fetch.py || true
       - run: 'bash tools/commit.sh "Docs: reference documents"'
