@@ -1238,7 +1238,7 @@ form.ask{position:relative}
 
 <section class="view" data-view="agri" hidden>
   <div class="intro narrow"><h2>Agriculture</h2>
-    <p class="lede">What Pakistan grows, where, and how its yields compare. District data from provincial crop reporting services, 1990-91 to 2024-25.</p></div>
+    <p class="lede">What Pakistan grows, where, and how its yields compare. National and provincial data from the Agricultural Statistics of Pakistan, 2007-08 to 2024-25; district data from provincial crop reporting services.</p></div>
   <div class="tiles" id="agTiles"></div>
   <div class="chips" id="agCrops" style="margin:14px 0"></div>
   <div class="two">
@@ -1292,7 +1292,7 @@ form.ask{position:relative}
       <dl class="kv" id="whKV"></dl>
     </div>
   </div>
-  <p class="note">Sources: Provincial Crop Reporting Services district series, 1990-91 to 2024-25 (maize to 2023-24); rice is milled rice and cotton is in 170-kg bales. Country yields: USDA Foreign Agricultural Service, World Agricultural Production, March 2026 (2024/25; rice on a rough-paddy basis, cotton as lint).</p>
+  <p class="note">Sources: Ministry of National Food Security and Research, Agricultural Statistics of Pakistan 2024-25 (national and provincial, 2007-08 to 2024-25); district yields from Provincial Crop Reporting Services, compiled via Data Darbar (CC BY 4.0). Rice is milled rice and cotton is in 170-kg bales. Country yields: USDA Foreign Agricultural Service, World Agricultural Production, March 2026 (2024/25; rice on a rough-paddy basis, cotton as lint).</p>
 </section>
 
 <section class="view" data-view="trade" hidden>
@@ -4294,7 +4294,7 @@ function renderAgri(){
   if(!AG) return; const N=AG.nat, fyy=f=>+f.slice(0,4)+1;
   const last=c=>{const n=N[c]; return {p:n.p.at(-1),y:n.y.at(-1),fy:n.fy.at(-1),a:n.a.at(-1)};};
   const w=last("Wheat"), ri=last("Rice"), co=last("Cotton"), w90=N.Wheat.y[0];
-  tiles("#agTiles",[["Wheat, 2024-25",`${fmt(w.p/1000)} m t`,`yield ${fmt(w.y)} t/ha, up from ${fmt(w90)} in 1990-91`,""],["Rice, 2024-25",`${fmt(ri.p/1000)} m t`,`milled; area ${fmt(ri.a/1000)} m ha, a record`,"good"],["Cotton, 2024-25",`${fmt(co.p/1000)} m bales`,`down from ${fmt(Math.max(...N.Cotton.p)/1000)} m at the peak`,"bad"],["Wheat yield vs China",`${fmt(3.23/5.94*100)}%`,"Egypt gets 6.9 t/ha, Pakistan 3.2",""]]);
+  tiles("#agTiles",[["Wheat, 2024-25",`${fmt(w.p/1000)} m t`,`yield ${fmt(w.y)} t/ha, up from ${fmt(w90)} in ${N.Wheat.fy[0]}`,""],["Rice, 2024-25",`${fmt(ri.p/1000)} m t`,`milled; area ${fmt(ri.a/1000)} m ha, a record`,"good"],["Cotton, 2024-25",`${fmt(co.p/1000)} m bales`,`down from ${fmt(Math.max(...N.Cotton.p)/1000)} m at the peak`,"bad"],["Wheat yield vs China",`${fmt(3.23/5.94*100)}%`,"Egypt gets 6.9 t/ha, Pakistan 3.2",""]]);
   $("#agCrops").innerHTML=Object.keys(N).map(c=>`<button class="chip" type="button" data-ag="${c}" aria-pressed="${c===AGSEL}" style="${c===AGSEL?"background:var(--accent);color:#fff;border-color:var(--accent)":""}">${c}</button>`).join("");
   $("#agCrops").querySelectorAll("[data-ag]").forEach(b=>b.addEventListener("click",()=>{AGSEL=b.dataset.ag; AGD=null; renderAgri();})); setTimeout(()=>{ renderAgMap(); renderWheat(); },0);
   const n=N[AGSEL], u=AGU[AGSEL], yrs=n.fy.map(fyy);
