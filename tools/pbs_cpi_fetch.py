@@ -25,4 +25,19 @@ while d<=t:
             if got: break
         if not got: log.append(f'miss {tag} {kind}')
     d=(d.replace(day=28)+dt.timedelta(days=5)).replace(day=1)
+# Older reviews: take links from PBS price pages (names vary), month and year read from the file name
+import re, html
+MN={m.lower():i for i,m in enumerate(['January','February','March','April','May','June','July','August','September','October','November','December'],1)}
+for page in ['https://www.pbs.gov.pk/cpi/','https://www.pbs.gov.pk/price-statistics/','https://www.pbs.gov.pk/cpi-2/','https://www.pbs.gov.pk/monthly-review-on-price-indices/']:
+    b=get(page)
+    if not b: log.append(f'nopage {page}'); continue
+    for h in re.findall(r'href=["\']([^"\']+)["\']',b.decode('utf8','ignore')):
+        h=html.unescape(h)
+        if not re.search(r'review',h,re.I) or not re.search(r'\.(pdf|docx?)$',h,re.I): continue
+        m=re.search(r'(january|february|march|april|may|june|july|august|september|october|november|december)[-_ ]*(\d{4})',h,re.I)
+        if not m: continue
+        tag=f"{m[2]}-{MN[m[1].lower()]:02d}"
+        if any(f.startswith(f'{tag}_review') for f in os.listdir(D)): continue
+        bb=get(h if h.startswith('http') else 'https://www.pbs.gov.pk'+h)
+        if bb and len(bb)>2000: ext=h.rsplit('.',1)[1].lower(); open(f'{D}/{tag}_review.{ext}','wb').write(bb); log.append(f'ok {tag} review {h}')
 open(f'{D}/log.txt','a').write('\n'.join(log)+'\n'); print('\n'.join(log))
