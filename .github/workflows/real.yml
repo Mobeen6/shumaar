@@ -17,9 +17,4 @@ jobs:
       - run: pip install pdfplumber openpyxl pandas
       - run: python tools/real_fetch.py
       - run: if [ -f tools/real_parse.py ]; then python tools/real_parse.py; fi
-      - run: |
-          git config user.name "shumaar-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data_raw/real || true
-          [ -f real.json ] && git add real.json tracker.json || true
-          git diff --cached --quiet || (git commit -m "Real sector: data update" && git pull --rebase && git push)
+      - run: bash tools/commit.sh "Real sector: data update"
