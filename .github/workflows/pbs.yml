@@ -1,0 +1,25 @@
+name: Fetch PBS CPI
+on:
+  schedule:
+    - cron: '0 13 1-6 * *'   # first days of the month, 18:00 PKT
+  workflow_dispatch:
+  push:
+    paths: ['tools/pbs_cpi_fetch.py', 'tools/pbs_cpi_parse.py', '.github/workflows/pbs.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pdfplumber python-docx
+      - run: python tools/pbs_cpi_fetch.py 2016
+      - run: if [ -f tools/pbs_cpi_parse.py ]; then python tools/pbs_cpi_parse.py; fi
+      - run: |
+          git config user.name "shumaar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data_raw/pbs_cpi || true
+          [ -f cpi.json ] && git add cpi.json tracker.json || true
+          git diff --cached --quiet || (git commit -m "PBS CPI: update" && git pull --rebase && git push)
