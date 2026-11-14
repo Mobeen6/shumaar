@@ -1,0 +1,17 @@
+ok-text nepra_sir_2025.pdf 331853390
+ok nepra_per_disco_2024-25.pdf 1563742
+ok budget_in_brief_2025-26.pdf 2517151
+ok budget_in_brief_2026-27.pdf 2193862
+ok mnfsr_asp_2024-25.pdf 26310438
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2015/2015-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2016/2016-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2017/2017-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2018/2018-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2019/2019-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2020/2020-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2021/2021-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2022/2022-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2023/2023-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2024/2024-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2025/2025-full.pdf HTTP Error 403: Forbidden
+fail https://beoe.gov.pk/files/statistics/yearly-reports/2026/2026-full.pdf HTTP Error 403: Forbidden
