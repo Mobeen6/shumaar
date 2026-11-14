@@ -1,0 +1,5 @@
+fail sbp_data_calendar.html https://www.sbp.org.pk/data-calendar HTTP Error 403: Forbidden
+fail sbp_mpc_calendar.html https://www.sbp.org.pk/m_policy/mp-calendar.asp HTTP Error 403: Forbidden
+fail pbs_release_statement_2026-10.pdf https://www.pbs.gov.pk/wp-content/uploads/2020/07/Release_Statement_October-2026.pdf HTTP Error 404: Not Found
+fail pbs_release_statement_2026-11.pdf https://www.pbs.gov.pk/wp-content/uploads/2020/07/Release_Statement_November-2026.pdf HTTP Error 404: Not Found
+fail pbs_release_statement_2026-12.pdf https://www.pbs.gov.pk/wp-content/uploads/2020/07/Release_Statement_December-2026.pdf HTTP Error 404: Not Found
