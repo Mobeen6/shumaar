@@ -1042,7 +1042,7 @@ form.ask{position:relative}
       <p class="note" id="soPia" style="margin-top:8px"></p>
     </div>
   </div>
-  <p class="note">Budget: Federal Budget in Brief 2026-27, Finance Division. NFC transfers: federal budget documents. Provincial budgets: Punjab Budget Highlights 2026-27; Sindh, KP and Balochistan budget speeches as reported. SOEs: Finance Division, Federal SOEs Annual Report FY2025 and CMU biannual review, as reported; PIA sale: Privatisation Commission, December 2025. Debt: Ministry of Finance and SBP via press reports. Interest-to-revenue: World Bank WDI [GC.XPN.INTP.RV.ZS], central government, latest year since 2019; Pakistan from IMF WEO 2024 (general government), so definitions differ.</p>
+  <p class="note">Budget: Federal Budget in Brief 2026-27, Finance Division. NFC transfers: Finance Division, Budget in Brief (revised estimates; 2026-27 budget). Provincial budgets: Punjab Budget Highlights 2026-27; Sindh, KP and Balochistan budget speeches as reported. SOEs: Finance Division, Federal SOEs Annual Report FY2025 and CMU biannual review, as reported; PIA sale: Privatisation Commission, December 2025. Debt: Ministry of Finance and SBP via press reports. Interest-to-revenue: World Bank WDI [GC.XPN.INTP.RV.ZS], central government, latest year since 2019; Pakistan from IMF WEO 2024 (general government), so definitions differ.</p>
 <div class="merged" id="s-debt" data-label="Debt">
   <div class="intro narrow"><h2>Debt: who Pakistan owes, and when it is due</h2>
     <p class="lede">Public debt by lender and instrument, who holds the domestic debt, and the repayment schedule for the coming years.</p></div>
@@ -1164,19 +1164,19 @@ form.ask{position:relative}
   <div class="two">
     <div class="panel">
       <p class="maptitle">How hard each fuel's plants run, % of capacity</p>
-      <p class="note" style="margin:2px 0 8px">Capacity factor, national grid (CPPA-G) plants. Furnace-oil plants ran 3% of the time in FY25.</p>
+      <p class="note" style="margin:2px 0 8px">Capacity factor, every plant in the country (K-Electric included), grouped by main fuel. Furnace-oil plants ran 3% of the time in FY25.</p>
       <svg id="enCf" class="chart" role="img" aria-label="Capacity factor by fuel"></svg>
     </div>
     <div class="panel">
       <p class="maptitle">Installed capacity vs electricity produced, FY2024-25</p>
-      <p class="note" style="margin:2px 0 8px">Share of grid megawatts and of gigawatt-hours by fuel.</p>
+      <p class="note" style="margin:2px 0 8px">Share of megawatts installed on 30 June 2025 and of gigawatt-hours produced, by fuel.</p>
       <svg id="enMix" class="chart" role="img" aria-label="Capacity vs generation by fuel"></svg>
     </div>
   </div>
   <div class="two">
     <div class="panel">
       <p class="maptitle">Big plants that barely ran in FY2024-25</p>
-      <p class="note" style="margin:2px 0 10px">% of capacity actually used (capacity factor), plants under 15%. Most still earn capacity payments.</p>
+      <p class="note" style="margin:2px 0 10px">% of capacity actually used (capacity factor), plants of 100 MW or more under 7%. Many still earn capacity payments.</p>
       <div class="hbars" id="enIdle"></div>
     </div>
     <div class="panel">
@@ -1233,7 +1233,7 @@ form.ask{position:relative}
       <dl class="kv" id="enKV" style="margin-top:14px"></dl>
     </div>
   </div>
-  <p class="note">Sources: NEPRA State of Industry and Performance Evaluation reports (DISCO losses and recovery, plant capacity and generation); NEPRA State of Industry 2025 for FY25 totals. Circular debt: Power Division, via National Assembly replies and press reports (FY25 stock given as Rs 1,614 bn by NEPRA, Rs 1,641 bn in a later reply). Capacity payments: Energy Minister's NA reply (FY21-25) and Power Division (FY26). Plant data cover the CPPA-G system, not K-Electric's own plants.</p>
+  <p class="note">Sources: NEPRA State of Industry and Performance Evaluation reports (DISCO losses and recovery, plant capacity and generation); NEPRA State of Industry 2025 for FY25 totals. Circular debt: Power Division, via National Assembly replies and press reports (FY25 stock given as Rs 1,614 bn by NEPRA, Rs 1,641 bn in a later reply). Capacity payments: Energy Minister's NA reply (FY21-25) and Power Division (FY26). Plant capacity and generation: NEPRA State of Industry 2025, Tables 4, 5, 7 and 8 (FY21-FY25), grouped by each plant's main fuel.</p>
 </section>
 
 <section class="view" data-view="agri" hidden>
@@ -4046,7 +4046,7 @@ function enInds(){ const N=EN.nepra25;
     mean:`Power-sector circular debt was Rs 1,675 bn in June 2026, up Rs 61 bn in the year; the gas sector's is Rs ${EN.gascd.at(-1)[1].toLocaleString()} bn.`,why:"It grows when distribution companies lose power and fail to collect bills, and when K-Electric does not pay for grid supply. A Rs 1.2 trn bank-financed settlement cut it in FY25. See the Energy tab.",cav:"FY25 stock reported as Rs 1,614 bn (NEPRA) and Rs 1,641 bn (later NA reply)."});
   IND.push({id:"en_cap",theme:"Economy",lvl:"National",name:"Capacity payments to power producers",unit:"Rs bn",g:EN.cap.map(r=>r[0]).reverse(),v:EN.cap.map(r=>r[1]).reverse(),hb:false,
     kw:["capacity payments","capacity payment","ipps","ipp","idle plants","power plants","capacity charges"],src:"Energy Minister NA reply; Power Division",def:"Payments to generators for available capacity, regardless of output.",
-    mean:"Pakistan paid Rs 1.86 trn in capacity payments in FY26, three times the FY21 level.",why:`Grid plants used ${fmt(EN.sys.gwh.at(-1)/(EN.sys.mw.at(-1)*8.76)*100)}% of their capacity in FY25; furnace-oil plants ran 3% of the time, and big plants like Hub and Kot Addu barely ran.`,cav:"Plant data cover the CPPA-G grid only."});
+    mean:"Pakistan paid Rs 1.86 trn in capacity payments in FY26, three times the FY21 level.",why:`Grid plants used ${fmt(EN.sys.gwh.at(-1)/(EN.sys.mw.at(-1)*8.76)*100)}% of their capacity in FY25; furnace-oil plants ran 3% of the time, and big plants like Muzaffargarh, Jamshoro and Kot Addu barely ran.`,cav:"Plant data cover every plant in the country, grouped by main fuel; capacity is as of 30 June."});
   IND.push({id:"en_loss",theme:"Economy",lvl:"DISCO",name:"Electricity line losses by distribution company",unit:"%",g:["Grid average",...EN.discos.map(d=>d.d)],v:[N.loss,...EN.discos.map(d=>d.loss.at(-1))],hb:false,
     kw:["line losses","t&d losses","electricity theft","power theft","disco losses","discos","distribution companies","bill recovery","electricity recovery","qesco","pesco","sepco","hesco","lesco","k-electric losses"],src:"NEPRA, FY2024-25",def:"Transmission and distribution losses, % of units purchased.",
     mean:`PESCO (${EN.discos[0].loss.at(-1)}%), SEPCO and QESCO lose more than a third of the power they buy; IESCO and FESCO lose under 9%. The grid average was ${N.loss}% against ${N.allowed}% allowed.`,why:`QESCO collected only ${EN.discos.find(d=>d.d==="QESCO").rec.at(-1)}% of its bills. Excess losses and unpaid bills cost Rs ${N.loss_rs+N.rec_rs} bn in FY25 and feed the circular debt.`,cav:"Losses combine technical losses and theft."});

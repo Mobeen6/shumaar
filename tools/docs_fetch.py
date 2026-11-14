@@ -1,5 +1,5 @@
 """Fetch official reference documents (annual) into data_raw/docs/: NEPRA State of Industry and DISCO performance
-reports, Bureau of Emigration yearly reports, Finance Division Budget in Brief, MNFSR Agricultural Statistics of Pakistan.
+reports, Finance Division Budget in Brief, MNFSR Agricultural Statistics of Pakistan.
 Files are streamed to disk; very large PDFs are kept only as text (pdftotext, low memory)."""
 import os, sys, urllib.request, urllib.parse, subprocess, gzip, shutil
 HDR={'Accept':'application/pdf,text/html,*/*','User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36','Accept-Language':'en-US,en;q=0.9','Referer':'https://beoe.gov.pk/reports-and-statistics'}
@@ -25,8 +25,12 @@ U={'nepra_sir_2025.pdf':['https://www.nepra.org.pk/publications/State of Industr
    'budget_in_brief_2023-24.pdf':['https://www.finance.gov.pk/budget/Budget_2023_24/Budget_in_Brief.pdf'],
    'budget_in_brief_2022-23.pdf':['https://www.finance.gov.pk/budget/Budget_2022_23/Budget_in_Brief_English.pdf'],
    'mnfsr_asp_2024-25.pdf':['https://mnfsr.gov.pk/SiteImage/Publication/ASP 2024-25 FINAL.pdf']}
-for y in range(2015,2027):
-    U[f'beoe_{y}.pdf']=[f'https://beoe.gov.pk/files/statistics/yearly-reports/{y}/{y}-full.pdf',f'https://www.beoe.gov.pk/files/statistics/yearly-reports/{y}/{y}-full.pdf',f'http://beoe.gov.pk/files/statistics/yearly-reports/{y}/{y}-full.pdf']
+# Punjab Crop Reporting Service: district-wise history (area, production, yield)
+for c in ['Wheat','Rice','Cotton','Sugarcane','Maize','Gram']:
+    U[f'crs_punjab_{c.lower()}_2022-25.pdf']=[f'https://crs-agripunjab.punjab.gov.pk/system/files/Historical Data {c} (Districtwise) 2022-25.pdf',
+        f'https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20{c}%20%28Districtwise%29%202022-25.pdf']
+U['crs_punjab_final_rabi_2023-24.pdf']=['https://agripunjab.punjab.gov.pk/system/files/Final Rabi Estimates 2023-24.pdf']
+U['bos_punjab_pas_2024.pdf']=['https://bos.punjab.gov.pk/system/files/PAS 2024.pdf']
 only=sys.argv[1:]  # optional: fetch only these names
 for fn,us in U.items():
     if only and fn not in only: continue
