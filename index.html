@@ -479,7 +479,7 @@ footer a{color:var(--accent)}
 .cal .ci{display:flex;flex-direction:column;gap:4px;min-width:0}
 .cal .ce{font:400 13px var(--f-body);color:var(--ink);line-height:1.35}
 .cal .ce b{font-weight:600}
-.cal .ce .tag{display:inline-block;font:500 10px var(--f-body);letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--rule);border-radius:999px;padding:0 6px;margin-left:6px;color:var(--muted);vertical-align:1px}
+.cal .ce .tag{display:inline-block;font-family:"Poppins","IBM Plex Sans",system-ui,sans-serif;font-weight:500;font-size:11px;line-height:1.6;border:1px solid var(--rule);border-radius:999px;padding:0 8px;margin-left:6px;color:var(--muted);vertical-align:1px}
 .cal .ce .tag.u{border-style:dashed}
 .cal .ce .ref{color:var(--muted)}
 .cal li.today .cd{color:var(--accent)}
@@ -5761,7 +5761,7 @@ function calDraw(){ if(!CAL) return; const all=$("#calAll").checked, t=new Date(
   const ev=CAL.ev.filter(e=>all||!e.minor);
   const grp=(a,b,rev)=>{ const m={}; ev.filter(e=>e.d>=a&&e.d<=b).forEach(e=>(m[e.d]=m[e.d]||[]).push(e)); const ds=Object.keys(m).sort(); if(rev) ds.reverse(); return ds.map(d=>[d,m[d]]); };
   const li=([d,es])=>{ const x=new Date(d+"T00:00:00"); const wd=x.toLocaleDateString("en-GB",{weekday:"short"}), dm=x.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
-    return `<li class="${d===td?"today":""}"><span class="cd">${d===td?"Today":wd}<small>${dm}</small></span><span class="ci">${es.map(e=>`<span class="ce" title="${esc(e.note||"")}">${e.big?"<b>":""}${esc(e.t)}${e.big?"</b>":""}${e.ref?` <span class="ref">· ${esc(e.ref)}</span>`:""}<span class="tag${e.k==="usual"?" u":""}">${e.src} · ${e.k==="usual"?"usual timing":"official"}</span></span>`).join("")}</span></li>`; };
+    return `<li class="${d===td?"today":""}"><span class="cd">${d===td?"Today":wd}<small>${dm}</small></span><span class="ci">${es.map(e=>`<span class="ce" title="${esc(e.note||"")}">${e.big?"<b>":""}${esc(e.t)}${e.big?"</b>":""}${e.ref?` <span class="ref">· ${esc(e.ref)}</span>`:""}<span class="tag${e.k==="usual"?" u":""}">${e.src} · ${e.k==="usual"?"Usual timing":"Official"}</span></span>`).join("")}</span></li>`; };
   const nx=grp(td,add(21)), ps=grp(add(-7),add(-1),true);
   $("#calNext").innerHTML=nx.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing scheduled.</span></li>`;
   $("#calPast").innerHTML=ps.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing released.</span></li>`;
