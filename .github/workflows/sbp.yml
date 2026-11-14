@@ -1,0 +1,25 @@
+name: Fetch SBP data
+on:
+  schedule:
+    - cron: '0 4 * * *'   # daily, 09:00 PKT
+  workflow_dispatch:
+  push:
+    paths: ['tools/sbp_fetch.py', 'tools/sbp_parse.py', '.github/workflows/sbp.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pandas openpyxl xlrd
+      - run: python tools/sbp_fetch.py
+      - run: if [ -f tools/sbp_parse.py ]; then python tools/sbp_parse.py; fi
+      - run: |
+          git config user.name "shumaar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data_raw/sbp || true
+          [ -f sbp.json ] && git add sbp.json || true
+          git diff --cached --quiet || (git commit -m "SBP: data update" && git pull --rebase && git push)
