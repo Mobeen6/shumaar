@@ -68,3 +68,7 @@ fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Gram%
 fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Gram%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
 ok crs_punjab_final_rabi_2023-24.pdf 3206662
 fail https://bos.punjab.gov.pk/system/files/PAS%202024.pdf <urlopen error timed out>
+ok crs_punjab_final_rabi_2024-25.pdf 3245662
+fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%202025-26.pdf HTTP Error 403: Forbidden
+ok crs_punjab_final_kharif_2023-24.pdf 3318764
+ok crs_punjab_final_kharif_2024-25.pdf 1078685
