@@ -1,0 +1,19 @@
+name: Fetch reference documents
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # Mondays, 12:00 PKT
+  workflow_dispatch:
+  push:
+    paths: ['tools/docs_fetch.py', '.github/workflows/docs.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pandas openpyxl xlrd pdfplumber
+      - run: python tools/docs_fetch.py
+      - run: 'bash tools/commit.sh "Docs: reference documents"'
