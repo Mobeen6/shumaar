@@ -53,10 +53,22 @@ if os.path.exists(K):
         m=re.search(r'(\d{1,2})-([A-Za-z]{3})-(\d{2})\.pdf',k)
         if m: acc.setdefault(f'20{m[3]}-{pd.to_datetime(m[2],format="%b").month:02d}',[]).append(v['offer'])
     R['kibor']={k:round(sum(a)/len(a),3) for k,a in sorted(acc.items())}
+# SBP EasyData downloads (daily KIBOR offer; REER/NEER, 2010=100) take precedence where present
+E='data_raw/easydata/'
+if os.path.exists(E+'kibor_offer_daily.csv'):
+    k=pd.read_csv(E+'kibor_offer_daily.csv'); k=k[k['Series Key'].str.endswith('KIBOR0030')]
+    k['m']=pd.to_datetime(k['Observation Date'],format='%d-%b-%Y').dt.strftime('%Y-%m')
+    ed=k.groupby('m')['Observation Value'].mean().round(3).to_dict()
+    R['kibor']={**R.get('kibor',{}),**ed}
+if os.path.exists(E+'reer_neer_2010.csv'):
+    f=pd.read_csv(E+'reer_neer_2010.csv'); mm=[pd.to_datetime(c,format='%b-%Y').strftime('%Y-%m') for c in f.columns[2:]]
+    for lab,key in [('REER','reer'),('NEER','neer')]:
+        row=f[f.ITEMS.str.contains(lab)&~f.ITEMS.str.contains('MOM')].iloc[0,2:]
+        R[key]={m:round(float(v),2) for m,v in zip(mm,pd.to_numeric(row,errors='coerce')) if pd.notna(v)}
 json.dump(dict(updated=dt.date.today().isoformat(),s=R),open('real.json','w'),separators=(',',':'))
 # tracker: replace series that now come from the original publisher
 T=json.load(open('tracker.json'))
-SRC={'lsm':'PBS','cars':'PAMA','bikes':'PAMA','kibor':'SBP'}
+SRC={'lsm':'PBS','cars':'PAMA','bikes':'PAMA','kibor':'SBP','reer':'SBP'}
 if os.path.exists('cpi.json'):
     C=json.load(open('cpi.json'))
     for k in ('cpi','core'): R[k]=C[k]; SRC[k]='PBS'

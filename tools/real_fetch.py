@@ -83,7 +83,7 @@ try:
                 if r: kib[key]=r
             except Exception: pass
     # 2) every working day not yet held, trying each naming pattern (the last one that worked first)
-    d=dt.date(2021,1,1); best=0; miss=json.load(open(f'{D}/kibor_miss.json')) if os.path.exists(f'{D}/kibor_miss.json') else []
+    d=dt.date.today()-dt.timedelta(days=45); best=0; miss=json.load(open(f'{D}/kibor_miss.json')) if os.path.exists(f'{D}/kibor_miss.json') else []
     while d<=dt.date.today() and n<2500:
         key=d.isoformat()
         if d.weekday()<5 and key not in kib and key not in miss:
