@@ -472,6 +472,21 @@ footer a{color:var(--accent)}
 .nltab th:first-child,.nltab td:first-child{text-align:left}
 .nltab td small{color:var(--muted)}
 @media (max-width:600px){.nlnight .nlpair{grid-template-columns:1fr}}
+.cal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.cal li{display:grid;grid-template-columns:76px 1fr;gap:10px;align-items:start}
+.cal .cd{font:600 12px var(--f-body);color:var(--ink);line-height:1.3}
+.cal .cd small{display:block;font-weight:400;color:var(--muted)}
+.cal .ci{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cal .ce{font:400 13px var(--f-body);color:var(--ink);line-height:1.35}
+.cal .ce b{font-weight:600}
+.cal .ce .tag{display:inline-block;font:500 10px var(--f-body);letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--rule);border-radius:999px;padding:0 6px;margin-left:6px;color:var(--muted);vertical-align:1px}
+.cal .ce .tag.u{border-style:dashed}
+.cal .ce .ref{color:var(--muted)}
+.cal li.today .cd{color:var(--accent)}
+.cal.past .ce{color:var(--muted)}
+.calsub{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;margin-top:14px;padding-top:10px;border-top:1px solid var(--rule);font:400 13px var(--f-body);color:var(--ink)}
+.calsub a{color:var(--accent)}
+.calall{display:flex;gap:6px;align-items:center;cursor:pointer}
 .ans-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .ans-tools button{border:1px solid var(--rule);background:var(--sheet);color:var(--accent);border-radius:999px;padding:4px 12px;font:500 12px var(--f-body);cursor:pointer}
 #answer .ans-tools .csvbtn,.answer .ans-tools .csvbtn{position:static;margin:0;padding:4px 12px;font:500 12px var(--f-body)}
@@ -883,6 +898,21 @@ form.ask{position:relative}
       <p class="note" style="margin:2px 0 8px" id="trkRangeNote"></p>
       <svg id="trkRange" class="chart" role="img" aria-label="Each monthly indicator against its five-year range"></svg>
     </div>
+  </div>
+  <h3 class="subh" id="calH">Data releases: just out and coming up</h3>
+  <div class="panel" id="calPanel">
+    <p class="maptitle">Official releases from SBP and PBS</p>
+    <p class="note" style="margin:2px 0 10px" id="calNote">Loading the release calendar…</p>
+    <div class="two">
+      <div style="min-width:0"><p class="maptitle" style="font-size:13px">Coming up, next three weeks</p><ol class="cal" id="calNext"></ol></div>
+      <div style="min-width:0"><p class="maptitle" style="font-size:13px">Just out, last seven days</p><ol class="cal past" id="calPast"></ol></div>
+    </div>
+    <div class="calsub">
+      <label class="calall"><input type="checkbox" id="calAll"> Show every SBP table</label>
+      <span>Add to your calendar: <a href="webcal://shumaar.org/calendar.ics" id="calWebcal">subscribe</a> · <button type="button" class="fbbtn" id="calCopy">Copy feed link</button></span>
+    </div>
+    <p class="note" style="margin-top:10px">Dates marked <b>official</b> come from SBP's data calendar ("not later than") and its monetary policy calendar. PBS does not publish a calendar for these releases, so its dates are marked <b>usual timing</b> and can move. The calendar refreshes every morning.</p>
+    <p class="note">Source: State Bank of Pakistan data calendar and MPC calendar; Pakistan Bureau of Statistics.</p>
   </div>
   <h3 class="subh" id="spiH">Prices this week</h3>
   <div class="panel" id="spiPanel">
@@ -5723,6 +5753,26 @@ REG.nlCity=()=>[R("Lit-up land (NASA Black Marble)","Lit land, total","Pakistan"
 IND.push({id:"nl_city",theme:"Economy",lvl:"City",name:"Lit-up area of cities at night, 2026, km²",unit:"km²",g:NL.cities.slice(0,8).map(c=>c.n+(c.j.length?" +":"")),v:NL.cities.slice(0,8).map(c=>c.a1),hb:true,
   kw:["cities at night","city size","urban sprawl","urban growth","city growth","biggest cities","largest cities","lit area","lit-up area","black marble","urban expansion","lahore growth","karachi growth","how big is lahore","how big is karachi","merging cities","conurbation","lights from space"],src:"NASA Black Marble (VIIRS)",def:"Area brighter than 5 nW/cm²/sr at night, median of autumn 2012 and the September-October 2026; towns joined by continuous light counted together.",
   mean:(()=>{ const C=Object.fromEntries(NL.cities.map(c=>[c.n,c])); return `Lit-up land grew from about ${Math.round(NL.tot[0]).toLocaleString()} km² in 2012 to ${Math.round(NL.tot[1]).toLocaleString()} km² in 2026. Lahore, Gujranwala, Sheikhupura, Kasur, Muridke and Kamoke have run together into one lit belt of ${C.Lahore.a1.toLocaleString()} km² (×${C.Lahore.x} the same footprint's 2012 lit area), larger than Karachi (${C.Karachi.a1.toLocaleString()} km², ×${C.Karachi.x}). Islamabad-Rawalpindi grew ×${C.Islamabad.x} and Faisalabad ×${C.Faisalabad.x}.`; })(),why:"Lit area is a satellite measure of how far electrified built-up land reaches, useful where city boundaries and census areas lag behind growth. See the Satellite tab for the maps.",cav:"It tracks lit land, not population or income; brighter street lighting can add area without new building."});
+/* ---------- release calendar (SBP official, PBS usual timing) ---------- */
+let CAL=null;
+function calDraw(){ if(!CAL) return; const all=$("#calAll").checked, t=new Date(); t.setHours(0,0,0,0);
+  const iso=d=>d.toISOString().slice(0,10), loc=d=>{ const x=new Date(d); x.setMinutes(x.getMinutes()-x.getTimezoneOffset()); return iso(x); };
+  const td=loc(t), add=n=>{ const x=new Date(t); x.setDate(x.getDate()+n); return loc(x); };
+  const ev=CAL.ev.filter(e=>all||!e.minor);
+  const grp=(a,b,rev)=>{ const m={}; ev.filter(e=>e.d>=a&&e.d<=b).forEach(e=>(m[e.d]=m[e.d]||[]).push(e)); const ds=Object.keys(m).sort(); if(rev) ds.reverse(); return ds.map(d=>[d,m[d]]); };
+  const li=([d,es])=>{ const x=new Date(d+"T00:00:00"); const wd=x.toLocaleDateString("en-GB",{weekday:"short"}), dm=x.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
+    return `<li class="${d===td?"today":""}"><span class="cd">${d===td?"Today":wd}<small>${dm}</small></span><span class="ci">${es.map(e=>`<span class="ce" title="${esc(e.note||"")}">${e.big?"<b>":""}${esc(e.t)}${e.big?"</b>":""}${e.ref?` <span class="ref">· ${esc(e.ref)}</span>`:""}<span class="tag${e.k==="usual"?" u":""}">${e.src} · ${e.k==="usual"?"usual timing":"official"}</span></span>`).join("")}</span></li>`; };
+  const nx=grp(td,add(21)), ps=grp(add(-7),add(-1),true);
+  $("#calNext").innerHTML=nx.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing scheduled.</span></li>`;
+  $("#calPast").innerHTML=ps.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing released.</span></li>`;
+  const big=CAL.ev.find(e=>e.big&&e.d>=td);
+  $("#calNote").textContent=(big?`Next big one: ${big.t.toLowerCase().startsWith("monetary")?"the policy rate decision":big.t} on ${new Date(big.d+"T00:00:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"})}. `:"")+`Calendar checked ${new Date(CAL.updated).toLocaleDateString("en-GB",{day:"numeric",month:"short"})}.`;
+}
+fetch("calendar.json").then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.ev){ CAL=d; calDraw(); } else $("#calNote").textContent="The release calendar could not be loaded."; }).catch(()=>{ $("#calNote").textContent="The release calendar could not be loaded."; });
+$("#calAll").addEventListener("change",calDraw);
+$("#calCopy").addEventListener("click",()=>{ const u="https://shumaar.org/calendar.ics", b=$("#calCopy"); const done=()=>{ b.textContent="Copied"; setTimeout(()=>b.textContent="Copy feed link",1500); };
+  (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(done).catch(()=>{ b.textContent=u; }); });
+REG.calNext=()=>CAL?CAL.ev.map(e=>R("Data release calendar",e.t+(e.ref?" ("+e.ref+")":""),"Pakistan",e.d,null,"",e.src==="SBP"?"State Bank of Pakistan":"Pakistan Bureau of Statistics","",e.k==="usual"?"Usual timing, not an official date":"Official: not later than this date")):[];
 /* ---------- weekly prices (PBS SPI) ---------- */
 let SPI=null;
 const spiShort=n=>n.replace(/\(.*?\)/g,"").replace(/\b(DALDA\/HABIB|DALDA|NATIONAL\/SHAN|NATIONAL|Lipton Yellow Label|Philips|LIFEBUOY|Capstan|Gul Ahmed\/Al Karam|NIDO|Bata|Sufi)\b/gi,"").replace(/or Other (superior Quality|Similar Brand)/i,"").replace(/,?\s*\bor\b\s*$/i,"").replace(/\s*,\s*/g," ").replace(/\s+/g," ").trim();
