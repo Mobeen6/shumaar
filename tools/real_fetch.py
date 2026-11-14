@@ -45,6 +45,16 @@ for h in oc:
         if not os.path.exists(fn):
             b=get(h)
             if b: open(fn,'wb').write(b); log.append(f'ok ocac {fn}')
+# OCAC monthly files that may still sit in the same upload folder (the page links only the latest month)
+d0=dt.date.today().replace(day=1)
+for k in range(1,30):
+    d0=(d0-dt.timedelta(days=1)).replace(day=1)
+    for nm in [f"{d0:%b}-{d0.year}-Pak-Provinces.pdf",f"{d0:%B}-{d0.year}-Pak-Provinces.pdf"]:
+        fn=f"{D}/ocac_{nm}"
+        if os.path.exists(fn): break
+        for up in ['2022/05',f'{d0.year}/{d0.month:02d}',f'{(d0+dt.timedelta(days=40)).year}/{(d0+dt.timedelta(days=40)).month:02d}']:
+            b=get(f'https://www.ocac.org.pk/wp-content/uploads/{up}/{nm}',30)
+            if b and b[:4]==b'%PDF': open(fn,'wb').write(b); log.append(f'ok ocac {fn}'); break
 # SBP daily KIBOR: each month's index page lists that month's daily PDFs; read the 6-month bid/offer from each.
 # Values are cached by date and saved as we go, so a cut-off run keeps what it got.
 K=f'{D}/kibor.json'; kib=json.load(open(K)) if os.path.exists(K) else {}

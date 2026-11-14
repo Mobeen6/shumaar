@@ -53,6 +53,26 @@ if os.path.exists(K):
         m=re.search(r'(\d{1,2})-([A-Za-z]{3})-(\d{2})\.pdf',k)
         if m: acc.setdefault(f'20{m[3]}-{pd.to_datetime(m[2],format="%b").month:02d}',[]).append(v['offer'])
     R['kibor']={k:round(sum(a)/len(a),3) for k,a in sorted(acc.items())}
+# OCAC monthly sales: grand total (internal + overseas) from each month's "Pak-Provinces" file, accumulated across runs
+O='data_raw/real/ocac_monthly.json'; om=json.load(open(O)) if os.path.exists(O) else {}
+try:
+    import pdfplumber
+    for f in glob.glob('data_raw/real/ocac_*-Pak-Provinces.pdf'):
+        t=pdfplumber.open(f).pages[0].extract_text() or ''
+        mh=re.search(r'SECTORAL SALES OF ENERGY PRODUCTS\s+([A-Z]+),?\s+(\d{4})',t)
+        mt=re.search(r'GRAND TOTAL \(A\+B\)[^\n]*?([\d,]{7,})\s+([\d,]{7,})\s*$',t,re.M)
+        if mh and mt:
+            m=dt.datetime.strptime(mh[1][:3].title()+' '+mh[2],'%b %Y').strftime('%Y-%m')
+            om[m]=round(int(mt[1].replace(',',''))/1000,3)
+            y0=f'{int(m[:4])-1}{m[4:]}'; om.setdefault(y0,round(int(mt[2].replace(',',''))/1000,3))
+    json.dump(om,open(O,'w'),indent=0)
+except Exception as e: print('ocac',e)
+T0=json.load(open('tracker.json'))
+pol=dict(zip(T0['pol']['m'],T0['pol']['v']))
+nx=lambda m:(dt.date(int(m[:4]),int(m[5:]),28)+dt.timedelta(days=5)).strftime('%Y-%m')
+k=nx(max(pol))
+while k in om: pol[k]=om[k]; k=nx(k)   # only months that continue the series without a gap
+R['pol']=pol
 # SBP EasyData downloads (daily KIBOR offer; REER/NEER, 2010=100) take precedence where present
 E='data_raw/easydata/'
 if os.path.exists(E+'kibor_offer_daily.csv'):
@@ -68,7 +88,7 @@ if os.path.exists(E+'reer_neer_2010.csv'):
 json.dump(dict(updated=dt.date.today().isoformat(),s=R),open('real.json','w'),separators=(',',':'))
 # tracker: replace series that now come from the original publisher
 T=json.load(open('tracker.json'))
-SRC={'lsm':'PBS','cars':'PAMA','bikes':'PAMA','kibor':'SBP','reer':'SBP'}
+SRC={'lsm':'PBS','cars':'PAMA','bikes':'PAMA','kibor':'SBP','reer':'SBP','pol':'OCAC'}
 if os.path.exists('cpi.json'):
     C=json.load(open('cpi.json'))
     for k in ('cpi','core'): R[k]=C[k]; SRC[k]='PBS'
@@ -76,5 +96,6 @@ for k,src in SRC.items():
     s={m:v for m,v in R.get(k,{}).items() if m>='2021-01'}
     if len(s)>=12:
         T[k]['m']=sorted(s); T[k]['v']=[s[m] for m in T[k]['m']]; T[k]['src']=src
+T['elec']['src']='NEPRA'
 json.dump(T,open('tracker.json','w'),separators=(',',':'))
 print({k:(len(v),max(v) if v else None) for k,v in R.items()}, {k:T[k].get('src') for k in T})
