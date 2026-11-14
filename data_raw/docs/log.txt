@@ -54,3 +54,17 @@ fail http://beoe.gov.pk/files/statistics/yearly-reports/2025/2025-full.pdf HTTP 
 fail https://beoe.gov.pk/files/statistics/yearly-reports/2026/2026-full.pdf HTTP Error 403: Forbidden
 fail https://www.beoe.gov.pk/files/statistics/yearly-reports/2026/2026-full.pdf HTTP Error 403: Forbidden
 fail http://beoe.gov.pk/files/statistics/yearly-reports/2026/2026-full.pdf HTTP Error 403: Forbidden
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Wheat%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Wheat%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Rice%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Rice%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Cotton%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Cotton%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Sugarcane%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Sugarcane%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Maize%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Maize%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Gram%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+fail https://crs-agripunjab.punjab.gov.pk/system/files/Historical%20Data%20Gram%20%28Districtwise%29%202022-25.pdf <urlopen error [Errno -2] Name or service not known>
+ok crs_punjab_final_rabi_2023-24.pdf 3206662
+fail https://bos.punjab.gov.pk/system/files/PAS%202024.pdf <urlopen error timed out>
