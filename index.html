@@ -472,11 +472,11 @@ footer a{color:var(--accent)}
 .nltab th:first-child,.nltab td:first-child{text-align:left}
 .nltab td small{color:var(--muted)}
 @media (max-width:600px){.nlnight .nlpair{grid-template-columns:1fr}}
-.cal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.cal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
 .cal li{display:grid;grid-template-columns:76px 1fr;gap:10px;align-items:start}
 .cal .cd{font:600 12px var(--f-body);color:var(--ink);line-height:1.3}
 .cal .cd small{display:block;font-weight:400;color:var(--muted)}
-.cal .ci{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cal .ci{display:flex;flex-direction:column;gap:3px;min-width:0}
 .cal .ce{font:400 13px var(--f-body);color:var(--ink);line-height:1.35}
 .cal .ce b{font-weight:600}
 .cal .ce .tag{display:inline-block;font-family:"Poppins","IBM Plex Sans",system-ui,sans-serif;font-weight:500;font-size:11px;line-height:1.6;border:1px solid var(--rule);border-radius:999px;padding:0 8px;margin-left:6px;color:var(--muted);vertical-align:1px}
@@ -911,7 +911,7 @@ form.ask{position:relative}
       <label class="calall"><input type="checkbox" id="calAll"> Show every SBP table</label>
       <span>Add to your calendar: <a href="webcal://shumaar.org/calendar.ics" id="calWebcal">subscribe</a> · <button type="button" class="fbbtn" id="calCopy">Copy feed link</button></span>
     </div>
-    <p class="note" style="margin-top:10px">Dates marked <b>official</b> come from SBP's data calendar ("not later than") and its monetary policy calendar. PBS does not publish a calendar for these releases, so its dates are marked <b>usual timing</b> and can move. The calendar refreshes every morning.</p>
+    <p class="note" style="margin-top:10px">Dates are SBP's own, from its data calendar ("not later than") and monetary policy calendar. PBS publishes no calendar, so its CPI and weekly price dates are marked <i>expected</i> and can move. The calendar refreshes every morning.</p>
     <p class="note">Source: State Bank of Pakistan data calendar and MPC calendar; Pakistan Bureau of Statistics.</p>
   </div>
   <h3 class="subh" id="spiH">Prices this week</h3>
@@ -5761,7 +5761,7 @@ function calDraw(){ if(!CAL) return; const all=$("#calAll").checked, t=new Date(
   const ev=CAL.ev.filter(e=>all||!e.minor);
   const grp=(a,b,rev)=>{ const m={}; ev.filter(e=>e.d>=a&&e.d<=b).forEach(e=>(m[e.d]=m[e.d]||[]).push(e)); const ds=Object.keys(m).sort(); if(rev) ds.reverse(); return ds.map(d=>[d,m[d]]); };
   const li=([d,es])=>{ const x=new Date(d+"T00:00:00"); const wd=x.toLocaleDateString("en-GB",{weekday:"short"}), dm=x.toLocaleDateString("en-GB",{day:"numeric",month:"short"});
-    return `<li class="${d===td?"today":""}"><span class="cd">${d===td?"Today":wd}<small>${dm}</small></span><span class="ci">${es.map(e=>`<span class="ce" title="${esc(e.note||"")}">${e.big?"<b>":""}${esc(e.t)}${e.big?"</b>":""}${e.ref?` <span class="ref">· ${esc(e.ref)}</span>`:""}<span class="tag${e.k==="usual"?" u":""}">${e.src} · ${e.k==="usual"?"Usual timing":"Official"}</span></span>`).join("")}</span></li>`; };
+    return `<li class="${d===td?"today":""}"><span class="cd">${d===td?"Today":wd}<small>${dm}</small></span><span class="ci">${es.map(e=>`<span class="ce" title="${esc(e.note||"")}">${e.big?"<b>":""}${esc(e.t)}${e.big?"</b>":""}${e.ref?` <span class="ref">· ${esc(e.ref)}</span>`:""}${e.k==="usual"?` <span class="ref">· expected</span>`:""}</span>`).join("")}</span></li>`; };
   const nx=grp(td,add(21)), ps=grp(add(-7),add(-1),true);
   $("#calNext").innerHTML=nx.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing scheduled.</span></li>`;
   $("#calPast").innerHTML=ps.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing released.</span></li>`;

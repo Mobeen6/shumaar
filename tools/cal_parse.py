@@ -13,6 +13,7 @@ HEAD=[(r"^Inflation Monitor","Inflation Monitor (SBP analysis of CPI)"),(r"^Offi
  (r"^Savings Mobilized by National Savings","National Savings collections"),(r"^Nominal/Real Effective Exchange Rates","Real effective exchange rate"),
  (r"^Islamic Banking Bulletin","Islamic Banking Bulletin"),(r"^Payment Systems Review","Payment Systems Review"),(r"^Loans to Private Sector Business","Private sector credit by type"),
  (r"^Exports and Imports of Goods & Services","Exports and imports of goods and services")]
+SECOND={'Real effective exchange rate','Exports and imports of goods and services','Islamic Banking Bulletin','Payment Systems Review','SBP Statistical Bulletin','Private sector credit by type','National Savings collections','Central government debt','Bank Lending Survey'}
 def per(s):
     m=re.search(r'for\s+(.*?)\s+Not Later',s); return m.group(1).replace('26',' 2026').replace('27',' 2027').replace('  ',' ').strip() if m else ''
 ev=[]
@@ -26,7 +27,10 @@ if os.path.exists(p):
         if not m: continue
         d=dt.date(int(m[3]),MON[m[1][:3].lower()],int(m[2]))
         nm=next((n for rx,n in HEAD if re.search(rx,r)),None)
-        if nm: ev.append(dict(d=d.isoformat(),t=nm,ref=per(r),src='SBP',k='official',note='Not later than this date',url='https://www.sbp.org.pk/data-calendar'))
+        if nm:
+            e=dict(d=d.isoformat(),t=nm,ref=per(r),src='SBP',k='official',note='Not later than this date',url='https://www.sbp.org.pk/data-calendar')
+            if nm in SECOND: e['minor']=1
+            ev.append(e)
         else: other.setdefault(d.isoformat(),[]).append(re.sub(r'\s+for\s+.*$','',r))
     for d,l in other.items(): ev.append(dict(d=d,t=f'{len(l)} more SBP tables',ref='',src='SBP',k='official',note='; '.join(l),url='https://www.sbp.org.pk/data-calendar',minor=1))
 # SBP MPC calendar
