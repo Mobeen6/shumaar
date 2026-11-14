@@ -16,8 +16,16 @@ U={'nepra_sir_2025.pdf':['https://www.nepra.org.pk/publications/State of Industr
 for y in range(2015,2027):
     U[f'beoe_{y}.pdf']=[f'https://beoe.gov.pk/files/statistics/yearly-reports/{y}/{y}-full.pdf',f'https://beoe.gov.pk/files/statistics/yearly-reports/{y}/{y}.pdf']
 for fn,us in U.items():
-    if os.path.exists(f'{D}/{fn}'): continue
+    if os.path.exists(f'{D}/{fn}') or os.path.exists(f'{D}/{fn}.skipped'): continue
     for u in us:
         b=get(u)
-        if b and b[:4]==b'%PDF': open(f'{D}/{fn}','wb').write(b); log.append(f'ok {fn} {len(b)}'); break
+        if b and b[:4]==b'%PDF':
+            if len(b)>40e6:   # too big for the repository: keep the text of every page instead
+                import pdfplumber, io, gzip
+                txt='\n'.join(f'=== page {i+1}\n'+(pg.extract_text() or '') for i,pg in enumerate(pdfplumber.open(io.BytesIO(b)).pages))
+                gzip.open(f'{D}/{fn[:-4]}.txt.gz','wt').write(txt); open(f'{D}/{fn}.skipped','w').write(str(len(b)))
+                log.append(f'ok-text {fn} {len(b)}')
+            else:
+                open(f'{D}/{fn}','wb').write(b); log.append(f'ok {fn} {len(b)}')
+            break
 open(f'{D}/log.txt','a').write('\n'.join(log)+'\n'); print('\n'.join(log))
