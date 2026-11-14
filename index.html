@@ -899,9 +899,9 @@ form.ask{position:relative}
       <svg id="trkRange" class="chart" role="img" aria-label="Each monthly indicator against its five-year range"></svg>
     </div>
   </div>
-  <h3 class="subh" id="calH">Data releases: just out and coming up</h3>
+  <h3 class="subh" id="calH">Release calendar</h3>
   <div class="panel" id="calPanel">
-    <p class="maptitle">Official releases from SBP and PBS</p>
+    <p class="maptitle">When Pakistan's numbers come out</p>
     <p class="note" style="margin:2px 0 10px" id="calNote">Loading the release calendar…</p>
     <div class="two">
       <div style="min-width:0"><p class="maptitle" style="font-size:13px">Coming up, next three weeks</p><ol class="cal" id="calNext"></ol></div>
@@ -5766,7 +5766,7 @@ function calDraw(){ if(!CAL) return; const all=$("#calAll").checked, t=new Date(
   $("#calNext").innerHTML=nx.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing scheduled.</span></li>`;
   $("#calPast").innerHTML=ps.map(li).join("")||`<li><span class="cd"></span><span class="ce">Nothing released.</span></li>`;
   const big=CAL.ev.find(e=>e.big&&e.d>=td);
-  $("#calNote").textContent=(big?`Next big one: ${big.t.toLowerCase().startsWith("monetary")?"the policy rate decision":big.t} on ${new Date(big.d+"T00:00:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"})}. `:"")+`Calendar checked ${new Date(CAL.updated).toLocaleDateString("en-GB",{day:"numeric",month:"short"})}.`;
+  $("#calNote").textContent=(big?`Next big one: ${big.t.toLowerCase().startsWith("monetary")?"the policy rate decision":big.t+(big.ref?" for "+new Date("1 "+big.ref).toLocaleDateString("en-GB",{month:"long"}):"")}, ${big.k==="usual"?"expected ":""}${new Date(big.d+"T00:00:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"})}. `:"")+`SBP and PBS releases, checked ${new Date(CAL.updated).toLocaleDateString("en-GB",{day:"numeric",month:"short"})}.`;
 }
 fetch("calendar.json").then(r=>r.ok?r.json():null).then(d=>{ if(d&&d.ev){ CAL=d; calDraw(); } else $("#calNote").textContent="The release calendar could not be loaded."; }).catch(()=>{ $("#calNote").textContent="The release calendar could not be loaded."; });
 $("#calAll").addEventListener("change",calDraw);
