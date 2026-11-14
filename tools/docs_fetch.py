@@ -17,6 +17,7 @@ def fetch(u,dest):
         if os.path.exists(dest): os.remove(dest)
         return False
 U={'nepra_sir_2025.pdf':['https://www.nepra.org.pk/publications/State of Industry Reports/State of Industry Report 2025.pdf'],
+   **{f'nepra_sir_{y}.pdf':[f'https://www.nepra.org.pk/publications/State of Industry Reports/State of Industry Report {y}.pdf'] for y in range(2018,2025)},
    'nepra_per_disco_2024-25.pdf':['https://nepra.org.pk/M&E/PER/Distribution/2026/PER 2024-25 Distribution Companies.pdf'],
    'budget_in_brief_2025-26.pdf':['https://finance.gov.pk/budget/budget_2025_26/budget_in_brief_10062025.pdf'],
    'budget_in_brief_2026-27.pdf':['https://finance.gov.pk/budget/budget_2026_27/budget_in_brief.pdf','https://finance.gov.pk/budget/budget_2026_27/Budget_in_Brief_2026_27.pdf','https://finance.gov.pk/budget/budget_2026_27/budget_in_brief_2026_27.pdf'],
