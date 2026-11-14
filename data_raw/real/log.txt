@@ -1,0 +1,10 @@
+ok qim https://www.pbs.gov.pk/wp-content/uploads/2020/07/QIM-Series-Base-Year-2015-16-11.xlsx
+fail https://pama.org.pk/wp-content/uploads/2022/06/production-sales-june.pdf HTTP Error 404: Not Found
+ok pama data_raw/real/pama_jica.pdf
+ok ocac data_raw/real/ocac_Refinery-Energy-Products-2026-27-Jul-Sep.pdf
+ok ocac data_raw/real/ocac_Refinery-Non-Energy-Products-2026-27-Jul-Sep.pdf
+ok ocac data_raw/real/ocac_Jul-Sep-2026-27-ENE-Pak.pdf
+ok ocac data_raw/real/ocac_Sep-2026-Pak-Provinces.pdf
+ok ocac data_raw/real/ocac_Prov-wise-Consmp-2021-22-till-2026-27-Jul-Sep.pdf
+ok ocac data_raw/real/ocac_Import-Export-2026-27-Jul-Sep.pdf
+kibor dates 400 with rate 0
