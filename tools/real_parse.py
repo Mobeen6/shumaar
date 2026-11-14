@@ -6,29 +6,52 @@ D='data_raw/real/'; R={}
 if os.path.exists(D+'pbs_qim_series.xlsx'):
     d=pd.read_excel(D+'pbs_qim_series.xlsx',header=None)
     R['lsm']={f'{v.year}-{v.month:02d}':round(float(q),3) for v,q in zip(d[0],d[1]) if isinstance(v,(pd.Timestamp,dt.datetime)) and q==q}
-# PAMA monthly sales: cars (passenger cars total) and motorcycles + rickshaws
+# PAMA monthly sales: total cars and total 2/3 wheelers. Each report covers the months of the fiscal year so far
+# and the same months a year earlier. Digits in these PDFs are split into touching words, so words are re-joined by position.
 try:
     import pdfplumber
+    MO={m:i for i,m in enumerate(['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'],1)}
+    def lines(pg):
+        w=sorted(pg.extract_words(x_tolerance=1),key=lambda x:x['top']); rows=[]
+        for x in w:   # cluster words into rows by vertical position
+            if rows and abs(x['top']-rows[-1][0])<=4.5: rows[-1][1].append(x)
+            else: rows.append([x['top'],[x]])
+        out=[]
+        for _,row in rows:
+            row=sorted(row,key=lambda x:x['x0']); m=[]
+            for x in row:
+                if m and -1.5<x['x0']-m[-1]['x1']<1.2: m[-1]={'text':m[-1]['text']+x['text'],'x0':m[-1]['x0'],'x1':x['x1']}
+                else: m.append(dict(x))
+            out.append([x['text'] for x in m])
+        return out
     cars={}; bikes={}
     for f in sorted(glob.glob(D+'pama_20??-??.pdf')):
-        k=os.path.basename(f)[5:12]; t='\n'.join((p.extract_text() or '') for p in pdfplumber.open(f).pages)
-        n=lambda pat: next((int(m.replace(',','')) for m in re.findall(pat,t,re.I)),None)
-        c=n(r'Total\s+Cars?\s+(?:[\d,]+\s+){0,3}?([\d,]{3,})') ; b=n(r'Total\s+(?:2\s*&\s*3\s*Wheelers|Motorcycles?\s*&?\s*Three\s*Wheelers)\s+(?:[\d,]+\s+){0,3}?([\d,]{4,})')
-        if c: cars[k]=c
-        if b: bikes[k]=b
-    R['cars']=cars; R['bikes']=bikes
+        hdr=None
+        for pg in pdfplumber.open(f).pages:
+            for t in lines(pg):
+                mons=[x for x in t if re.match(r"^[A-Za-z]{3,9}'\d{2}$",x)]
+                if len(mons)>=2: hdr=[(x.split("'")[0][:3].lower(),int(x.split("'")[1])) for x in mons]
+                nums=[int(x.replace(',','')) if re.match(r'^[\d,]+$',x) else None for x in t if re.match(r'^([\d,]+|-)$',x)]
+                isc=t[0]=='CARS' and len(nums)>=6; isb=t[0]=='Wheelers' and len(nums)>=6
+                if (isc or isb) and hdr and nums:
+                    n=len(hdr); half=n//2   # columns: months (prev FY), cumulative, months (this FY), cumulative
+                    vals=nums[:half]+nums[half+1:half+1+half]
+                    for (mo,yy),v in zip(hdr,vals):
+                        if v is None: continue
+                        y=2000+yy; key=f'{y}-{MO[mo]:02d}'
+                        (cars if isc else bikes)[key]=v
+    R['cars']=dict(sorted(cars.items())); R['bikes']=dict(sorted(bikes.items()))
 except Exception as e: print('pama',e)
-# SBP KIBOR 6-month offer, monthly average of daily sheets
+# SBP KIBOR 6-month offer, monthly average of daily sheets (keys are dates; older entries keyed by URL)
 K=D+'kibor.json'
 if os.path.exists(K):
     acc={}
-    for u,v in json.load(open(K)).items():
+    for k,v in json.load(open(K)).items():
         if not v or 'offer' not in v: continue
-        m=re.search(r'(\d{1,2})[-_ ]?([A-Za-z]{3,9})[-_ ]?(\d{2,4})',u.rsplit('/',1)[1]) or (re.search(r'(\d{1,2})[-\s/.]([A-Za-z]{3,9})[-\s/.,]*(\d{2,4})',v.get('date') or ''))
-        if not m: continue
-        try: mo=pd.to_datetime(m[2][:3],format='%b').month
-        except Exception: continue
-        y=int(m[3]); y=y+2000 if y<100 else y; acc.setdefault(f'{y}-{mo:02d}',[]).append(v['offer'])
+        m=re.match(r'(\d{4})-(\d{2})-\d{2}$',k)
+        if m: acc.setdefault(f'{m[1]}-{m[2]}',[]).append(v['offer']); continue
+        m=re.search(r'(\d{1,2})-([A-Za-z]{3})-(\d{2})\.pdf',k)
+        if m: acc.setdefault(f'20{m[3]}-{pd.to_datetime(m[2],format="%b").month:02d}',[]).append(v['offer'])
     R['kibor']={k:round(sum(a)/len(a),3) for k,a in sorted(acc.items())}
 json.dump(dict(updated=dt.date.today().isoformat(),s=R),open('real.json','w'),separators=(',',':'))
 # tracker: replace series that now come from the original publisher
