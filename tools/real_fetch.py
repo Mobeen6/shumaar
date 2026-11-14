@@ -1,6 +1,6 @@
 """Fetch official real-sector and money-market sources into data_raw/real/:
 PBS LSM (QIM trend sheet), PAMA monthly vehicle sales PDFs, OCAC statistics page and files, SBP daily KIBOR PDFs (values cached)."""
-import os, re, json, urllib.request, html, datetime as dt
+import os, re, json, urllib.request, urllib.parse, html, datetime as dt
 HDR={'Accept':'*/*','User-Agent':'Mozilla/5.0 (X11; Linux x86_64)','Accept-Language':'en'}
 D='data_raw/real'; os.makedirs(D,exist_ok=True); log=[]
 def get(u,t=90):
@@ -45,34 +45,42 @@ for h in oc:
         if not os.path.exists(fn):
             b=get(h)
             if b: open(fn,'wb').write(b); log.append(f'ok ocac {fn}')
-# SBP daily KIBOR: try SBP's known file-name patterns for each working day; keep only parsed rates.
-# The pattern that worked last is tried first; misses are remembered so later runs move on.
+# SBP daily KIBOR: each month's index page lists that month's daily PDFs; read the 6-month bid/offer from each.
+# Values are cached by date and saved as we go, so a cut-off run keeps what it got.
 K=f'{D}/kibor.json'; kib=json.load(open(K)) if os.path.exists(K) else {}
-kib={k:v for k,v in kib.items() if not k.startswith('http') or v}
-def kib_urls(d):
-    a=d.strftime('%b'); yy=d.strftime('%y')
-    return [f"https://archive.sbp.org.pk/ecodata/kibor/{d.year}/{a}/kibor-{d:%d}-{a}-{yy}.pdf",
-            f"https://www.sbp.org.pk/ecodata/kibor/{d.year}/{a}/Kibor-{d:%d}-{a}-{yy}.pdf",
-            f"https://www.sbp.org.pk/ecodata/kibor/{d.year}/{a}/kibor-{d:%d}-{a}-{yy}.pdf",
-            f"https://www.sbp.org.pk/assets/document/kibor-rates-{d.day}-{d.strftime('%B').lower()}-{d.year}.pdf",
-            f"https://www.sbp.org.pk/assets/document/kibor-rates-{d:%d}-{d.strftime('%B').lower()}-{d.year}.pdf"]
+kib={k:v for k,v in kib.items() if v and 'offer' in v and not k.startswith('http')}
+def fnum(x):
+    x=re.sub(r'\.{2,}','.',x)
+    try: return float(x)
+    except: return None
+def kib_date(u):
+    m=re.search(r'(\d{1,2})[-_ ]([A-Za-z]{3})[a-z]*[-_ ](\d{2,4})\.pdf',u,re.I)
+    if not m: return None
+    y=int(m[3]); y=y+2000 if y<100 else y
+    try: return dt.datetime.strptime(f'{int(m[1])} {m[2][:3].title()} {y}','%d %b %Y').date().isoformat()
+    except: return None
 try:
     import pdfplumber, io
-    d=dt.date(2021,1,1); n=0; best=0
-    while d<=dt.date.today() and n<1500:
-        key=d.isoformat()
-        if d.weekday()<5 and key not in kib:
-            urls=kib_urls(d); order=[best]+[i for i in range(len(urls)) if i!=best]; got=None
-            for i in order:
-                b=get(urls[i],25); n+=1
-                if b and b[:4]==b'%PDF': got=(i,b); break
-            if got:
-                best=got[0]; t=pdfplumber.open(io.BytesIO(got[1])).pages[0].extract_text() or ''
-                rm=re.search(r'6\s*-?\s*M[A-Za-z]*\s+([\d.]+)\s+([\d.]+)',t,re.I)
-                kib[key]={'bid':float(rm[1]),'offer':float(rm[2])} if rm else {'raw':t[:300]}
-            else: kib[key]=None
-        d+=dt.timedelta(days=1)
-    json.dump(kib,open(K,'w'))
-    log.append(f'kibor days {len(kib)} with rate {sum(1 for v in kib.values() if v and "offer" in v)}, requests {n}')
+    n=0; m0=dt.date(2021,1,1); today=dt.date.today()
+    while m0<=today and n<2500:
+        mon=m0.strftime('%b'); pdfs=set()
+        for base in ['https://www.sbp.org.pk/ecodata/kibor','https://archive.sbp.org.pk/ecodata/kibor','https://www.sbp.org.pk/Ecodata/kibor']:
+            idx=f'{base}/{m0.year}/{mon}/index.asp'
+            for h in links(idx):
+                if h.lower().endswith('.pdf'): pdfs.add(urllib.parse.urljoin(idx,h))
+            if pdfs: break
+        for u in sorted(pdfs):
+            key=kib_date(u)
+            if not key or key in kib: continue
+            b=get(u,30); n+=1
+            if not b or b[:4]!=b'%PDF': continue
+            try: t=pdfplumber.open(io.BytesIO(b)).pages[0].extract_text() or ''
+            except Exception: continue
+            rm=re.search(r'6\s*-?\s*M[A-Za-z]*\s+([\d.]+)\s+([\d.]+)',t,re.I)
+            if rm and fnum(rm[2]): kib[key]={'bid':fnum(rm[1]),'offer':fnum(rm[2])}
+        log.append(f'kibor {m0:%Y-%m}: {len(pdfs)} files')
+        json.dump(kib,open(K,'w'))
+        m0=(m0.replace(day=28)+dt.timedelta(days=4)).replace(day=1)
+    log.append(f'kibor days with rate {len(kib)}, requests {n}')
 except Exception as e: log.append(f'kibor error {e}')
 open(f'{D}/log.txt','a').write('\n'.join(log)+'\n'); print('\n'.join(log[-40:]))
