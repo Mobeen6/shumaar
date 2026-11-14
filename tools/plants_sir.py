@@ -2,7 +2,7 @@
 import re,sys,json,difflib
 L=open(sys.argv[1]).read().split('\n')
 def num(t):
-    t=t.strip().replace(',','').replace(' ','')
+    t=re.sub(r'[*‡†#]','',t.strip().replace(',','').replace(' ',''))
     if re.fullmatch(r'[-.·]+',t) or t in('--','..','·-'): return 0.0
     try: return float(t)
     except: return None
@@ -28,6 +28,8 @@ extra={'Uch Power':[586]*5,'Attock Gen.':[165]*5,'Atlas Power':[224,224,224,224,
  'Gul Ahmed Electric':[0,50,50,50,50],'Liberty Wind Power-II':[0,50,50,50,50],
  'NASDA Green Energy':[0,50,50,50,50],'Metro 2 Wind Power':[0,50,50,50,50],'Huaneng Shandong Ruyi':[1320]*5}
 C={(re.sub(r'\s*\(formerly.*','',p[0])):v[:6] for p,v in cap}
+if '22' in sys.argv[1]:
+    for k,v in {'Malakand-III (PEDO)':[81]*5,'Pehur (PEDO)':[18]*5,'Zhenfa Pakistan New Energy':[0,0,0,0,100],'Huaneng Shandong Ruyi':[1320]*5,'Port Qasim Electric Power':[1320]*5,'Bin Qasim TPS-I':[1260,1260,1260,1050,840]}.items(): C[k]=[float(x) for x in v]
 if '25' in sys.argv[1]:
     for k,v in extra.items(): C[k]=[float(x) for x in v]
 Cn={norm(k):k for k in C}
@@ -47,7 +49,8 @@ def fuel(f):
 plants=[];miss=[];G=[]
 for p,v in gen:
     nm=p[0]; f=None
-    if '25' in sys.argv[1] and fuel(nm) and len(p)==6: nm='Huaneng Shandong Ruyi'; f='Coal'
+    if fuel(nm) and len(p)==6 and 'coal' in nm.lower(): nm='Huaneng Shandong Ruyi'; f='Coal'
+    if nm.startswith('Port Qasim Electric'): f='Coal'
     if nm.startswith('%') or 'net-meter' in nm.lower() or 'import' in nm.lower(): continue
     for tok in p[1:-5]:
         if f: break
