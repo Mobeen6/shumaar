@@ -1,0 +1,10 @@
+ok pbs_industry.html 1085021
+ok pbs_qim_aug26.html 213881
+ok sbp_kibor_index.html 221698
+ok sbp_kibor_2026_oct.html 221716
+ok pama_home.html 135505
+fail pama_stats.html HTTP Error 404: Not Found
+ok ocac_home.html 52653
+ok nepra_home.html 207972
+ok sbp_neer.html 221694
+ok sbp_ecodata_er.html 570113
