@@ -17,4 +17,4 @@ jobs:
       - run: pip install pandas openpyxl xlrd pdfplumber pdfplumber beautifulsoup4
       - run: python tools/cal_fetch.py
       - run: if [ -f tools/cal_parse.py ]; then python tools/cal_parse.py; fi
-      - run: bash tools/commit.sh "Calendar: daily update"
+      - run: 'bash tools/commit.sh "Calendar: daily update"'

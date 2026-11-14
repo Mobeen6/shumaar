@@ -17,4 +17,4 @@ jobs:
       - run: pip install pandas openpyxl xlrd pdfplumber pdfplumber python-docx
       - run: python tools/pbs_cpi_fetch.py 2025
       - run: if [ -f tools/pbs_cpi_parse.py ]; then python tools/pbs_cpi_parse.py; fi
-      - run: bash tools/commit.sh "PBS CPI: update"
+      - run: 'bash tools/commit.sh "PBS CPI: update"'

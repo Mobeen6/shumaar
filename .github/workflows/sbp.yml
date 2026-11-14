@@ -17,4 +17,4 @@ jobs:
       - run: pip install pandas openpyxl xlrd
       - run: python tools/sbp_fetch.py
       - run: if [ -f tools/sbp_parse.py ]; then python tools/sbp_parse.py; fi
-      - run: bash tools/commit.sh "SBP: data update"
+      - run: 'bash tools/commit.sh "SBP: data update"'

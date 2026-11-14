@@ -17,4 +17,4 @@ jobs:
       - run: pip install pdfplumber openpyxl pandas
       - run: python tools/real_fetch.py
       - run: if [ -f tools/real_parse.py ]; then python tools/real_parse.py; fi
-      - run: bash tools/commit.sh "Real sector: data update"
+      - run: 'bash tools/commit.sh "Real sector: data update"'

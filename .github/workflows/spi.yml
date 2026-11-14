@@ -17,4 +17,4 @@ jobs:
       - run: pip install pandas openpyxl xlrd pdfplumber pdfplumber openpyxl
       - run: python tools/spi_fetch.py ${{ github.event_name == 'schedule' && 3 || 60 }}
       - run: if [ -f tools/spi_parse.py ]; then python tools/spi_parse.py; fi
-      - run: bash tools/commit.sh "SPI: weekly PBS update"
+      - run: 'bash tools/commit.sh "SPI: weekly PBS update"'
