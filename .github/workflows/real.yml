@@ -1,0 +1,25 @@
+name: Fetch real-sector data
+on:
+  schedule:
+    - cron: '30 5 * * *'   # daily, 10:30 PKT
+  workflow_dispatch:
+  push:
+    paths: ['tools/real_fetch.py', 'tools/real_parse.py', '.github/workflows/real.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pdfplumber openpyxl pandas
+      - run: python tools/real_fetch.py
+      - run: if [ -f tools/real_parse.py ]; then python tools/real_parse.py; fi
+      - run: |
+          git config user.name "shumaar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data_raw/real || true
+          [ -f real.json ] && git add real.json tracker.json || true
+          git diff --cached --quiet || (git commit -m "Real sector: data update" && git pull --rebase && git push)
