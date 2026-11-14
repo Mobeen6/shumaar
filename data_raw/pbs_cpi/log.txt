@@ -260,3 +260,21 @@ ok 2026-10 review Monthly-Review-October2026.pdf
 miss 2026-10 press
 miss 2026-11 review
 miss 2026-11 press
+miss 2025-01 press
+miss 2025-02 press
+miss 2025-03 press
+miss 2025-04 press
+miss 2025-05 press
+miss 2025-06 press
+miss 2025-07 press
+miss 2025-08 press
+miss 2025-09 press
+miss 2025-10 press
+miss 2025-11 press
+miss 2026-01 press
+miss 2026-02 press
+miss 2026-10 press
+miss 2026-11 review
+miss 2026-11 press
+nopage https://www.pbs.gov.pk/cpi-2/
+nopage https://www.pbs.gov.pk/monthly-review-on-price-indices/
