@@ -59,28 +59,49 @@ def kib_date(u):
     y=int(m[3]); y=y+2000 if y<100 else y
     try: return dt.datetime.strptime(f'{int(m[1])} {m[2][:3].title()} {y}','%d %b %Y').date().isoformat()
     except: return None
+def kib_urls(d):
+    a=d.strftime('%b'); yy=d.strftime('%y'); mon=d.strftime('%B').lower()
+    return [f"https://www.sbp.org.pk/assets/document/kibor-rates-{d.day}-{mon}-{d.year}.pdf",
+            f"https://www.sbp.org.pk/assets/document/kibor-rates-{d:%d}-{mon}-{d.year}.pdf",
+            f"https://archive.sbp.org.pk/ecodata/kibor/{d.year}/{a}/kibor-{d:%d}-{a}-{yy}.pdf",
+            f"https://www.sbp.org.pk/ecodata/kibor/{d.year}/{a}/Kibor-{d:%d}-{a}-{yy}.pdf"]
+def kib_parse(b):
+    t=pdfplumber.open(io.BytesIO(b)).pages[0].extract_text() or ''
+    rm=re.search(r'6\s*-?\s*M[A-Za-z]*\s+([\d.]+)\s+([\d.]+)',t,re.I)
+    if rm and fnum(rm[2]) and 1<fnum(rm[2])<40: return {'bid':fnum(rm[1]),'offer':fnum(rm[2])}
 try:
     import pdfplumber, io
-    n=0; m0=dt.date(2021,1,1); today=dt.date.today()
-    while m0<=today and n<2500:
-        mon=m0.strftime('%b'); pdfs=set()
-        for base in ['https://www.sbp.org.pk/ecodata/kibor','https://archive.sbp.org.pk/ecodata/kibor','https://www.sbp.org.pk/Ecodata/kibor']:
-            idx=f'{base}/{m0.year}/{mon}/index.asp'
-            for h in links(idx):
-                if h.lower().endswith('.pdf'): pdfs.add(urllib.parse.urljoin(idx,h))
-            if pdfs: break
-        for u in sorted(pdfs):
-            key=kib_date(u)
-            if not key or key in kib: continue
-            b=get(u,30); n+=1
-            if not b or b[:4]!=b'%PDF': continue
-            try: t=pdfplumber.open(io.BytesIO(b)).pages[0].extract_text() or ''
-            except Exception: continue
-            rm=re.search(r'6\s*-?\s*M[A-Za-z]*\s+([\d.]+)\s+([\d.]+)',t,re.I)
-            if rm and fnum(rm[2]): kib[key]={'bid':fnum(rm[1]),'offer':fnum(rm[2])}
-        log.append(f'kibor {m0:%Y-%m}: {len(pdfs)} files')
-        json.dump(kib,open(K,'w'))
-        m0=(m0.replace(day=28)+dt.timedelta(days=4)).replace(day=1)
-    log.append(f'kibor days with rate {len(kib)}, requests {n}')
-except Exception as e: log.append(f'kibor error {e}')
+    n=0
+    # 1) files linked from SBP's KIBOR page
+    for u in [urllib.parse.urljoin('https://www.sbp.org.pk/',h) for h in links('https://www.sbp.org.pk/economic-data/kibor-rates') if h.lower().endswith('.pdf')]:
+        key=kib_date(u) or (lambda m: m and dt.datetime.strptime(f'{m[1]} {m[2][:3].title()} {m[3]}','%d %b %Y').date().isoformat())(re.search(r'kibor-rates-(\d{1,2})-([a-z]+)-(\d{4})',u,re.I))
+        if not key or key in kib: continue
+        b=get(u,30); n+=1
+        if b and b[:4]==b'%PDF':
+            try:
+                r=kib_parse(b)
+                if r: kib[key]=r
+            except Exception: pass
+    # 2) every working day not yet held, trying each naming pattern (the last one that worked first)
+    d=dt.date(2021,1,1); best=0; miss=json.load(open(f'{D}/kibor_miss.json')) if os.path.exists(f'{D}/kibor_miss.json') else []
+    while d<=dt.date.today() and n<2500:
+        key=d.isoformat()
+        if d.weekday()<5 and key not in kib and key not in miss:
+            urls=kib_urls(d); got=None
+            for i in [best]+[i for i in range(len(urls)) if i!=best]:
+                b=get(urls[i],25); n+=1
+                if b and b[:4]==b'%PDF': got=(i,b); break
+            if got:
+                best=got[0]
+                try:
+                    r=kib_parse(got[1])
+                    if r: kib[key]=r
+                except Exception: pass
+            elif d<dt.date.today()-dt.timedelta(days=7): miss.append(key)
+            if n%100==0: json.dump(kib,open(K,'w'))
+        d+=dt.timedelta(days=1)
+    json.dump(kib,open(K,'w')); json.dump(miss,open(f'{D}/kibor_miss.json','w'))
+    log.append(f'kibor days with rate {len(kib)}, misses {len(miss)}, requests {n}')
+except Exception as e:
+    json.dump(kib,open(K,'w')); log.append(f'kibor error {e}')
 open(f'{D}/log.txt','a').write('\n'.join(log)+'\n'); print('\n'.join(log[-40:]))
