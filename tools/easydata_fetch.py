@@ -6,7 +6,7 @@ D='data_raw/easydata'; os.makedirs(D,exist_ok=True); log=[]
 B='https://easydata.sbp.org.pk/api/v1'
 def get(u,t=60):
     try:
-        r=urllib.request.urlopen(urllib.request.Request(u,headers={'Accept':'*/*','User-Agent':'Mozilla/5.0'}),timeout=t)
+        r=urllib.request.urlopen(urllib.request.Request(u,headers={'Accept':'*/*','User-Agent':'python-requests/2.32.3','Accept-Encoding':'identity'}),timeout=t)
         return r.status, r.read()
     except urllib.error.HTTPError as e: return e.code, e.read()[:2000]
     except Exception as e: return None, str(e).encode()
