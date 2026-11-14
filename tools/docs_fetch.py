@@ -25,6 +25,10 @@ U={'nepra_sir_2025.pdf':['https://www.nepra.org.pk/publications/State of Industr
    'budget_in_brief_2023-24.pdf':['https://www.finance.gov.pk/budget/Budget_2023_24/Budget_in_Brief.pdf'],
    'budget_in_brief_2022-23.pdf':['https://www.finance.gov.pk/budget/Budget_2022_23/Budget_in_Brief_English.pdf'],
    'mnfsr_asp_2024-25.pdf':['https://mnfsr.gov.pk/SiteImage/Publication/ASP 2024-25 FINAL.pdf']}
+# MNFSR Crops Area and Production by districts (all provinces)
+U['mnfsr_cap_2024-25.pdf']=['https://mnfsr.gov.pk/SiteImage/Publication/CAP 2024-25.pdf']
+U['mnfsr_cap_2023-24.pdf']=['https://mnfsr.gov.pk/SiteImage/Downloads/Cap_2024 updated Final.pdf']
+U['mnfsr_cap_2022-23.pdf']=['https://mnfsr.gov.pk/SiteImage/Downloads/Crops Area AND Production by 2022-23.pdf']
 # Punjab Crop Reporting Service final estimates, district-wise (crs-agripunjab does not resolve from runners)
 for y in ['2024-25','2025-26']:
     U[f'crs_punjab_final_rabi_{y}.pdf']=[f'https://agripunjab.punjab.gov.pk/system/files/Final Rabi Estimates {y}.pdf']
