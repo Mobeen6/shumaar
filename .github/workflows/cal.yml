@@ -1,0 +1,25 @@
+name: Fetch release calendars
+on:
+  schedule:
+    - cron: '30 3 * * *'   # daily, 08:30 PKT
+  workflow_dispatch:
+  push:
+    paths: ['tools/cal_fetch.py', 'tools/cal_parse.py', '.github/workflows/cal.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install pdfplumber beautifulsoup4
+      - run: python tools/cal_fetch.py
+      - run: if [ -f tools/cal_parse.py ]; then python tools/cal_parse.py; fi
+      - run: |
+          git config user.name "shumaar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data_raw || true
+          [ -f calendar.json ] && git add calendar.json calendar.ics || true
+          git diff --cached --quiet || (git commit -m "Calendar: daily update" && git pull --rebase && git push)
