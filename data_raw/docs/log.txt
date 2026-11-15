@@ -84,3 +84,11 @@ fail https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_26_balochistan_dist
 fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
 fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_islamabad.xlsx HTTP Error 404: Not Found
 fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%202025-26.pdf HTTP Error 403: Forbidden
+ok census23_table_26_kp_districts.xlsx 56998
+ok census23_table_26_punjab_districts.xlsx 56091
+ok census23_table_26_sindh_districts.xlsx 50638
+ok census23_table_26_balochistan_districts.xlsx 52977
+fail https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
+ok census23_table_26_islamabad.xlsx 11403
+fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%202025-26.pdf HTTP Error 403: Forbidden
