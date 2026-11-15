@@ -1,0 +1,76 @@
+== punjab_open http://www.open.punjab.gov.pk/schools/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
+== punjab_open2 https://open.punjab.gov.pk/schools/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
+== punjab_sis https://sis.punjab.gov.pk/ 29 'ERR <urlopen error timed out>'
+== punjab_schools https://schools.punjab.gov.pk/ 52369 '<!DOCTYPE html>\n<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/'
+  /libraries/json2/json2.js?v=2
+  /schools
+  /sitemap
+  /sites/schools.punjab.gov.pk/files/CLC.png
+  /sites/schools.punjab.gov.pk/files/NMST.png
+  /sites/schools.punjab.gov.pk/files/PCTB.png
+  /sites/schools.punjab.gov.pk/files/PEC.png
+  /sites/schools.punjab.gov.pk/files/PEF.png
+  /sites/schools.punjab.gov.pk/files/PEIMA.jpg
+  /sites/schools.punjab.gov.pk/files/PMIU.png
+  /sites/schools.punjab.gov.pk/files/QAED.png
+  /sites/schools.punjab.gov.pk/files/pinktober-popup-image_0.png
+  /sites/schools.punjab.gov.pk/governmentofpunjab.ico
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/attributes.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/drupal.bootstrap.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/misc/states.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/popover.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/theme.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/tooltip.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/css/front.css?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/css/style.css?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/js/script.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/logo.png
+  /system/files/school-banner.jpg
+  /system/files/schools-banner-new_0.jpg
+  https://daanishschools.punjab.gov.pk/ 
+  https://sedcomplaints.punjab.gov.pk/sed/register_complaint_options
+  https://twitter.com/schooledupunjab
+  https://www.facebook.com/SchoolEduPunjab/
+  https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FSchoolEduPunjab%2F%3Fref%3Dembed_page&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=190649088715289
+== kp_home https://kpese.gov.pk/ 1026867 '<!DOCTYPE html>\n<html lang="en-US">\n<head>\n\t<meta charset="UTF-8">\n\t<meta name="'
+  https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap
+  https://kpese.gov.pk/category/annual-school-census/
+  https://kpese.gov.pk/good-governance-roadmap-%d8%b9%d9%88%d8%a7%d9%85%db%8c-%d8%a7%db%8c%d8%ac%d9%86%da%88%d8%a7-%da%a9%db%92-%d8%aa%d8%ad%d8%aa-%d8%b3%db%8c%da%a9%d8%b1%d9%b9%d8%b1%db%8c-%d8%a7%db%8c%d9%84%db%8c/
+  https://kpese.gov.pk/good-governance-roadmap-ggr/
+  https://kpese.gov.pk/private-schools-regulatory-authority-psra/
+  https://kpese.gov.pk/school-bag-weight-limit-halka-basta-act-2020/
+  https://kpese.gov.pk/school-self-reporting-ssr/
+  https://kpese.gov.pk/wp-content/uploads/2026/05/School-Bag-Weight-Limit-Halka-Basta-Act-2020-768x431.png
+  https://kpese.gov.pk/wp-content/uploads/2026/08/virtual-school-768x417.jpg
+  https://kpese.gov.pk/wp-includes/js/dist/api-fetch.min.js?ver=6f2a4faeee3c722b1e57
+  https://kpese.gov.pk/wp-includes/js/dist/private-apis.min.js?ver=eb85f28c4c729bb4f002
+  https://kpese.gov.pk/wp-json/
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2F
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2F&#038;format=xml
+  https://kpese.gov.pk/wp-json/wp/v2/pages/16581
+== kp_maps https://kpese.gov.pk/maps/ 29 'ERR HTTP Error 404: Not Found'
+== kp_emis https://emis.kpese.gov.pk/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
+== kp_ese https://www.ese.gok.pk/ 72845 '<!DOCTYPE html>\r\n<html lang="en">\r\n    <head>\r\n    <!-- Meta Tags -->\r\n<meta nam'
+  https://drive.google.com/file/d/1IwLqXAPMCZmL1RUr5c8CSVMJPHPkuWKy/view?usp=drivesdk
+  https://ese.gok.pk/public/uploads/downloads/resignation.pdf
+  https://slack.com/intl/en-pk/downloads/windows
+  https://www.ese.gok.pk/sitemap
+  https://www.microsoft.com/en-pk/download/office.aspx
+== sindh_semis https://semis.rsu-sindh.gov.pk/ 29 'ERR <urlopen error timed out>'
+== sindh_rsu https://rsusindh.gov.pk/ 58785 '    \r\n\r\n<!DOCTYPE html>\r\n<html dir="ltr" lang="en">\r\n<head>\r\n\r\n<!-- Meta Tags --'
+  https://etaleem.gov.pk/teleschool
+  https://rsusindh.gov.pk/downloads/circulars.php
+  https://rsusindh.gov.pk/downloads/laws-rules.php
+  https://rsusindh.gov.pk/downloads/notification.php
+  https://rsusindh.gov.pk/downloads/press.php
+  https://rsusindh.gov.pk/downloads/publications.php
+  https://rsusindh.gov.pk/downloads/tender-procurement.php
+  https://rsusindh.gov.pk/downloads/tenders.php
+  https://rsusindh.gov.pk/programs/onlineGIS.php?district=Karachi%20Central
+  https://rsusindh.gov.pk/programs/school-infrastructure.php
+  https://rsusindh.gov.pk/school-profile.php
+  https://www.instagram.com/sindh_school_education/?hl=en
+  https://www.linkedin.com/in/sindh-school-education-a984b3200
+  https://www.sindhonlineschool.com/
+== bal_bemis https://www.bemis.edu.pk/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
+== bal_pmu https://emis.balochistan.gov.pk/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
