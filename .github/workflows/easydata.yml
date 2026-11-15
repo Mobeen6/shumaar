@@ -4,7 +4,7 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch:
   push:
-    paths: ['tools/schools_probe.py', 'tools/kibor_probe.py', 'tools/easydata_fetch.py', 'tools/easydata_series.json', '.github/workflows/easydata.yml']
+    paths: ['tools/schools_fetch.py', 'tools/kibor_probe.py', 'tools/easydata_fetch.py', 'tools/easydata_series.json', '.github/workflows/easydata.yml']
 permissions:
   contents: write
 jobs:
@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
-      - run: python tools/schools_probe.py
+      - run: python tools/schools_fetch.py
       - run: python tools/kibor_probe.py
       - run: python tools/easydata_fetch.py
         env:
