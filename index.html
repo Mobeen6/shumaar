@@ -4636,7 +4636,7 @@ function guideIndex(){ if(GIDX) return GIDX; GIDX=[]; let n=0;
   return GIDX; }
 function renderGuide(){
   const nInd=IND.length, nLay=D?Object.keys(D.inds).filter(c=>!MTL_OLD.has(c)).length:0, nDist=GEO?GEO.features.length:160, nCharts=guideIndex().filter(x=>x.kind==="chart").length;
-  $("#gStats").innerHTML=[[nInd,"topics Ask answers"],[nLay,"district map layers"],[nDist,"districts mapped"],[nCharts,"charts and tables"],["1951–2026","years covered"]].map(([v,l])=>`<span><b>${typeof v==="number"?v.toLocaleString():v}</b>${l}</span>`).join("");
+  $("#gStats").innerHTML=[[nInd,"topics you can ask about"],[nLay,"district map layers"],[nDist,"districts mapped"],[nCharts,"charts and tables"],["1951–2026","years covered"]].map(([v,l])=>`<span><b>${typeof v==="number"?v.toLocaleString():v}</b>${l}</span>`).join("");
   $("#gWays").innerHTML=[["districts","Map any district"],["satellite","See it from space"],["provinces","Compare provinces"],["peers","Compare countries"],["data","Download CSVs"]].map(([v,t])=>`<button type="button" class="chip" data-gview="${v}">${t} →</button>`).join("");
   const idx=guideIndex();
   $("#gTopics").innerHTML=VGROUPS.filter(g=>g.g).map(g=>`<div class="gtopic"><h4>${esc(g.g)}</h4>${g.views.map(([v,l])=>{ const secs=idx.filter(x=>x.view===v&&x.kind==="section").map(x=>x.t), nc=idx.filter(x=>x.view===v&&x.kind!=="section").length; return `<button type="button" class="gtab" data-gview="${v}"><b>${esc(l)}${nc?`<i>${nc} charts</i>`:""}</b>${secs.length?`<span>${esc(secs.join(" · "))}</span>`:""}</button>`; }).join("")}</div>`).join("");
