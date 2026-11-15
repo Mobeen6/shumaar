@@ -1,3 +1,216 @@
+== sindh_gis https://rsusindh.gov.pk/programs/onlineGIS.php?district=Karachi%20Central 29099 '  \n<!DOCTYPE html>\n\n<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->\n<!-'
+  ../css/colors/mapCustom.css
+  ../images/gis-icons/boys/be.png
+  ../images/gis-icons/boys/bm.png
+  ../images/gis-icons/boys/bp.png
+  ./index.php
+  https://rsusindh.gov.pk/activity-calendar.php
+  https://rsusindh.gov.pk/careers.php
+  https://rsusindh.gov.pk/contact-us.php
+  https://rsusindh.gov.pk/downloads/circulars.php
+  https://rsusindh.gov.pk/downloads/laws-rules.php
+  https://rsusindh.gov.pk/downloads/notification.php
+  https://rsusindh.gov.pk/downloads/publications.php
+  https://rsusindh.gov.pk/downloads/tender-procurement.php
+  https://rsusindh.gov.pk/downloads/tenders.php
+  https://rsusindh.gov.pk/grm-select.php
+  https://rsusindh.gov.pk/important-links.php
+  https://rsusindh.gov.pk/privacy-policy.php
+  https://rsusindh.gov.pk/programs/gender-mainstreaming.php
+  https://rsusindh.gov.pk/programs/onlineGIS.php?district=Karachi%20Central
+  https://rsusindh.gov.pk/programs/school-infrastructure.php
+  https://rsusindh.gov.pk/programs/teacher-affairs.php
+  https://rsusindh.gov.pk/projects.php
+  https://rsusindh.gov.pk/rsu-team.php
+  https://rsusindh.gov.pk/rti.php
+  https://rsusindh.gov.pk/vision&objectives.php
+  https://www.google.com/maps/d/embed?mid=1Mnssuqo3bVjrr6m9HYrP829MgN-T_su5
+  https://www.google.com/maps/d/embed?mid=1QBSKq1AB-YwazgnZLQXgyuT9tZc_TzUh
+  onlineGIS.php?district=Badin
+  onlineGIS.php?district=Dadu
+  onlineGIS.php?district=Ghotki
+  onlineGIS.php?district=Hyderabad
+  onlineGIS.php?district=Jacobabad
+  onlineGIS.php?district=Jamshoro
+  onlineGIS.php?district=Kamber at Shahdadkot
+  onlineGIS.php?district=Karachi Central
+  onlineGIS.php?district=Karachi East
+  onlineGIS.php?district=Karachi Korangi
+  onlineGIS.php?district=Karachi Malir
+  onlineGIS.php?district=Karachi South
+  onlineGIS.php?district=Karachi West
+  onlineGIS.php?district=Kashmore at Kandhkot
+  onlineGIS.php?district=Khairpur Mirs
+  onlineGIS.php?district=Larakana
+  onlineGIS.php?district=Matiari
+  onlineGIS.php?district=Mirpurkhas
+  onlineGIS.php?district=Naushero Feroze
+  onlineGIS.php?district=Sanghar
+  onlineGIS.php?district=Shaheed Benazirabad
+  onlineGIS.php?district=Shikarpur
+  onlineGIS.php?district=Sujawal
+  onlineGIS.php?district=Sukkur
+  onlineGIS.php?district=Tando Allahyar
+  onlineGIS.php?district=Tando Muhammad Khan
+  onlineGIS.php?district=Tharparkar
+  onlineGIS.php?district=Thatta
+  onlineGIS.php?district=Umerkot
+== sindh_gis_tharparkar https://rsusindh.gov.pk/programs/onlineGIS.php?district=Tharparkar 29094 '  \n<!DOCTYPE html>\n\n<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->\n<!-'
+  ../css/colors/mapCustom.css
+  ../images/gis-icons/boys/be.png
+  ../images/gis-icons/boys/bm.png
+  ../images/gis-icons/boys/bp.png
+  ./index.php
+  https://rsusindh.gov.pk/activity-calendar.php
+  https://rsusindh.gov.pk/careers.php
+  https://rsusindh.gov.pk/contact-us.php
+  https://rsusindh.gov.pk/downloads/circulars.php
+  https://rsusindh.gov.pk/downloads/laws-rules.php
+  https://rsusindh.gov.pk/downloads/notification.php
+  https://rsusindh.gov.pk/downloads/publications.php
+  https://rsusindh.gov.pk/downloads/tender-procurement.php
+  https://rsusindh.gov.pk/downloads/tenders.php
+  https://rsusindh.gov.pk/grm-select.php
+  https://rsusindh.gov.pk/important-links.php
+  https://rsusindh.gov.pk/privacy-policy.php
+  https://rsusindh.gov.pk/programs/gender-mainstreaming.php
+  https://rsusindh.gov.pk/programs/onlineGIS.php?district=Karachi%20Central
+  https://rsusindh.gov.pk/programs/school-infrastructure.php
+  https://rsusindh.gov.pk/programs/teacher-affairs.php
+  https://rsusindh.gov.pk/projects.php
+  https://rsusindh.gov.pk/rsu-team.php
+  https://rsusindh.gov.pk/rti.php
+  https://rsusindh.gov.pk/vision&objectives.php
+  https://www.google.com/maps/d/embed?mid=1Mnssuqo3bVjrr6m9HYrP829MgN-T_su5
+  https://www.google.com/maps/d/embed?mid=1tJwXi40dlUeQBPjNXjvygwB4R3rk6dSZ
+  onlineGIS.php?district=Badin
+  onlineGIS.php?district=Dadu
+  onlineGIS.php?district=Ghotki
+  onlineGIS.php?district=Hyderabad
+  onlineGIS.php?district=Jacobabad
+  onlineGIS.php?district=Jamshoro
+  onlineGIS.php?district=Kamber at Shahdadkot
+  onlineGIS.php?district=Karachi Central
+  onlineGIS.php?district=Karachi East
+  onlineGIS.php?district=Karachi Korangi
+  onlineGIS.php?district=Karachi Malir
+  onlineGIS.php?district=Karachi South
+  onlineGIS.php?district=Karachi West
+  onlineGIS.php?district=Kashmore at Kandhkot
+  onlineGIS.php?district=Khairpur Mirs
+  onlineGIS.php?district=Larakana
+  onlineGIS.php?district=Matiari
+  onlineGIS.php?district=Mirpurkhas
+  onlineGIS.php?district=Naushero Feroze
+  onlineGIS.php?district=Sanghar
+  onlineGIS.php?district=Shaheed Benazirabad
+  onlineGIS.php?district=Shikarpur
+  onlineGIS.php?district=Sujawal
+  onlineGIS.php?district=Sukkur
+  onlineGIS.php?district=Tando Allahyar
+  onlineGIS.php?district=Tando Muhammad Khan
+  onlineGIS.php?district=Tharparkar
+  onlineGIS.php?district=Thatta
+  onlineGIS.php?district=Umerkot
+== sindh_profile https://rsusindh.gov.pk/school-profile.php 18767 '\r\n \r\n<!DOCTYPE html>\r\n<html dir="ltr" lang="en">\r\n\r\n<head>\r\n\r\n  <!-- Meta Tags -'
+  https://rsusindh.gov.pk/activity-calendar.php
+  https://rsusindh.gov.pk/careers.php
+  https://rsusindh.gov.pk/contact-us.php
+  https://rsusindh.gov.pk/downloads/circulars.php
+  https://rsusindh.gov.pk/downloads/laws-rules.php
+  https://rsusindh.gov.pk/downloads/notification.php
+  https://rsusindh.gov.pk/downloads/publications.php
+  https://rsusindh.gov.pk/downloads/tender-procurement.php
+  https://rsusindh.gov.pk/downloads/tenders.php
+  https://rsusindh.gov.pk/grm-select.php
+  https://rsusindh.gov.pk/important-links.php
+  https://rsusindh.gov.pk/privacy-policy.php
+  https://rsusindh.gov.pk/programs/gender-mainstreaming.php
+  https://rsusindh.gov.pk/programs/onlineGIS.php?district=Karachi%20Central
+  https://rsusindh.gov.pk/programs/school-infrastructure.php
+  https://rsusindh.gov.pk/programs/teacher-affairs.php
+  https://rsusindh.gov.pk/projects.php
+  https://rsusindh.gov.pk/rsu-team.php
+  https://rsusindh.gov.pk/rti.php
+  https://rsusindh.gov.pk/vision&objectives.php
+== sindh_infra https://rsusindh.gov.pk/programs/school-infrastructure.php 18001 '\r\n<!DOCTYPE html>\r\n<html dir="ltr" lang="en">\r\n<head>\r\n\r\n<!-- Meta Tags -->\r\n<me'
+  https://rsusindh.gov.pk/activity-calendar.php
+  https://rsusindh.gov.pk/careers.php
+  https://rsusindh.gov.pk/contact-us.php
+  https://rsusindh.gov.pk/downloads/circulars.php
+  https://rsusindh.gov.pk/downloads/laws-rules.php
+  https://rsusindh.gov.pk/downloads/notification.php
+  https://rsusindh.gov.pk/downloads/publications.php
+  https://rsusindh.gov.pk/downloads/tender-procurement.php
+  https://rsusindh.gov.pk/downloads/tenders.php
+  https://rsusindh.gov.pk/grm-select.php
+  https://rsusindh.gov.pk/important-links.php
+  https://rsusindh.gov.pk/privacy-policy.php
+  https://rsusindh.gov.pk/programs/gender-mainstreaming.php
+  https://rsusindh.gov.pk/programs/onlineGIS.php?district=Karachi%20Central
+  https://rsusindh.gov.pk/programs/school-consolidation.php
+  https://rsusindh.gov.pk/programs/school-infrastructure.php
+  https://rsusindh.gov.pk/programs/teacher-affairs.php
+  https://rsusindh.gov.pk/projects.php
+  https://rsusindh.gov.pk/rsu-team.php
+  https://rsusindh.gov.pk/rti.php
+  https://rsusindh.gov.pk/vision&objectives.php
+== punjab_schools_list https://schools.punjab.gov.pk/schools 16460 '<!DOCTYPE html>\n<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/'
+  /schools
+  /sitemap
+  /sites/schools.punjab.gov.pk/governmentofpunjab.ico
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/attributes.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/drupal.bootstrap.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/misc/states.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/popover.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/theme.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap/js/tooltip.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/css/front.css?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/css/style.css?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/js/script.js?sujm95
+  /sites/schools.punjab.gov.pk/themes/bootstrap_subtheme/logo.png
+  https://schoolportal.punjab.gov.pk/sed_census/
+  https://schools.punjab.gov.pk/node/184
+  https://schools.punjab.gov.pk/schools
+  https://sedcomplaints.punjab.gov.pk/sed/register_complaint_options
+  https://twitter.com/schooledupunjab
+  https://www.facebook.com/SchoolEduPunjab/
+== kp_asc https://kpese.gov.pk/category/annual-school-census/ 896665 '<!DOCTYPE html>\n<html lang="en-US">\n<head>\n\t<meta charset="UTF-8">\n\t<meta name="'
+  https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap
+  https://kpese.gov.pk/annual-school-census-2020-21/
+  https://kpese.gov.pk/annual-school-census-2021-22/
+  https://kpese.gov.pk/annual-school-census-2022-23/
+  https://kpese.gov.pk/annual-school-census-2023-24/
+  https://kpese.gov.pk/annual-schools-statistical-report-2024-25/
+  https://kpese.gov.pk/category/annual-school-census/
+  https://kpese.gov.pk/category/annual-school-census/feed/
+  https://kpese.gov.pk/good-governance-roadmap-ggr/
+  https://kpese.gov.pk/private-schools-regulatory-authority-psra/
+  https://kpese.gov.pk/wp-includes/js/dist/api-fetch.min.js?ver=6f2a4faeee3c722b1e57
+  https://kpese.gov.pk/wp-includes/js/dist/private-apis.min.js?ver=eb85f28c4c729bb4f002
+  https://kpese.gov.pk/wp-json/
+  https://kpese.gov.pk/wp-json/wp/v2/categories/76
+  https://kpese.gov.pk/xmlrpc.php?rsd
+  JS data:image/svg+xml,%3Csvg xmlns=
+  JS http://eduma.thimpress.com/thim-2/wp-content/themes/eduma/images/patterns/pattern1.png
+== kp_ssr https://kpese.gov.pk/school-self-reporting-ssr/ 865318 '<!DOCTYPE html>\n<html lang="en-US">\n<head>\n\t<meta charset="UTF-8">\n\t<meta name="'
+  http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fkpese.gov.pk%2Fschool-self-reporting-ssr%2F&amp;description=An%20online%20School%20Self-Reporting%20%28SSR%29%20portal%20was%20developed%20and%20implemented%20for%20the%20collection%20of%20data%20directly%20from%20schools%20on%20all%20the%20basic%20fields%2Findicators.&amp;media=https%3A%2F%2Fkpese.gov.pk%2Fwp-content%2Fuploads%2F2026%2F05%2FSSR.png
+  https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap
+  https://kpese.gov.pk/category/annual-school-census/
+  https://kpese.gov.pk/good-governance-roadmap-ggr/
+  https://kpese.gov.pk/private-schools-regulatory-authority-psra/
+  https://kpese.gov.pk/school-self-reporting-ssr/
+  https://kpese.gov.pk/wp-includes/js/dist/api-fetch.min.js?ver=6f2a4faeee3c722b1e57
+  https://kpese.gov.pk/wp-includes/js/dist/private-apis.min.js?ver=eb85f28c4c729bb4f002
+  https://kpese.gov.pk/wp-json/
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2Fschool-self-reporting-ssr%2F
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2Fschool-self-reporting-ssr%2F&#038;format=xml
+  https://kpese.gov.pk/wp-json/wp/v2/posts/17934
+  https://kpese.gov.pk/xmlrpc.php?rsd
+  https://twitter.com/share?url=https%3A%2F%2Fkpese.gov.pk%2Fschool-self-reporting-ssr%2F&amp;text=School%20Self%20Reporting%20%28SSR%29
+  https://www.facebook.com/sharer.php?u=https%3A%2F%2Fkpese.gov.pk%2Fschool-self-reporting-ssr%2F
+  JS data:image/svg+xml,%3Csvg xmlns=
+  JS http://eduma.thimpress.com/thim-2/wp-content/themes/eduma/images/patterns/pattern1.png
 == punjab_open http://www.open.punjab.gov.pk/schools/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
 == punjab_open2 https://open.punjab.gov.pk/schools/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
 == punjab_sis https://sis.punjab.gov.pk/ 29 'ERR <urlopen error timed out>'
@@ -28,6 +241,8 @@
   /system/files/school-banner.jpg
   /system/files/schools-banner-new_0.jpg
   https://daanishschools.punjab.gov.pk/ 
+  https://qaed.pk/qari/login.php
+  https://qaed.pk/qari/login.php 
   https://sedcomplaints.punjab.gov.pk/sed/register_complaint_options
   https://twitter.com/schooledupunjab
   https://www.facebook.com/SchoolEduPunjab/
@@ -48,6 +263,11 @@
   https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2F
   https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2F&#038;format=xml
   https://kpese.gov.pk/wp-json/wp/v2/pages/16581
+  https://kpese.gov.pk/xmlrpc.php?rsd
+  JS data:image/svg+xml,%3Csvg xmlns=
+  JS http://eduma.thimpress.com/thim-2/wp-content/themes/eduma/images/patterns/pattern1.png
+  JS https://kpese.gov.pk/wp-content/uploads/2026/05/banner-final.png
+  JS https://kpese.gov.pk/wp-content/uploads/2026/07/Summer-Learning-Festival.jpg
 == kp_maps https://kpese.gov.pk/maps/ 29 'ERR HTTP Error 404: Not Found'
 == kp_emis https://emis.kpese.gov.pk/ 56 'ERR <urlopen error [Errno -2] Name or service not known>'
 == kp_ese https://www.ese.gok.pk/ 72845 '<!DOCTYPE html>\r\n<html lang="en">\r\n    <head>\r\n    <!-- Meta Tags -->\r\n<meta nam'
@@ -58,7 +278,12 @@
   https://www.microsoft.com/en-pk/download/office.aspx
 == sindh_semis https://semis.rsu-sindh.gov.pk/ 29 'ERR <urlopen error timed out>'
 == sindh_rsu https://rsusindh.gov.pk/ 58785 '    \r\n\r\n<!DOCTYPE html>\r\n<html dir="ltr" lang="en">\r\n<head>\r\n\r\n<!-- Meta Tags --'
+  //cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js
   https://etaleem.gov.pk/teleschool
+  https://rsusindh.gov.pk/activity-calendar.php
+  https://rsusindh.gov.pk/asc.php
+  https://rsusindh.gov.pk/careers.php
+  https://rsusindh.gov.pk/contact-us.php
   https://rsusindh.gov.pk/downloads/circulars.php
   https://rsusindh.gov.pk/downloads/laws-rules.php
   https://rsusindh.gov.pk/downloads/notification.php
@@ -66,9 +291,26 @@
   https://rsusindh.gov.pk/downloads/publications.php
   https://rsusindh.gov.pk/downloads/tender-procurement.php
   https://rsusindh.gov.pk/downloads/tenders.php
+  https://rsusindh.gov.pk/e-media.php
+  https://rsusindh.gov.pk/grm-select.php
+  https://rsusindh.gov.pk/important-links.php
+  https://rsusindh.gov.pk/media-links.php
+  https://rsusindh.gov.pk/oosc-activities.php
+  https://rsusindh.gov.pk/oosc/oosc_initiatives.php
+  https://rsusindh.gov.pk/privacy-policy.php
+  https://rsusindh.gov.pk/programs/Professional Development.php
+  https://rsusindh.gov.pk/programs/gender-mainstreaming.php
   https://rsusindh.gov.pk/programs/onlineGIS.php?district=Karachi%20Central
   https://rsusindh.gov.pk/programs/school-infrastructure.php
+  https://rsusindh.gov.pk/programs/teacher-affairs.php
+  https://rsusindh.gov.pk/projects.php
+  https://rsusindh.gov.pk/radio-learning.php
+  https://rsusindh.gov.pk/radio-messages.php
+  https://rsusindh.gov.pk/rsu-team.php
+  https://rsusindh.gov.pk/rti.php
   https://rsusindh.gov.pk/school-profile.php
+  https://rsusindh.gov.pk/select-project.php
+  https://rsusindh.gov.pk/vision&objectives.php
   https://www.instagram.com/sindh_school_education/?hl=en
   https://www.linkedin.com/in/sindh-school-education-a984b3200
   https://www.sindhonlineschool.com/
