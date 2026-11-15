@@ -1,0 +1,1846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Matiari</name>
+    <description/>
+    <Style id="icon-1899-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Matiari.xlsx</name>
+      <Placemark>
+        <name>GBELS - KODE BHANUJO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 2-Shah Mir Rahu<br>SEMIS_ID: 423030310<br>School Address: P.O SHAHMIR RAHU<br>School Status: Temp. Closed<br>School Level: Elementary<br>School Gender: Boys<br>Enrollment: 0<br>Teachers: <br>Classrooms: 0<br>TotalRooms: 0<br>X: 68.3694<br>Y: 26.0511<br>PGS: 3<br>Gender/Level: Boys Elementary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Mir Rahu</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.2303031E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>P.O SHAHMIR RAHU</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Elementary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Boys</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>0.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>0.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.3694</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0511</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Boys Elementary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.3694,26.0511,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS - ABDULLAH CHHUTTO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 3-Tajpur<br>SEMIS_ID: 423020214<br>School Address: ALLAH DINO SAND<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Boys<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 1<br>X: 68.5879<br>Y: 25.54<br>PGS: 3<br>Gender/Level: Boys Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>3-Tajpur</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020214E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>ALLAH DINO SAND</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Boys</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.5879</value>
+          </Data>
+          <Data name="Y">
+            <value>25.54</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Boys Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.5879,25.54,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS - ISMAIL KHOSO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 8-Faqeer Nooh Hothyani<br>SEMIS_ID: 423020358<br>School Address: PO BHIT SHAH<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Boys<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.511<br>Y: 25.7339<br>PGS: 3<br>Gender/Level: Boys Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>8-Faqeer Nooh Hothyani</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020358E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO BHIT SHAH</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Boys</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.511</value>
+          </Data>
+          <Data name="Y">
+            <value>25.7339</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Boys Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.511,25.7339,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS - MUHAMMAD HASSAN SANJRANI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 5-Sekhat<br>SEMIS_ID: 423020173<br>School Address: TALUKA MATARI<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Boys<br>Enrollment: 6<br>Teachers: <br>Classrooms: 1<br>TotalRooms: 1<br>X: 68.5405<br>Y: 25.6675<br>PGS: 3<br>Gender/Level: Boys Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>5-Sekhat</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020173E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>TALUKA MATARI</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Boys</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>6.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.5405</value>
+          </Data>
+          <Data name="Y">
+            <value>25.6675</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Boys Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.5405,25.6675,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS - QADIR BUX AKLANI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 6-Odero Lal Station<br>SEMIS_ID: 423020143<br>School Address: PO ODEROLAL STATION<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Boys<br>Enrollment: 0<br>Teachers: <br>Classrooms: 1<br>TotalRooms: 1<br>X: 68.6587<br>Y: 25.5833<br>PGS: 3<br>Gender/Level: Boys Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>6-Odero Lal Station</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020143E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO ODEROLAL STATION</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Boys</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.6587</value>
+          </Data>
+          <Data name="Y">
+            <value>25.5833</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Boys Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.6587,25.5833,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS - SULEMAN CHHUTTO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 6-Odero Lal Station<br>SEMIS_ID: 423020394<br>School Address: SULEMAN CHUTTO<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Boys<br>Enrollment: 5<br>Teachers: <br>Classrooms: 1<br>TotalRooms: 1<br>X: 68.6352<br>Y: 25.591<br>PGS: 3<br>Gender/Level: Boys Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>6-Odero Lal Station</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020394E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>SULEMAN CHUTTO</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Boys</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>5.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.6352</value>
+          </Data>
+          <Data name="Y">
+            <value>25.591</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Boys Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.6352,25.591,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - BACHAL DETHA</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 2-Shah Alam Shah Ji Wasi<br>SEMIS_ID: 423020076<br>School Address: PO MATIARI<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 1<br>X: 68.5135<br>Y: 25.5705<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Alam Shah Ji Wasi</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020076E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO MATIARI</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.5135</value>
+          </Data>
+          <Data name="Y">
+            <value>25.5705</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.5135,25.5705,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - BADAR LAKHO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 2-Shah Mir Rahu<br>SEMIS_ID: 423030062<br>School Address: PO HALA<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.3183<br>Y: 26.0134<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Mir Rahu</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030062E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO HALA</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.3183</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0134</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.3183,26.0134,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - BAGO RIND</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 2-Shah Mir Rahu<br>SEMIS_ID: 423030055<br>School Address: P.O MUSHTAQABAD<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.3327<br>Y: 26.0201<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Mir Rahu</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030055E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>P.O MUSHTAQABAD</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.3327</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0201</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.3327,26.0201,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - DADO HAJANO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 4-Zairpir<br>SEMIS_ID: 423030072<br>School Address: PO ZAIR PUR<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.4208<br>Y: 25.9407<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>4-Zairpir</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030072E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO ZAIR PUR</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4208</value>
+          </Data>
+          <Data name="Y">
+            <value>25.9407</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4208,25.9407,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - DAIM RAHU</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 4-Zairpir<br>SEMIS_ID: 423030076<br>School Address: PO BHALIDINO KAKA<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.4247<br>Y: 25.9847<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>4-Zairpir</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030076E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO BHALIDINO KAKA</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4247</value>
+          </Data>
+          <Data name="Y">
+            <value>25.9847</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4247,25.9847,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - GUL MUHAMMAD KHASKHELI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 8-Faqeer Nooh Hothyani<br>SEMIS_ID: 423020069<br>School Address: P.O ODERO LAL VILLAGE<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.5378<br>Y: 25.6841<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>8-Faqeer Nooh Hothyani</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020069E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>P.O ODERO LAL VILLAGE</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.5378</value>
+          </Data>
+          <Data name="Y">
+            <value>25.6841</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.5378,25.6841,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - HAJI MEHAAR JAMALI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 3-Bhalidino Kaka<br>SEMIS_ID: 423030070<br>School Address: HAJI MEHAAR JAMALI<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.394<br>Y: 25.9865<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>3-Bhalidino Kaka</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.2303007E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>HAJI MEHAAR JAMALI</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.394</value>
+          </Data>
+          <Data name="Y">
+            <value>25.9865</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.394,25.9865,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - HAJI QADIR BUX JAMALI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 3-Bhalidino Kaka<br>SEMIS_ID: 423030103<br>School Address: PO SIKANDERABAD<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.3911<br>Y: 26.0293<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>3-Bhalidino Kaka</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030103E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO SIKANDERABAD</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.3911</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0293</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.3911,26.0293,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - JALAL KHAN CHANDIO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 4-Zairpir<br>SEMIS_ID: 423030292<br>School Address: PO VILLEG BHALEDINGO KAKA<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.4633<br>Y: 26.0366<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>4-Zairpir</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030292E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO VILLEG BHALEDINGO KAKA</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4633</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0366</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4633,26.0366,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - JUMOON KHOSO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 6-Odero Lal Station<br>SEMIS_ID: 423020098<br>School Address: JUMOON KHOSO<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.4961<br>Y: 25.545<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>6-Odero Lal Station</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020098E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>JUMOON KHOSO</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4961</value>
+          </Data>
+          <Data name="Y">
+            <value>25.545</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4961,25.545,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - KHAIR MUHAMMAD KAKA</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 3-Bhalidino Kaka<br>SEMIS_ID: 423030084<br>School Address: PO BHALEDINO KAKA<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.4188<br>Y: 26.022<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>3-Bhalidino Kaka</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030084E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO BHALEDINO KAKA</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4188</value>
+          </Data>
+          <Data name="Y">
+            <value>26.022</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4188,26.022,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - KHUDA BUX MALLAH</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 2-Shah Mir Rahu<br>SEMIS_ID: 423030090<br>School Address: KHUDA BUX MALLAH<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.339<br>Y: 26.0528<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Mir Rahu</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.2303009E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>KHUDA BUX MALLAH</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.339</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0528</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.339,26.0528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - LUTUF RAHOO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 4-Zairpir<br>SEMIS_ID: 423030075<br>School Address: PO BHALEDINO KAKA<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.4159<br>Y: 25.9816<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>4-Zairpir</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030075E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO BHALEDINO KAKA</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4159</value>
+          </Data>
+          <Data name="Y">
+            <value>25.9816</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4159,25.9816,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - MALOOK KHASKHELI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 2-Shah Mir Rahu<br>SEMIS_ID: 423030097<br>School Address: PO B.D KAKA<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.3221<br>Y: 26.0196<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Mir Rahu</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030097E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO B.D KAKA</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.3221</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0196</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.3221,26.0196,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - MITHO HAT</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 2-Shah Mir Rahu<br>SEMIS_ID: 423030077<br>School Address: PO SAEEDABAD NEW<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.3597<br>Y: 26.0518<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Mir Rahu</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030077E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO SAEEDABAD NEW</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.3597</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0518</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.3597,26.0518,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - PHULL KAKA (THROUGH BY HANDS)</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Saeedabad<br>UC/MC/TC NAME: 3-Bhalidino Kaka<br>SEMIS_ID: 423030053<br>School Address: PO BHALEDINO KAKA<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 2<br>TotalRooms: 2<br>X: 68.3925<br>Y: 26.0255<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Saeedabad</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>3-Bhalidino Kaka</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23030053E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>PO BHALEDINO KAKA</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.3925</value>
+          </Data>
+          <Data name="Y">
+            <value>26.0255</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.3925,26.0255,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - SACHOO ABRO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 6-Odero Lal Station<br>SEMIS_ID: 423020082<br>School Address: P.O SACHOO ABRO<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 1<br>TotalRooms: 1<br>X: 68.6088<br>Y: 25.638<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>6-Odero Lal Station</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020082E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>P.O SACHOO ABRO</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.6088</value>
+          </Data>
+          <Data name="Y">
+            <value>25.638</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.6088,25.638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - SALEH MANGRIO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 1-Matiari<br>SEMIS_ID: 423020380<br>School Address: P O MATIARI VILLAGE SALEH MANGRIO<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 4<br>Teachers: <br>Classrooms: 1<br>TotalRooms: 1<br>X: 68.4827<br>Y: 25.5969<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>1-Matiari</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.2302038E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>P O MATIARI VILLAGE SALEH MANGRIO</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>4.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4827</value>
+          </Data>
+          <Data name="Y">
+            <value>25.5969</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4827,25.5969,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GGPS - SHAIKH TEAR</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Mitiari<br>UC/MC/TC NAME: 2-Shah Alam Shah Ji Wasi<br>SEMIS_ID: 423020365<br>School Address: P O MATIARI<br>School Status: Temp. Closed<br>School Level: Primary<br>School Gender: Girls<br>Enrollment: 0<br>Teachers: <br>Classrooms: 1<br>TotalRooms: 1<br>X: 68.4673<br>Y: 25.5566<br>PGS: 3<br>Gender/Level: Girls Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>2-Shah Alam Shah Ji Wasi</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>4.23020365E8</value>
+          </Data>
+          <Data name="School Address">
+            <value>P O MATIARI</value>
+          </Data>
+          <Data name="School Status">
+            <value>Temp. Closed</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Girls</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>0.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value/>
+          </Data>
+          <Data name="Classrooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4673</value>
+          </Data>
+          <Data name="Y">
+            <value>25.5566</value>
+          </Data>
+          <Data name="PGS">
+            <value>3.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Girls Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4673,25.5566,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS -YAQOOB LASHARI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Hala<br>UC/MC/TC NAME: Ajan Shah<br>SEMIS_ID: 923000022<br>School Address: <br>School Status: Functional<br>School Level: Primary<br>School Gender: Mix<br>Enrollment: 26<br>Teachers: 1<br>Classrooms: <br>TotalRooms: 1<br>X: 68.5563<br>Y: 25.7664<br>PGS: 2<br>Gender/Level: Mix Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Hala</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>Ajan Shah</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>9.23000022E8</value>
+          </Data>
+          <Data name="School Address">
+            <value/>
+          </Data>
+          <Data name="School Status">
+            <value>Functional</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Mix</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>26.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value>1.0</value>
+          </Data>
+          <Data name="Classrooms">
+            <value/>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.5563</value>
+          </Data>
+          <Data name="Y">
+            <value>25.7664</value>
+          </Data>
+          <Data name="PGS">
+            <value>2.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Mix Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.5563,25.7664,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS -GOLO MACHI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Hala<br>UC/MC/TC NAME: Khando<br>SEMIS_ID: 923000017<br>School Address: <br>School Status: Functional<br>School Level: Primary<br>School Gender: Mix<br>Enrollment: 74<br>Teachers: 1<br>Classrooms: <br>TotalRooms: 1<br>X: 68.4715<br>Y: 25.7759<br>PGS: 2<br>Gender/Level: Mix Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Hala</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>Khando</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>9.23000017E8</value>
+          </Data>
+          <Data name="School Address">
+            <value/>
+          </Data>
+          <Data name="School Status">
+            <value>Functional</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Mix</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>74.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value>1.0</value>
+          </Data>
+          <Data name="Classrooms">
+            <value/>
+          </Data>
+          <Data name="TotalRooms">
+            <value>1.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4715</value>
+          </Data>
+          <Data name="Y">
+            <value>25.7759</value>
+          </Data>
+          <Data name="PGS">
+            <value>2.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Mix Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4715,25.7759,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS -QAISER KHAN KHOSO</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Hala<br>UC/MC/TC NAME: Ajan Shah<br>SEMIS_ID: 923000023<br>School Address: <br>School Status: Functional<br>School Level: Primary<br>School Gender: Mix<br>Enrollment: 38<br>Teachers: 1<br>Classrooms: <br>TotalRooms: 2<br>X: 68.4904<br>Y: 25.7764<br>PGS: 2<br>Gender/Level: Mix Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Hala</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>Ajan Shah</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>9.23000023E8</value>
+          </Data>
+          <Data name="School Address">
+            <value/>
+          </Data>
+          <Data name="School Status">
+            <value>Functional</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Mix</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>38.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value>1.0</value>
+          </Data>
+          <Data name="Classrooms">
+            <value/>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4904</value>
+          </Data>
+          <Data name="Y">
+            <value>25.7764</value>
+          </Data>
+          <Data name="PGS">
+            <value>2.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Mix Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4904,25.7764,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS -AARAB KHAN NIZAMANI</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Hala<br>UC/MC/TC NAME: Karam Khan Nizamani<br>SEMIS_ID: 923000020<br>School Address: <br>School Status: Functional<br>School Level: Primary<br>School Gender: Mix<br>Enrollment: 88<br>Teachers: 1<br>Classrooms: <br>TotalRooms: 2<br>X: 68.4607<br>Y: 25.8572<br>PGS: 2<br>Gender/Level: Mix Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Hala</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>Karam Khan Nizamani</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>9.2300002E8</value>
+          </Data>
+          <Data name="School Address">
+            <value/>
+          </Data>
+          <Data name="School Status">
+            <value>Functional</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Mix</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>88.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value>1.0</value>
+          </Data>
+          <Data name="Classrooms">
+            <value/>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4607</value>
+          </Data>
+          <Data name="Y">
+            <value>25.8572</value>
+          </Data>
+          <Data name="PGS">
+            <value>2.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Mix Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4607,25.8572,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>GBPS -GHULAM MUHAMMAD MEMON</name>
+        <description><![CDATA[DISTRICT: Mitiari<br>TEHSIL: Hala<br>UC/MC/TC NAME: Khando<br>SEMIS_ID: 923000024<br>School Address: <br>School Status: Functional<br>School Level: Primary<br>School Gender: Mix<br>Enrollment: 29<br>Teachers: 2<br>Classrooms: <br>TotalRooms: 2<br>X: 68.4016<br>Y: 25.7856<br>PGS: 2<br>Gender/Level: Mix Primary]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="DISTRICT">
+            <value>Mitiari</value>
+          </Data>
+          <Data name="TEHSIL">
+            <value>Hala</value>
+          </Data>
+          <Data name="UC/MC/TC NAME">
+            <value>Khando</value>
+          </Data>
+          <Data name="SEMIS_ID">
+            <value>9.23000024E8</value>
+          </Data>
+          <Data name="School Address">
+            <value/>
+          </Data>
+          <Data name="School Status">
+            <value>Functional</value>
+          </Data>
+          <Data name="School Level">
+            <value>Primary</value>
+          </Data>
+          <Data name="School Gender">
+            <value>Mix</value>
+          </Data>
+          <Data name="Enrollment">
+            <value>29.0</value>
+          </Data>
+          <Data name="Teachers">
+            <value>2.0</value>
+          </Data>
+          <Data name="Classrooms">
+            <value/>
+          </Data>
+          <Data name="TotalRooms">
+            <value>2.0</value>
+          </Data>
+          <Data name="X">
+            <value>68.4016</value>
+          </Data>
+          <Data name="Y">
+            <value>25.7856</value>
+          </Data>
+          <Data name="PGS">
+            <value>2.0</value>
+          </Data>
+          <Data name="Gender/Level">
+            <value>Mix Primary</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            68.4016,25.7856,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

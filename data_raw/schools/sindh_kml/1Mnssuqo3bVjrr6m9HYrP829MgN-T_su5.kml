@@ -1,0 +1,2398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Karachi Schools</name>
+    <description>Karachi Schools GIS Mapping</description>
+    <Style id="icon-1591-0288D1-labelson">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder>
+      <name>Karachi Schools.xlsx</name>
+      <Placemark>
+        <name>Abdullah Rakla Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9773<br>Latitude: 24.8604]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9773</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8604</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9773,24.8604,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>AKU Medical College Class of 94 Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0103<br>Latitude: 25.0461]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0103</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0461</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0103,25.0461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al-Ameen Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2618<br>Latitude: 24.8413]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2618</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8413</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2618,24.8413,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al-Ameen Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2618<br>Latitude: 24.8413]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2618</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8413</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2618,24.8413,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al-Karam Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.2138<br>Latitude: 24.8372]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2138</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8372</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2138,24.8372,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al-Muhaimin Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0969<br>Latitude: 25.0371]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0969</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0371</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0969,25.0371,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al-Muhaimin Campus-II Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.2087<br>Latitude: 24.8541]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2087</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8541</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2087,24.8541,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Amna Zaka Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0103<br>Latitude: 25.0461]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0103</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0461</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0103,25.0461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>B.G.P Campus-II Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0919<br>Latitude: 25.0332]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0919</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0332</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0919,25.0332,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bhittaiabad Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gulshan Town<br>Longitude: 67.1554<br>Latitude: 24.9184]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gulshan Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1554</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9184</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1554,24.9184,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Capt. Karim Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.2233<br>Latitude: 24.8880]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2233</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8880</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2233,24.888,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Coast Guard - Adamjee Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1515<br>Latitude: 24.8057]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1515</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8057</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1515,24.8057,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cowasjee Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9875<br>Latitude: 24.8619]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9875</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8619</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9875,24.8619,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Crescent Steel Campus - III Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: New Karachi Town<br>Longitude: 67.0473<br>Latitude: 24.9932]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>New Karachi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0473</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9932</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0473,24.9932,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DCD Campus-V Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.1835<br>Latitude: 24.8843]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1835</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8843</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1835,24.8843,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Fatima & Sultana Sultan Campus Secondary Morning]]></name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2962<br>Latitude: 24.8858]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2962</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8858</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2962,24.8858,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>FSB Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gadap Town<br>Longitude: 67.1379<br>Latitude: 25.0068]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gadap Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1379</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0068</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1379,25.0068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hamida Amin Kothawala Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gadap Town<br>Longitude: 67.1421<br>Latitude: 25.0038]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gadap Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1421</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0038</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1421,25.0038,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>I.I.L Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.2325<br>Latitude: 24.8359]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2325</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8359</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2325,24.8359,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Idrees Ismail Awan Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9393<br>Latitude: 24.9520]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9393</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9520</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9393,24.952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>INFAQ Foundation Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2255<br>Latitude: 24.8174]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2255</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8174</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2255,24.8174,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Jeddy & Ziauddin Campus Secondary Morning]]></name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9005<br>Latitude: 24.8903]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9005</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8903</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9005,24.8903,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>KFC Pakistan Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gadap Town<br>Longitude: 67.0983<br>Latitude: 24.9917]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gadap Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0983</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9917</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0983,24.9917,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>KFC Pakistan Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gadap Town<br>Longitude: 67.0983<br>Latitude: 24.9917]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gadap Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0983</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9917</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0983,24.9917,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mobilink Campus II Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0103<br>Latitude: 25.0461]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0103</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0461</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0103,25.0461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Novatex Campus II Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2504<br>Latitude: 24.8703]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2504</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8703</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2504,24.8703,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Keamari Sindh Police Campus - I Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9813<br>Latitude: 24.8284]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9813</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8284</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9813,24.8284,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Riaz Tata Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1577<br>Latitude: 24.8264]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1577</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8264</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1577,24.8264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Dr. Suraiya & Rehana Campus Secondary Afternoon]]></name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9588<br>Latitude: 24.9271]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9588</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9271</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9588,24.9271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Dr. Suraiya & Rehana Campus Secondary Morning]]></name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9588<br>Latitude: 24.9271]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9588</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9271</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9588,24.9271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saya Foundation Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Orangi Town<br>Longitude: 66.9865<br>Latitude: 24.9936]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Orangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9865</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9936</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9865,24.9936,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shah Faisal - Sindh Police Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Shah Faisal Town<br>Longitude: 67.1448<br>Latitude: 24.8795]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Shah Faisal Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1448</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8795</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1448,24.8795,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus - IV Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: New Karachi Town<br>Longitude: 67.0899<br>Latitude: 25.0035]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>New Karachi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0899</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0035</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0899,25.0035,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus - XII Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: New Karachi Town<br>Longitude: 67.0501<br>Latitude: 24.9841]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>New Karachi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0501</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9841</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0501,24.9841,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus - XII Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: New Karachi Town<br>Longitude: 67.0501<br>Latitude: 24.9841]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>New Karachi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0501</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9841</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0501,24.9841,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus - V Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gulshan Town<br>Longitude: 67.1556<br>Latitude: 24.9212]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gulshan Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1556</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9212</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1556,24.9212,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus - VI Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2843<br>Latitude: 24.8715]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2843</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8715</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2843,24.8715,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus - VI Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2843<br>Latitude: 24.8715]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2843</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8715</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2843,24.8715,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus XIII Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2710<br>Latitude: 24.8855]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2710</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8855</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.271,24.8855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus XVI Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.0782<br>Latitude: 24.8363]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0782</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8363</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0782,24.8363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus-XIV Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Saddar Town<br>Longitude: 67.0192<br>Latitude: 24.8704]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Saddar Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0192</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8704</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0192,24.8704,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sumar Goth Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9402<br>Latitude: 24.9252]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9402</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9252</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9402,24.9252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sumar Goth Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9402<br>Latitude: 24.9252]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9402</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9252</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9402,24.9252,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Yusuf Khan Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.8940<br>Latitude: 24.8946]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.8940</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8946</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.894,24.8946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zulekha Bai Mukaty Campus-I Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9619<br>Latitude: 24.9654]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9619</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9654</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9619,24.9654,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Zulekha Bai Mukaty Campus-I Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9619<br>Latitude: 24.9654]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9619</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9654</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9619,24.9654,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>UA - MN Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0917<br>Latitude: 25.0317]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0917</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0317</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0917,25.0317,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shirin Sultan Dossa Campus - IV Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: New Karachi Town<br>Longitude: 67.0899<br>Latitude: 25.0035]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>New Karachi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0899</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0035</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0899,25.0035,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hashim Sayeed Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gadap Town<br>Longitude: 67.3923<br>Latitude: 25.0199]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gadap Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.3923</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0199</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.3923,25.0199,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mehr Zafar Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gadap Town<br>Longitude: 67.3923<br>Latitude: 25.0199]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gadap Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.3923</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0199</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.3923,25.0199,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cowasjee Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9875<br>Latitude: 24.8619]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9875</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8619</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9875,24.8619,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saya Foundation Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Orangi Town<br>Longitude: 66.9865<br>Latitude: 24.9936]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Orangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9865</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9936</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9865,24.9936,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al Muhaimin Campus (ext) Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0969<br>Latitude: 25.0371]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0969</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0371</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0969,25.0371,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al-Karam Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.2138<br>Latitude: 24.8372]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2138</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8372</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2138,24.8372,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Riaz Tata Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1577<br>Latitude: 24.8264]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1577</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8264</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1577,24.8264,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mobilink Campus II Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.0103<br>Latitude: 25.0461]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0103</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0461</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0103,25.0461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sultan Mowjee Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.3483<br>Latitude: 24.8461]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.3483</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8461</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.3483,24.8461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nazira Muslim Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.8304<br>Latitude: 24.8847]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.8304</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8847</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.8304,24.8847,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al-Muhaimin Campus-II Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.2087<br>Latitude: 24.8541]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2087</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8541</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2087,24.8541,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DCD Campus-VI Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.1835<br>Latitude: 24.8843]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1835</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8843</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1835,24.8843,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DCD Campus-VI Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.1835<br>Latitude: 24.8843]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1835</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8843</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1835,24.8843,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>DCD Campus-V Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.1835<br>Latitude: 24.8843]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1835</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8843</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1835,24.8843,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Coast Guard - Adamjee Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1515<br>Latitude: 24.8057]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1515</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8057</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1515,24.8057,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Arshad & Zareen Campus Secondary Morning]]></name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.3235<br>Latitude: 24.9333]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.3235</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9333</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.3235,24.9333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shah Faisal - Sindh Police Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Shah Faisal Town<br>Longitude: 67.1448<br>Latitude: 24.8795]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Shah Faisal Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1448</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8795</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1448,24.8795,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abdul Razzak Tabba Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.2340<br>Latitude: 24.8627]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2340</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8627</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.234,24.8627,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sultan Mowjee Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.3483<br>Latitude: 24.8461]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.3483</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8461</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.3483,24.8461,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Azim Sultan Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9301<br>Latitude: 24.9629]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9301</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9629</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9301,24.9629,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sadia Khatoon Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9588<br>Latitude: 24.9271]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9588</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9271</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9588,24.9271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sadia Khatoon Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9588<br>Latitude: 24.9271]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9588</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9271</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9588,24.9271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The KDA Chapter Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.1017<br>Latitude: 25.0547]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1017</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0547</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1017,25.0547,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Manhattan Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: New Karachi Town<br>Longitude: 67.0319<br>Latitude: 24.9793]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>New Karachi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0319</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9793</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0319,24.9793,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al Haaj Hamid Eid Muhammad Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9588<br>Latitude: 24.9271]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9588</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9271</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9588,24.9271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Qamar Mumtaz Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.1085<br>Latitude: 25.0474]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1085</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0474</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1085,25.0474,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Haji Mushtaq Ahmed Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Gadap Town<br>Longitude: 67.0319<br>Latitude: 24.9793]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Gadap Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.0319</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9793</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.0319,24.9793,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hilton Pharma TBD Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1407<br>Latitude: 24.8562]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1407</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8562</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1407,24.8562,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lucknow Society TBD Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1407<br>Latitude: 24.8562]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1407</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8562</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1407,24.8562,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mumtaz and Malik Noorani Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.2843<br>Latitude: 24.8716]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2843</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8716</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2843,24.8716,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Naseem Faruq Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Landhi Town<br>Longitude: 67.1753<br>Latitude: 24.8390]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Landhi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1753</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8390</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1753,24.839,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>NED Class of 84 Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.1017<br>Latitude: 25.0547]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1017</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0547</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1017,25.0547,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Villie & Noshirwan Cowasjee Campus Secondary Morning]]></name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Bin Qasim Town<br>Longitude: 67.6491<br>Latitude: 24.8529]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Bin Qasim Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.6491</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8529</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.6491,24.8529,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Feroza Hasham Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.2098<br>Latitude: 24.8607]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.2098</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8607</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.2098,24.8607,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Amna H. Shah Campus Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1185<br>Latitude: 24.8211]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1185</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8211</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1185,24.8211,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Yusuf Khan Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.8940<br>Latitude: 24.8946]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.8940</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8946</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.894,24.8946,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Abdullah Rakla Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Kiamari Town<br>Longitude: 66.9773<br>Latitude: 24.8604]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Kiamari Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9773</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8604</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9773,24.8604,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>FAS - Korangi Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Korangi Town<br>Longitude: 67.1721<br>Latitude: 24.8100]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Korangi Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1721</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.8100</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1721,24.81,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Niaz Ahmed Campus IV Secondary Morning</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Malir Town<br>Longitude: 67.1085<br>Latitude: 25.0474]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Malir Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>67.1085</value>
+          </Data>
+          <Data name="Latitude">
+            <value>25.0474</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            67.1085,25.0474,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Al Haaj Hamid Eid Muhammad Campus Secondary Afternoon</name>
+        <description><![CDATA[District: Karachi<br>City: Karachi<br>Town: Baldia Town<br>Longitude: 66.9588<br>Latitude: 24.9271]]></description>
+        <styleUrl>#icon-1591-0288D1-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="District">
+            <value>Karachi</value>
+          </Data>
+          <Data name="City">
+            <value>Karachi</value>
+          </Data>
+          <Data name="Town">
+            <value>Baldia Town</value>
+          </Data>
+          <Data name="Longitude">
+            <value>66.9588</value>
+          </Data>
+          <Data name="Latitude">
+            <value>24.9271</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            66.9588,24.9271,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Untitled layer</name>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,83 @@
+kml Badin 1Ae1Z1JX6WGkJnipOZJWwCbFBpHeTUojw 4297703
+kml Badin 1Mnssuqo3bVjrr6m9HYrP829MgN-T_su5 78910
+kml Dadu 1eQ9lerV4O9IB-ecleaAVxu-YNpuTvyvF 3864468
+kml Ghotki 1aMNvl2AGbI0hvaLmYqjKw2SkVH9qw2Yf 3939008
+kml Hyderabad 1NSmHdf0HkJkFHS0HCXgAZE9dRji2ioPM 1843359
+kml Jacobabad 1TlEqaPFiSnWtZEmkOnua2YG9fqrT-Z79 2998130
+kml Jamshoro 1s8JaG9N6m098lMo8mDDBw9kXPjcawI_M 1524168
+kml Kamber at Shahdadkot 1n36gz-xcurMH4vgVvj3qvdMLPutFJJwg 3271207
+kml Karachi Central 1QBSKq1AB-YwazgnZLQXgyuT9tZc_TzUh 1236016
+kml Karachi East 1_cMg679IWPtW9u5z3IuLM3LEGT6VxKbJ 587479
+kml Karachi Korangi 1s8HGvl6mYynjyBP14BanGAI9xJ_gmLDd 878978
+kml Karachi Malir 1lgq61Bqgow62ACo7L3iodS5WH50olo2W 1449823
+kml Karachi South 1NHW75t2YARzGKET8F4mQXuh79mjq7G92 725845
+kml Karachi West 1GnlF-ehBEnm47keOWOkDys_3RjXznIWS 1208047
+kml Kashmore at Kandhkot 15PNBchuv_09Y2pToipnKm66AIZwwDxsT 2867667
+kml Khairpur Mirs 1w59p7QFCoY5uq6AJA9L48U9r-aesKq3U 4181166
+kml Larakana 1l_-85dAgbV1P8qz_uBsJhbdxDkZsLThf 2404569
+kml Matiari 1CXWjsFk7zcvAgGRQQAW13nPDX5M0jYiK 63062
+kml Mirpurkhas 1w8Zi72RbWLlQgPBxDndsN-AN797ICg_n 4195509
+kml Naushero Feroze 19m1DwpGHqZ1xHPrVYsgfosp-zVYHaVdI 3995664
+kml Sanghar 1UPXxGOVxnbn4ak6IF1BFmZbp4ROvOdv3 3973892
+kml Shaheed Benazirabad 1kwPWmllPavGYnPE2WazeGXfEtanXgnP9 4027575
+kml Shikarpur 1SznSgJg28vdJ81DtX9d2gvgYKy6eMQa7 2293959
+kml Sujawal 16QMjrx6-X9R6XadDojbSxWJO_Q_Y8xw9 3146058
+kml Sukkur 1_4dvX6BxwAT4VzjEzGuhYY1izTbPxe_R 2470572
+kml Tando Allahyar 1lWy0a5y4ZOD8mHAt5EVFHBATx7S64Xph 1685239
+kml Tando Muhammad Khan 10MqXIhy2Wslu-_mXl8qWZ5j9SaN5-6Mo 2053211
+kml Tharparkar 1tJwXi40dlUeQBPjNXjvygwB4R3rk6dSZ 3931302
+kml Thatta 15cL-dnm1X5x5jd-gXZzlyKYY3v9lfdo_ 5791769
+kml Umerkot 1DbENAyRAHhcAnAd27gC8A1luPFnqy3NK 4136901
+== punjab_sed_census 56 'ERR <urlopen error [Errno -2] Name or service not known>'
+== kp_asc_2425 865061 '<!DOCTYPE html>\n<html lang="en-US">\n<head>\n\t<meta charset="U'
+  http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-schools-statistical-report-2024-25%2F&amp;description=&amp;media=
+  https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap
+  https://iemis.kpese.gov.pk/ords/emis/r/tp/login
+  https://iemis.kpese.gov.pk/ords/r/emis/hrmis/login
+  https://iemis.kpese.gov.pk/ords/r/emis/human-resource-management-information-system-hrmis/login
+  https://kpese.gov.pk/annual-school-census-2020-21/
+  https://kpese.gov.pk/annual-school-census-2021-22/
+  https://kpese.gov.pk/annual-school-census-2022-23/
+  https://kpese.gov.pk/annual-schools-statistical-report-2024-25/
+  https://kpese.gov.pk/author/ad1-emis/
+  https://kpese.gov.pk/category/annual-school-census/
+  https://kpese.gov.pk/category/initiatives/emis/
+  https://kpese.gov.pk/good-governance-roadmap-ggr/
+  https://kpese.gov.pk/notification-guidelines-instructions-of-summer-camp-in-all-summer-zone-schools-public-private-of-khyber-pakhtunkhwa/
+  https://kpese.gov.pk/private-schools-regulatory-authority-psra/
+  https://kpese.gov.pk/wp-content/uploads/2026/07/Annual-Schools-Statistical-Report-2024-25.pdf
+  https://kpese.gov.pk/wp-json/
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-schools-statistical-report-2024-25%2F
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-schools-statistical-report-2024-25%2F&#038;format=xml
+  https://kpese.gov.pk/wp-json/wp/v2/posts/18312
+  https://kpese.gov.pk/xmlrpc.php?rsd
+  https://twitter.com/share?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-schools-statistical-report-2024-25%2F&amp;text=Annual%20Schools%20Statistical%20Report%202024-25
+  https://www.facebook.com/sharer.php?u=https%3A%2F%2Fkpese.gov.pk%2Fannual-schools-statistical-report-2024-25%2F
+  mailto:%20emisesekp@gmail.com
+  mailto:emisesekp@gmail.com
+== kp_asc_2324 863631 '<!DOCTYPE html>\n<html lang="en-US">\n<head>\n\t<meta charset="U'
+  http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-school-census-2023-24%2F&amp;description=&amp;media=
+  https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap
+  https://iemis.kpese.gov.pk/ords/emis/r/tp/login
+  https://iemis.kpese.gov.pk/ords/r/emis/hrmis/login
+  https://iemis.kpese.gov.pk/ords/r/emis/human-resource-management-information-system-hrmis/login
+  https://kpese.gov.pk/annual-school-census-2021-22/
+  https://kpese.gov.pk/annual-school-census-2022-23/
+  https://kpese.gov.pk/annual-school-census-2023-24/
+  https://kpese.gov.pk/annual-schools-statistical-report-2024-25/
+  https://kpese.gov.pk/author/ad1-emis/
+  https://kpese.gov.pk/category/annual-school-census/
+  https://kpese.gov.pk/category/initiatives/emis/
+  https://kpese.gov.pk/good-governance-roadmap-ggr/
+  https://kpese.gov.pk/notification-guidelines-instructions-of-summer-camp-in-all-summer-zone-schools-public-private-of-khyber-pakhtunkhwa/
+  https://kpese.gov.pk/private-schools-regulatory-authority-psra/
+  https://kpese.gov.pk/wp-content/uploads/2026/05/ASC-2023-24.pdf
+  https://kpese.gov.pk/wp-json/
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-school-census-2023-24%2F
+  https://kpese.gov.pk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-school-census-2023-24%2F&#038;format=xml
+  https://kpese.gov.pk/wp-json/wp/v2/posts/18169
+  https://kpese.gov.pk/xmlrpc.php?rsd
+  https://twitter.com/share?url=https%3A%2F%2Fkpese.gov.pk%2Fannual-school-census-2023-24%2F&amp;text=Annual%20School%20Census%202023-24
+  https://www.facebook.com/sharer.php?u=https%3A%2F%2Fkpese.gov.pk%2Fannual-school-census-2023-24%2F
+  mailto:%20emisesekp@gmail.com
+  mailto:emisesekp@gmail.com
