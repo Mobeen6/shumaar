@@ -76,3 +76,11 @@ ok mnfsr_cap_2024-25.pdf 3874049
 ok mnfsr_cap_2023-24.pdf 6559021
 ok mnfsr_cap_2022-23.pdf 6297838
 fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%202025-26.pdf HTTP Error 403: Forbidden
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_kp_districts.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_punjab_districts.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_sindh_districts.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_balochistan_districts.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_islamabad.xlsx HTTP Error 404: Not Found
+fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%202025-26.pdf HTTP Error 403: Forbidden
