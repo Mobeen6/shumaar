@@ -9,7 +9,7 @@ def fetch(u,dest):
     u=urllib.parse.quote(u,safe=':/?=&%')
     try:
         with urllib.request.urlopen(urllib.request.Request(u,headers=HDR),timeout=120) as r, open(dest,'wb') as f: shutil.copyfileobj(r,f,1<<20)
-        with open(dest,'rb') as f: ok=f.read(4)==b'%PDF'
+        with open(dest,'rb') as f: h=f.read(4); ok=h==b'%PDF' or (dest.endswith('.xlsx') and h[:2]==b'PK')
         if not ok: os.remove(dest)
         return ok
     except Exception as e:
