@@ -11,7 +11,7 @@
 //   GAIA (Gong et al. 2020, Remote Sensing of Environment): year a 30 m pixel first became impervious, 1985-2018.
 //   Esri / Impact Observatory 10 m land cover (Karra et al. 2021), annual 2017-latest: classes 5 = crops, 7 = built area.
 
-var districts = ee.FeatureCollection('projects/shumaar/assets/shumaar_districts_shp');
+var districts = ee.FeatureCollection('projects/shumaar-514920/assets/shumaar_districts_shp');
 
 // ---- built-up layers -------------------------------------------------------
 var gaia = ee.Image('Tsinghua/FROM-GLC/GAIA/v10').select('change_year_index'); // 1 = 2018 ... 34 = 1985
