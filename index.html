@@ -2073,6 +2073,19 @@ form.ask{position:relative}
       <div class="hbars" id="nlSlow"></div>
     </div>
   </div>
+  <div class="two">
+    <div class="panel">
+      <p class="maptitle">Summer dimming: load-shedding seen from space (2013-2026)</p>
+      <p class="note" style="margin:2px 0 8px">Night-time light in May-August compared with the winter before (November-February), %. In 2013-14 the country's lights fell by over a third each summer, when shortfalls ran to thousands of megawatts. The dip has largely gone in Lahore, Islamabad and most of Punjab since 2018, but Karachi still dims by about 15% most summers.</p>
+      <svg id="nlDim" class="chart" role="img" aria-label="Summer dimming of night-time light, 2013-2026"></svg>
+    </div>
+    <div class="panel">
+      <p class="maptitle">Summer dimming by district (2022-2026)</p>
+      <p class="note" style="margin:2px 0 12px">Average of the last five summers against the winters before them, for the 25 brightest districts. Lights in big Punjab cities hold steady; Karachi, Hyderabad and smaller towns on high-loss feeders dim.</p>
+      <div class="hbars" id="nlDimD"></div>
+    </div>
+  </div>
+  <p class="note" id="nlDimN" style="margin:-4px 0 14px">Monthly median of cloud-free nights, after removing background glow measured over the darkest districts. Summer haze and monsoon cloud also dim the image, so part of the dip is atmosphere; Islamabad, which has little load-shedding, is shown as a check.</p>
   <div class="panel">
     <p class="maptitle">On the map</p>
     <div class="chips"><button class="chip" data-mapgo="nl_dens">Light per km², 2026</button><button class="chip" data-mapgo="nl_grow">Growth in light, 2012-26</button><button class="chip" data-mapgo="nl_pc">Light per person</button><button class="chip" data-mapgo="nl_newlit">Newly lit since 2012</button><button class="chip" data-mapgo="rwi">Relative wealth index (Meta)</button></div>
@@ -4346,7 +4359,10 @@ function renderAccess(){
   $("#acNote").textContent=`Median district: ${fmt(med(rows.map(r=>r.m)))}% of people more than 30 minutes by vehicle from a clinic or hospital, and ${fmt(med(rows.map(r=>r.w)))}% more than an hour's walk (Malaria Atlas Project travel times, 2019).`;
   if(AG){ const L=AG.nl, ps=[["Pakistan",L.nat,"--ink",3],["Punjab",L.prov["Punjab"],"--pk1",2],["Sindh",L.prov["Sindh"],"--pk2",2],["Khyber Pakhtunkhwa",L.prov["Khyber Pakhtunkhwa"],"--pk3",2],["Balochistan",L.prov["Balochistan"],"--pk4",2]];
     lineChart("#nlLine",L.years,ps.map(([n,v,c,w])=>({n:n.replace("Khyber Pakhtunkhwa","KP"),v,c,w})),{w:440,h:250,r:118});
-    hbars("#nlFast",L.fast.map(r=>[`${r[0]} (${r[1]})`,r[3]])); hbars("#nlSlow",L.slow.map(r=>[`${r[0]} (${r[1]})`,r[3]]),true); }
+    hbars("#nlFast",L.fast.map(r=>[`${r[0]} (${r[1]})`,r[3]])); hbars("#nlSlow",L.slow.map(r=>[`${r[0]} (${r[1]})`,r[3]]),true);
+    if(L.dim){ const M=L.dim; lineChart("#nlDim",M.years,[["Pakistan","--ink",3],["Karachi","--pk2",2],["Lahore","--pk1",2],["Islamabad","--pk3",2]].map(([n,c,w])=>({n,v:M[n],c,w})),{w:440,h:250,r:118,unit:"%"});
+      hbars("#nlDimD",M.dist.map(r=>[`${r[0]} (${r[1]})`,r[2]]),true);
+      $("#nlDimN").textContent=`Monthly median of cloud-free nights to ${M.last}, after removing background glow measured over the darkest districts. Month by month, national light moves against NEPRA's generation (correlation ${M.corr}, ${M.corrn} months from 2021): output peaks in summer for daytime cooling, while evenings go darker. Summer haze and monsoon cloud also dim the image, so part of the dip is atmosphere; Islamabad, which has little load-shedding, is shown as a check.`; } }
 }
 fetch("agri.json").then(r=>r.json()).then(d=>{AG=d; renderAgri(); renderAccess(); const N=AG.nat;
   IND.push({id:"ag_crops",theme:"Economy",lvl:"National",name:"Crop output, 2024-25",unit:"",g:["Wheat, m t","Rice (milled), m t","Cotton, m bales","Sugarcane, m t","Wheat yield, t/ha"],v:[N.Wheat.p.at(-1)/1000,N.Rice.p.at(-1)/1000,N.Cotton.p.at(-1)/1000,N.Sugarcane.p.at(-1)/1000,N.Wheat.y.at(-1)].map(v=>+v.toFixed(2)),hb:null,
@@ -5616,6 +5632,8 @@ const REG={
  agProd:()=>Object.entries(AG.nat).flatMap(([c,n])=>n.fy.flatMap((f,i)=>n.p[i]==null?[]:[R("Crop production",c+": production",  "Pakistan",f,n.p[i],c==="Cotton"?"'000 bales":"'000 t","Provincial crop reporting"),R("Crop production",c+": area","Pakistan",f,n.a[i],"'000 ha","Provincial crop reporting"),R("Crop production",c+": yield","Pakistan",f,n.y[i],c==="Cotton"?"bales/ha":"t/ha","Provincial crop reporting")])),
  agPeers:()=>Object.entries(AG.peers).flatMap(([c,P])=>P.map(([n,v])=>R("Crop yields vs other countries",c,n,"2024/25",v,c==="Cotton"?"kg lint/ha":"t/ha","USDA FAS World Agricultural Production, March 2026"))),
  agTop:()=>Object.entries(AG.top).flatMap(([c,T])=>T.map(r=>R("Top producing districts",c,r[0],"2024-25",r[2],c==="Cotton"?"'000 bales":"'000 t","Provincial crop reporting","",`${r[1]}; yield ${r[3]}`))),
+ nlDim:()=>["Pakistan","Karachi","Lahore","Islamabad"].flatMap(n=>AG.nl.dim.years.map((y,i)=>R("Summer dimming of night-time light",n,n,y,AG.nl.dim[n][i],"% May-Aug vs preceding Nov-Feb","NASA Black Marble (VIIRS)","","Background-corrected monthly medians"))),
+ nlDimD:()=>AG.nl.dim.dist.map(r=>R("Summer dimming by district","Night light, May-Aug vs preceding Nov-Feb",`${r[0]} (${r[1]})`,"2022-26",r[2],"%","NASA Black Marble (VIIRS)","","")),
  nlLine:()=>[["Pakistan",AG.nl.nat],...Object.entries(AG.nl.prov)].flatMap(([n,v])=>AG.nl.years.map((y,i)=>R("Total night-time light",n,n,y,v[i],"thousand radiance × km²","NASA Black Marble (VIIRS)","","Sum of radiance above 1 nW/cm²/sr; 2026 = 12 months to 2 Nov"))),
  acSch:()=>GEO.features.flatMap(f=>{const V=D.vals[f.id]||{}; return ["a_hmot","a_hm60","a_hwalk","a_wwalk"].filter(c=>V[c]).map(c=>R("Access to health care",D.inds[c].label,f.properties.n,"2026",V[c][0],D.inds[c].unit,D.inds[c].orig));}),
  mgRem:()=>MG.rem.flatMap(r=>["Saudi Arabia","UAE","Other Gulf","UK","USA","EU","Other"].map(n=>R("Remittances by sending country",n,"Pakistan","FY"+r.fy,r[n],"$ bn","SBP"))),
