@@ -23,7 +23,7 @@
 :root{
   --paper:#f3f5f4; --sheet:#ffffff; --ink:#16231f; --muted:#5b6a65; --rule:#d5ddda;
   --accent:#1d6b5a; --accent-soft:#e1efea; --ochre:#b5761c; --ochre-soft:#f6ead6;
-  --bad:#a8402f; --good:#2e7d4f; --nodata:#d6dcda; --hatch:#8b9792;
+  --bad:#a8402f; --good:#2e7d4f; --alr:#c0281b; --alo:#f0961e; --nodata:#d6dcda; --hatch:#8b9792;
   --c1:#f3e6cf; --c2:#e7c08d; --c3:#d4914f; --c4:#b45f2c; --c5:#7c3216;
   --t1:#dcefe8; --t2:#a7d4c4; --t3:#68b19a; --t4:#2f8770; --t5:#145545;
   --dv1:#9c3a22; --dv2:#d99a6c; --dv3:#efe0bf; --dv4:#7fbfab; --dv5:#1b6c58;
@@ -35,7 +35,7 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --paper:#111816; --sheet:#18211e; --ink:#e4ebe8; --muted:#97a69f; --rule:#2c3833;
   --accent:#5fb89f; --accent-soft:#1d332c; --ochre:#e0a650; --ochre-soft:#3a2d17;
-  --bad:#e07a66; --good:#6cc28d; --nodata:#252f2b; --hatch:#5c6a64;
+  --bad:#e07a66; --good:#6cc28d; --alr:#ff5a45; --alo:#ffb347; --nodata:#252f2b; --hatch:#5c6a64;
   --c1:#3a3226; --c2:#6b4a28; --c3:#a5652e; --c4:#d9894a; --c5:#f4bd86;
   --t1:#1d332c; --t2:#25574a; --t3:#2f8770; --t4:#5fb89f; --t5:#a9e0cd;
   --dv1:#e07a66; --dv2:#8f5a45; --dv3:#6b6447; --dv4:#3f8c77; --dv5:#7fd3b9;
@@ -43,7 +43,7 @@
 :root[data-theme="dark"]{
   --paper:#111816; --sheet:#18211e; --ink:#e4ebe8; --muted:#97a69f; --rule:#2c3833;
   --accent:#5fb89f; --accent-soft:#1d332c; --ochre:#e0a650; --ochre-soft:#3a2d17;
-  --bad:#e07a66; --good:#6cc28d; --nodata:#252f2b; --hatch:#5c6a64;
+  --bad:#e07a66; --good:#6cc28d; --alr:#ff5a45; --alo:#ffb347; --nodata:#252f2b; --hatch:#5c6a64;
   --c1:#3a3226; --c2:#6b4a28; --c3:#a5652e; --c4:#d9894a; --c5:#f4bd86;
   --t1:#1d332c; --t2:#25574a; --t3:#2f8770; --t4:#5fb89f; --t5:#a9e0cd;
   --dv1:#e07a66; --dv2:#8f5a45; --dv3:#6b6447; --dv4:#3f8c77; --dv5:#7fd3b9;
@@ -3896,13 +3896,14 @@ function renderEnvX(){
   $("#ndmaNote").textContent=`Cumulative since 26 June 2026, NDMA situation report of ${N.asof}.`;
   const cols=[["deaths_total","Deaths"],["injured_total","Injured"],["houses_damaged_total","Houses damaged"],["livestock_perished","Livestock lost"]];
   $("#ndmaTbl").innerHTML=`<thead><tr><th class="rl"></th>${cols.map(c=>`<th>${c[1]}</th>`).join("")}</tr></thead><tbody>`+rows.map(p=>`<tr><td class="lab"${p==="Pakistan"?' style="font-weight:700"':""}>${p}</td>${cols.map(([k])=>{const v=N.rows[p]&&N.rows[p][k]; return `<td>${v==null?"–":Math.round(v).toLocaleString()}</td>`;}).join("")}</tr>`).join("")+"</tbody>";
-  const sv=d3.select("#gdacs"); sv.selectAll("*").remove(); const W=440,H=150,pd={l:70,r:10,t:10,b:22}; sv.attr("viewBox",`0 0 ${W} ${H}`);
-  const hz=["flood","drought","tropical_cyclone"], lab={flood:"Floods",drought:"Drought",tropical_cyclone:"Cyclones"}; const x=d3.scaleLinear().domain([2000,2026]).range([pd.l,W-pd.r]); const y=d3.scalePoint().domain(hz).range([pd.t+12,H-pd.b-12]);
-  hz.forEach(h=>{ sv.append("line").attr("class","ax").attr("x1",pd.l).attr("x2",W-pd.r).attr("y1",y(h)).attr("y2",y(h)).attr("stroke-opacity",.5); sv.append("text").attr("x",pd.l-6).attr("y",y(h)+4).attr("text-anchor","end").style("fill",css("--ink")).text(lab[h]); });
+  const sv=d3.select("#gdacs"); sv.selectAll("*").remove(); const W=440,H=170,pd={l:70,r:12,t:30,b:22}; sv.attr("viewBox",`0 0 ${W} ${H}`);
+  const hz=["flood","drought","tropical_cyclone"], lab={flood:"Floods",drought:"Drought",tropical_cyclone:"Cyclones"}; const x=d3.scaleLinear().domain([2000,2026]).range([pd.l,W-pd.r]); const y=d3.scalePoint().domain(hz).range([pd.t+12,H-pd.b-14]);
+  [["--alr","Red alert"],["--alo","Orange alert"]].forEach(([c,t],k)=>{ const lx=pd.l+k*92; sv.append("circle").attr("cx",lx+5).attr("cy",10).attr("r",5).attr("fill",css(c)); sv.append("text").attr("x",lx+14).attr("y",14).style("font-size","11px").style("fill",css("--ink")).text(t); });
+  hz.forEach(h=>{ sv.append("line").attr("class","ax").attr("x1",pd.l).attr("x2",W-pd.r).attr("y1",y(h)).attr("y2",y(h)).attr("stroke-opacity",.5); sv.append("text").attr("x",pd.l-8).attr("y",y(h)+4).attr("text-anchor","end").style("fill",css("--ink")).text(lab[h]); });
   [2000,2005,2010,2015,2020,2025].forEach(t=>sv.append("text").attr("x",x(t)).attr("y",H-6).attr("text-anchor","middle").text(t));
-  ENVX.events.forEach(e=>{ const yr=+e[0].slice(0,4)+(+e[0].slice(5,7)-1)/12; sv.append("circle").attr("cx",x(yr)).attr("cy",y(e[2])).attr("r",5).attr("fill",css(/red/i.test(e[4])?"--bad":"--ochre")).attr("fill-opacity",.8).append("title").text(`${e[3]}, ${e[0]}: ${e[4]} alert`); });
-  sv.append("circle").attr("cx",W-120).attr("cy",H-30).attr("r",4).attr("fill",css("--bad")); sv.append("text").attr("x",W-112).attr("y",H-26).style("font-size","10px").text("red");
-  sv.append("circle").attr("cx",W-75).attr("cy",H-30).attr("r",4).attr("fill",css("--ochre")); sv.append("text").attr("x",W-67).attr("y",H-26).style("font-size","10px").text("orange");
+  hz.forEach(h=>{ const ev=ENVX.events.filter(e=>e[2]===h).map(e=>({e,yr:+e[0].slice(0,4)+(+e[0].slice(5,7)-1)/12})).sort((a,b)=>a.yr-b.yr);
+    let last=-1e9, k=0; ev.forEach(d=>{ const cx=x(d.yr); k=(cx-last<9)?k+1:0; last=(k?last:cx); const dy=k? (k%2?-1:1)*Math.ceil(k/2)*9 : 0;
+      sv.append("circle").attr("cx",cx).attr("cy",y(h)+dy).attr("r",4.5).attr("fill",css(/red/i.test(d.e[4])?"--alr":"--alo")).attr("stroke",css("--sheet")).attr("stroke-width",1.2).append("title").text(`${d.e[3]}, ${d.e[0]}: ${d.e[4]} alert`); }); });
 }
 /* ---------- debt ---------- */
 let DBT=null, DBALL=false;
