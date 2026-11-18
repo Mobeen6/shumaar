@@ -402,6 +402,8 @@ dl.kv{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;margin:10px 0 
 dl.kv dt,dl.kv dd{padding:9px 0;border-top:1px solid var(--rule)} dl.kv dt:first-of-type,dl.kv dt:first-of-type + dd{border-top:0;padding-top:2px}
 dl.kv dt{color:var(--muted);line-height:1.4} dl.kv dd{margin:0;padding-left:18px;text-align:right;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:flex-end;gap:1px}
 dl.kv dd b{font-weight:600;font-size:15px;color:var(--ink)} dl.kv dd small{font-size:11.5px;color:var(--muted);line-height:1.3}
+dl.kv.kvtext{grid-template-columns:1fr} dl.kv.kvtext dt{padding:10px 0 2px;font-size:12px;letter-spacing:.04em;text-transform:uppercase} dl.kv.kvtext dt:first-of-type{padding-top:2px}
+dl.kv.kvtext dd{border-top:0;padding:0 0 10px;text-align:left;align-items:flex-start} dl.kv.kvtext dd b{font-weight:500;font-size:14px;line-height:1.45} dl.kv.kvtext dd small{font-size:12.5px}
 .subh{font-family:var(--f-display);font-size:20px;margin:12px 0 0}
 
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -1402,7 +1404,7 @@ form.ask{position:relative}
       <p class="note" style="margin:2px 0 10px">Flood risk index, 0-10. Hazard from 2022 satellite flood maps; vulnerability and coping from PSLM 2019-20, before the floods.</p>
       <div class="hbars" id="crTop"></div></div>
     <div class="panel"><p class="maptitle">How the index is built</p>
-      <dl class="kv" id="crHow"></dl>
+      <dl class="kv kvtext" id="crHow"></dl>
       <p class="note" style="margin-top:10px">Each indicator is scaled 0-10 between the 2nd and 98th percentile of districts. The index covers 128 districts with PSLM data; Azad Kashmir, Gilgit-Baltistan and the former tribal districts lack them.</p></div>
   </div>
   <div class="panel"><p class="maptitle">Open on the district map</p>
@@ -3607,7 +3609,7 @@ function renderClimRisk(){
   hbars("#crTop",top.map(r=>[`${r.n} (${r.p==="Balochistan"?"Bal.":r.p==="Khyber Pakhtunkhwa"?"KP":r.p})`,r.v]));
   const P=D.prov.fl_pop, N=D.prov.fl_n;
   tiles("#crTiles",[["Lived in flooded areas, 2022",(N.Pakistan/1e6).toFixed(1)+" million","UNOSAT satellite maps, peak Aug-Nov","bad"],["Share in Sindh",fmt(P.Sindh)+"%","of Sindh's people; Balochistan "+fmt(P.Balochistan)+"%","bad"],["Districts with half their people in flood water",String(GEO.features.filter(f=>{const v=D.vals[f.id]&&D.vals[f.id].fl_pop;return v&&v[0]>=50;}).length),"all in Sindh and Balochistan",""],["Highest risk",top[0]?top[0].n:"–",top[0]?"index "+fmt(top[0].v)+" of 10":"",""]]);
-  kvs("#crHow",[["Hazard and exposure","Share of people in 2022 flood water (square root)"],["Vulnerability","Asset index (inverted), food insecurity, no toilet"],["Lack of coping capacity","Child immunisation, skilled birth attendance, household internet (all inverted)"],["Risk","(hazard × vulnerability × coping)^⅓"]]);
+  kvs("#crHow",[["Hazard and exposure","<b>Share of people living in 2022 flood water</b><small>square-root scaled</small>"],["Vulnerability","<b>Few household assets, food insecurity, homes without a toilet</b>"],["Lack of coping capacity","<b>Low child immunisation, few births with a skilled attendant, little household internet</b>"],["Risk","<b>Geometric mean of the three: ∛(hazard × vulnerability × coping)</b>"]]);
 }
 
 /* ---------- provinces heat maps ---------- */
