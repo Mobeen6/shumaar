@@ -41,6 +41,9 @@ for y in ['2024-25','2025-26']:
     U[f'crs_punjab_final_rabi_{y}.pdf']=[f'https://agripunjab.punjab.gov.pk/system/files/Final Rabi Estimates {y}.pdf']
 for y in ['2023-24','2024-25']:
     U[f'crs_punjab_final_kharif_{y}.pdf']=[f'https://agripunjab.punjab.gov.pk/system/files/Final Kharif Estimates {y}.pdf']
+# PBS PSLM 2019-20 district report (for validating inherited district layers)
+U['pslm_2019_20_district.pdf']=['https://www.pbs.gov.pk/sites/default/files/pslm/publications/PSLM_2019_20_District_Level.pdf','https://www.pbs.gov.pk/sites/default/files/pslm/publications/pslm_district_2019-20/PSLM_2019_20_District_Level.pdf']
+U['pslm_2019_20_district_keyfindings.pdf']=['https://www.pbs.gov.pk/sites/default/files/pslm/publications/pslm_district_2019-20/Key_Finding_Report_of_PSLM_District_Level_Survey_2019-20.pdf','https://www.pbs.gov.pk/wp-content/uploads/2020/07/Key_Finding_Report_of_PSLM_District_Level_Survey_2019-20.pdf']
 only=sys.argv[1:]  # optional: fetch only these names
 for fn,us in U.items():
     if only and fn not in only: continue
