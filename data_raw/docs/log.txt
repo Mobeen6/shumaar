@@ -95,3 +95,10 @@ fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%2020
 fail https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
 fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
 fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%202025-26.pdf HTTP Error 403: Forbidden
+fail https://www.pbs.gov.pk/wp-content/uploads/2020/07/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_26_balochistan_district.xlsx HTTP Error 404: Not Found
+fail https://agripunjab.punjab.gov.pk/system/files/Final%20Rabi%20Estimates%202025-26.pdf HTTP Error 403: Forbidden
+fail https://www.pbs.gov.pk/sites/default/files/pslm/publications/PSLM_2019_20_District_Level.pdf HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/pslm/publications/pslm_district_2019-20/PSLM_2019_20_District_Level.pdf HTTP Error 404: Not Found
+fail https://www.pbs.gov.pk/sites/default/files/pslm/publications/pslm_district_2019-20/Key_Finding_Report_of_PSLM_District_Level_Survey_2019-20.pdf HTTP Error 404: Not Found
+ok pslm_2019_20_district_keyfindings.pdf 10500225
