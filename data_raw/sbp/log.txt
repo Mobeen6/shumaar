@@ -1,12 +1,12 @@
-fail Homeremit_Arch.xlsx The read operation timed out
-fail BPM6_Ach_M.xlsx HTTP Error 525: <none>
-fail M3-Arch.xlsx HTTP Error 522: <none>
-fail BroadMoney_M2_Arch.xls HTTP Error 520: <none>
+ok Homeremit_Arch.xlsx 213473
+ok BPM6_Ach_M.xlsx 76025
+ok M3-Arch.xlsx 3087636
+ok BroadMoney_M2_Arch.xls 1068544
 ok Forex_Arch.xlsx 83829
-fail ORA_Arch.xlsx HTTP Error 522: <none>
-fail BFER_Daily_Arch.xlsx HTTP Error 522: <none>
+ok ORA_Arch.xlsx 13749
+ok BFER_Daily_Arch.xlsx 775238
 ok Lendingdepositrates_Arch.xls 506368
 ok IR-Corridor-Hist.xls 220672
-fail ExportsImports-Goods-Arch.xlsx The read operation timed out
+ok ExportsImports-Goods-Arch.xlsx 173386
 ok QGDP.xlsx 58122
-fail GDP_table.xlsx The read operation timed out
+ok GDP_table.xlsx 29395
