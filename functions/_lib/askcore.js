@@ -62,7 +62,7 @@ function findDistrict(B,name){ const q=norm(name).replace(/\b(district|city|tehs
 function rankIn(B,code,d){ const L=B.layers[code]; const peers=B.dist.filter(x=>x.p===d.p&&x.v[code]&&(L.noN||x.v[code][1]>=25));
   const s=[...peers].sort((a,b)=>L.hb?a.v[code][0]-b.v[code][0]:b.v[code][0]-a.v[code][0]); const r=s.indexOf(d)+1; return r?`${r} of ${s.length} in ${d.p}${L.hb==null?" (ordered high to low)":L.hb?" (1 = lowest = best)":" (1 = highest = best)"}`:undefined; }
 function districtRow(B,code,d){ const L=B.layers[code], x=d.v[code]; if(!x) return null;
-  return {layer:code,label:L.label,value:x[0],unit:L.unit,sample:L.noN?undefined:x[1],reliability:L.noN?undefined:x[1]<25?"too few observations":x[1]<100?"small sample, indicative":"ok",
+  return {layer:code,label:L.label,value:x[0],unit:L.unit,sample:L.noN?undefined:(x[4]??x[1]),margin_of_error:x[3]!=null?x[3]:undefined,reliability:L.noN?undefined:x[1]<25?"too uncertain":x[1]<100?"indicative":"ok",
     province_value:(B.prov[code]||{})[d.p],pakistan_value:(B.prov[code]||{}).Pakistan,rank:rankIn(B,code,d),source:L.src}; }
 
 /* ---- tools ---- */
@@ -79,7 +79,7 @@ function tools(B){ return [
     const d=f.d; const codes=Array.isArray(layers)&&layers.length?layers.map(String):Object.keys(d.v);
     const rows=codes.map(c=>B.layers[c]?(Array.isArray(layers)&&layers.length?districtRow(B,c,d):(d.v[c]?[c,B.layers[c].label,d.v[c][0],B.layers[c].unit]:null)):null).filter(Boolean);
     return {district:d.n,province:d.p,division:d.dv||undefined,note:f.note,values:rows}; }},
- {name:"rank_districts",description:"Rank districts on one layer: top or bottom N, optionally within one province (Punjab, Sindh, KP, Balochistan, ICT). Skips estimates with fewer than 25 observations.",
+ {name:"rank_districts",description:"Rank districts on one layer: top or bottom N, optionally within one province (Punjab, Sindh, KP, Balochistan, ICT). Skips estimates that are too uncertain (fewer than 25 observations, or a margin of error over 15 points).",
   inputSchema:{type:"object",properties:{layer:{type:"string"},province:{type:"string"},n:{type:"number"},order:{type:"string",enum:["highest","lowest"]}},required:["layer"]},
   run:({layer,province,n,order})=>{ const L=B.layers[String(layer)]; if(!L) throw new Error("Unknown layer "+layer);
     const pv=province?String(province).replace(/khyber.*|kpk/i,"KP").replace(/islamabad/i,"ICT"):null;

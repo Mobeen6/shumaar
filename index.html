@@ -402,6 +402,9 @@ dl.kv{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;margin:10px 0 
 dl.kv dt,dl.kv dd{padding:9px 0;border-top:1px solid var(--rule)} dl.kv dt:first-of-type,dl.kv dt:first-of-type + dd{border-top:0;padding-top:2px}
 dl.kv dt{color:var(--muted);line-height:1.4} dl.kv dd{margin:0;padding-left:18px;text-align:right;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:flex-end;gap:1px}
 dl.kv dd b{font-weight:600;font-size:15px;color:var(--ink)} dl.kv dd small{font-size:11.5px;color:var(--muted);line-height:1.3}
+.mapprov{font-size:12.5px;line-height:1.5;color:var(--ink2,var(--ink));margin:8px 0 0;max-width:80ch}
+.tier{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.03em;padding:1px 8px;border-radius:999px;margin-right:4px;border:1px solid currentColor}
+.tier.official{color:var(--good)} .tier.computed{color:var(--accent)} .tier.model{color:var(--muted)}
 dl.kv.kvtext{grid-template-columns:1fr} dl.kv.kvtext dt{padding:10px 0 2px;font-size:12px;letter-spacing:.04em;text-transform:uppercase} dl.kv.kvtext dt:first-of-type{padding-top:2px}
 dl.kv.kvtext dd{border-top:0;padding:0 0 10px;text-align:left;align-items:flex-start} dl.kv.kvtext dd b{font-weight:500;font-size:14px;line-height:1.45} dl.kv.kvtext dd small{font-size:12.5px}
 .subh{font-family:var(--f-display);font-size:20px;margin:12px 0 0}
@@ -1985,6 +1988,7 @@ form.ask{position:relative}
       <div class="pmctl" id="mTl" hidden><button type="button" class="more" id="mTlPlay" aria-label="Play the map over time">▶ Play</button><span class="yr" id="mTlYr"></span><div class="seg" role="group" aria-label="Survey year" id="mTlSeg"></div><span class="note" id="mTlNote">Same colour scale for every year</span></div>
       <svg id="map" role="img" aria-label="Choropleth map of Pakistan districts"></svg>
       <div class="legend" id="legend"></div>
+      <p class="mapprov" id="mapProv"></p>
     </div>
     <div class="panel prof" id="profile" aria-live="polite"></div>
   </div>
@@ -2039,7 +2043,7 @@ form.ask{position:relative}
     <div class="chips"><button class="chip" data-mapgo="a_hmot">More than 30 minutes from a clinic by vehicle</button><button class="chip" data-mapgo="a_hm60">More than an hour, even by vehicle</button><button class="chip" data-mapgo="a_hwalk">More than an hour's walk to a clinic</button><button class="chip" data-mapgo="a_wwalk">Women 15-49 more than an hour's walk</button></div>
     <p class="note" style="margin-top:8px" id="acNote"></p>
   </div>
-  <p class="note">PSLM 2019-20 layers are district-representative. HIES and LFS 2024-25 layers cover rural areas only. Hatching marks small samples.</p>
+  <p class="note">Each layer is labelled: official figure, estimate from official microdata, or model/satellite estimate. For survey percentages, hatching marks estimates with an approximate margin of error of ±7.5-15 points; above ±15 they are greyed out and left out of rankings. HIES and LFS 2024-25 layers cover rural areas only.</p>
 </section>
 <section class="view" data-view="satellite" hidden>
   <div class="intro narrow"><div class="eyebrow">Satellites and maps</div><h2>Pakistan from space</h2>
@@ -2870,9 +2874,22 @@ function dstat(fid,code){
   const uniq=[]; const seen=new Set(); for(const o of peers){ const k=o.v[0]+"|"+o.v[1]; if(!seen.has(k)){seen.add(k);uniq.push(o);} }
   uniq.sort((a,b)=>ind.hb?a.v[0]-b.v[0]:b.v[0]-a.v[0]);
   const r=uniq.findIndex(o=>o.v[0]===v[0]&&o.v[1]===v[1])+1;
-  return {val:v[0],n:v[1],exp:v[2],rank:r,of:uniq.length,prov,pv:(D.prov[code]||{})[prov],nat:(D.prov[code]||{})["Pakistan"]};
+  return {val:v[0],n:v[1],rn:realN(v),moe:v[3],exp:v[2],rank:r,of:uniq.length,prov,pv:(D.prov[code]||{})[prov],nat:(D.prov[code]||{})["Pakistan"]};
 }
-function relLabel(n){ return n<25?"too few observations":n<100?"indicative, small sample":"district estimate"; }
+/* Reliability. For survey percentages, an approximate 95% margin of error from the sample size, assuming a design
+   effect of 2.5 (typical for clustered household surveys) and an Agresti-Coull adjusted share. v[1] becomes the
+   "effective" sample used by every threshold on the site (<25 = not shown, <100 = indicative); the real sample
+   is kept in v[4] and the margin in v[3]. */
+const TIER={official:["Official figure","Published by the agency; Shumaar only divides by population or area."],
+ computed:["From official microdata","Estimated from the agency's survey microdata or counts with survey weights."],
+ model:["Model or satellite estimate","Not an official statistic."]};
+const DEFF=2.5, MOE_IND=7.5, MOE_MAX=15;
+function prepRel(){ for(const [c,ind] of Object.entries(D.inds)){ const pct=/^%/.test(ind.unit||"");
+  for(const V of Object.values(D.vals)){ const v=V[c]; if(!v||ind.noN||v[1]>=9999||v[1]<=0) continue; v[4]=v[1];
+    if(pct){ const n=v[1], p=(v[0]/100*n+2)/(n+4); v[3]=196*Math.sqrt(DEFF*p*(1-p)/n);
+      if(v[3]>MOE_MAX) v[1]=Math.min(n,24); else if(v[3]>MOE_IND) v[1]=Math.min(n,99); } } } }
+const realN=v=>v[4]??v[1];
+function relLabel(n,moe){ const m=moe!=null?`, margin of error about ±${fmt(moe)} points`:""; return n<25?(moe!=null?`too uncertain to show${m}`:"too few observations"):n<100?`indicative${m}`:`district estimate${m}`; }
 function districtAnswer(dist,code){ CUR=null;
   const fid=dist.id; const f=GEO.features[fid]; const nm=f.properties.n;
   if(!code){ code=["imm","oosc","lit"].find(c=>D.vals[fid]&&D.vals[fid][c])||"oosc"; }
@@ -2883,7 +2900,7 @@ function districtAnswer(dist,code){ CUR=null;
   a.innerHTML=`<div><div class="eyebrow">District · ${esc(f.properties.p)} · ${esc(ind.src)}${ind.rural?" (rural)":""}${ind.div?` · ${esc(f.properties.dv)} division estimate`:""}</div>
     <h2>${esc(ind.label)} in ${esc(nm)}: <b>${fmtU(s.val,ind)}</b>${s.rank?` <span class="note">· ${s.rank} of ${s.of} in ${esc(PROVKEY[s.prov]||s.prov)}</span>`:""}</h2></div>
     ${bars([nm,PROVKEY[s.prov]||s.prov,"Pakistan"],[s.val,s.pv??null,s.nat??null],0)}
-    <div class="meaning"><section class="mc"><p class="mc-h">${MC_ICO.mean}How it compares</p><p>${ex||"No expected value is modelled for this indicator."}</p><p class="note">${ind.noN?esc(ind.orig||ind.src)+".":`Sample: ${s.n.toLocaleString()} observations, ${relLabel(s.n)}.`}</p></section></div>
+    <div class="meaning"><section class="mc"><p class="mc-h">${MC_ICO.mean}How it compares</p><p>${ex||"No expected value is modelled for this indicator."}</p><p class="note">${ind.noN?esc(ind.orig||ind.src)+".":`Sample: ${s.rn.toLocaleString()} observations, ${relLabel(s.n,s.moe)}.`}</p></section></div>
     <button class="linkbtn" data-map="${code}" data-sel="${fid}">Open ${esc(nm)} on the map →</button>`;
   wireAnswer(null);
 }
@@ -3080,7 +3097,7 @@ function makeBundle(src){ try{ applyKWX(); }catch(e){}
     prev:i.prev?{when:i.prev.w,values:g.map((n,k)=>[n,r2(i.prev.v[k])]).filter(x=>x[1]!=null)}:null,
     hb:i.hb==null?null:!!i.hb,src:strip(i.src),def:strip(i.def),lvl:strip(i.lvl),cav:strip(i.cav),map:i.map||null,kw:(i.kw||[]).slice(0,14)}; });
   const layers={}; for(const [c,i] of Object.entries(D.inds)) layers[c]={label:i.label,theme:i.theme||"",unit:i.unit||"",src:strip(i.orig||i.src),hb:i.hb==null?null:!!i.hb,rural:!!i.rural,noN:!!i.noN};
-  const dist=GEO.features.map(f=>{ const v=D.vals[f.id]||{}; const o={}; for(const c in v){ const x=v[c]; if(x&&x[0]!=null) o[c]=[r2(x[0]),x[1]]; } return {n:f.properties.n,p:PROVKEY[f.properties.p]||f.properties.p,dv:f.properties.dv||"",v:o}; });
+  const dist=GEO.features.map(f=>{ const v=D.vals[f.id]||{}; const o={}; for(const c in v){ const x=v[c]; if(x&&x[0]!=null) o[c]=x[3]!=null?[r2(x[0]),x[1],null,Math.round(x[3]*10)/10,x[4]]:[r2(x[0]),x[1]]; } return {n:f.properties.n,p:PROVKEY[f.properties.p]||f.properties.p,dv:f.properties.dv||"",v:o}; });
   const prov={}; for(const c in D.prov){ prov[c]={}; for(const k in D.prov[c]) prov[c][PROVKEY[k]||k]=r2(D.prov[c][k]); }
   const tables={};
   for(const k of Object.keys(REG)){ let rows; try{ rows=REG[k](); }catch(e){ continue; } if(!rows||!rows.length) continue;
@@ -3122,7 +3139,7 @@ function findDistrict(B,name){ const q=norm(name).replace(/\b(district|city|tehs
 function rankIn(B,code,d){ const L=B.layers[code]; const peers=B.dist.filter(x=>x.p===d.p&&x.v[code]&&(L.noN||x.v[code][1]>=25));
   const s=[...peers].sort((a,b)=>L.hb?a.v[code][0]-b.v[code][0]:b.v[code][0]-a.v[code][0]); const r=s.indexOf(d)+1; return r?`${r} of ${s.length} in ${d.p}${L.hb==null?" (ordered high to low)":L.hb?" (1 = lowest = best)":" (1 = highest = best)"}`:undefined; }
 function districtRow(B,code,d){ const L=B.layers[code], x=d.v[code]; if(!x) return null;
-  return {layer:code,label:L.label,value:x[0],unit:L.unit,sample:L.noN?undefined:x[1],reliability:L.noN?undefined:x[1]<25?"too few observations":x[1]<100?"small sample, indicative":"ok",
+  return {layer:code,label:L.label,value:x[0],unit:L.unit,sample:L.noN?undefined:(x[4]??x[1]),margin_of_error:x[3]!=null?Math.round(x[3]*10)/10:undefined,reliability:L.noN?undefined:x[1]<25?"too uncertain":x[1]<100?"indicative":"ok",
     province_value:(B.prov[code]||{})[d.p],pakistan_value:(B.prov[code]||{}).Pakistan,rank:rankIn(B,code,d),source:L.src}; }
 
 /* ---- tools ---- */
@@ -3139,7 +3156,7 @@ function tools(B){ return [
     const d=f.d; const codes=Array.isArray(layers)&&layers.length?layers.map(String):Object.keys(d.v);
     const rows=codes.map(c=>B.layers[c]?(Array.isArray(layers)&&layers.length?districtRow(B,c,d):(d.v[c]?[c,B.layers[c].label,d.v[c][0],B.layers[c].unit]:null)):null).filter(Boolean);
     return {district:d.n,province:d.p,division:d.dv||undefined,note:f.note,values:rows}; }},
- {name:"rank_districts",description:"Rank districts on one layer: top or bottom N, optionally within one province (Punjab, Sindh, KP, Balochistan, ICT). Skips estimates with fewer than 25 observations.",
+ {name:"rank_districts",description:"Rank districts on one layer: top or bottom N, optionally within one province (Punjab, Sindh, KP, Balochistan, ICT). Skips estimates that are too uncertain (fewer than 25 observations, or a margin of error over 15 points).",
   inputSchema:{type:"object",properties:{layer:{type:"string"},province:{type:"string"},n:{type:"number"},order:{type:"string",enum:["highest","lowest"]}},required:["layer"]},
   run:({layer,province,n,order})=>{ const L=B.layers[String(layer)]; if(!L) throw new Error("Unknown layer "+layer);
     const pv=province?String(province).replace(/khyber.*|kpk/i,"KP").replace(/islamabad/i,"ICT"):null;
@@ -3317,14 +3334,15 @@ function renderMap(){
   $("#mapTitle").textContent=(M.exp?"Versus expected: ":"")+ind.label;
   $("#mapSub").textContent=`${ind.src}${ind.note15?" ("+ind.note15+")":""}${ind.rural?", rural parts of districts":""}${ind.div?", one value per division, shaded across its districts":""} · ${M.exp?`expected value from household asset index, R² ${D.lens[M.code].r2}`:(ind.hb===false?"stronger colour = lower = worse":ind.hb?"stronger colour = higher = worse":"stronger colour = higher (neither good nor bad)")}`;
   $("#legend").innerHTML=cl.legend.map(([t,c])=>`<span class="sw"><i style="background:${c}"></i>${t}</span>`).join("")+
-    `<span class="sw"><i style="background:${nod};border:1px solid var(--rule)"></i>No estimate</span><span class="sw"><i style="background:repeating-linear-gradient(45deg,var(--hatch) 0 1px,transparent 1px 4px)"></i>Small sample</span>`;
+    `<span class="sw"><i style="background:${nod};border:1px solid var(--rule)"></i>No estimate</span>${ind.noN?"":`<span class="sw"><i style="background:repeating-linear-gradient(45deg,var(--hatch) 0 1px,transparent 1px 4px)"></i>${/^%/.test(ind.unit||"")&&!ind.noN?"Indicative (margin ±7.5-15 pts)":"Small sample"}</span>`}${ind.noN?"":`<span class="sw"><i style="background:repeating-linear-gradient(45deg,var(--hatch) 0 1px,${nod} 1px 3px)"></i>Too uncertain to show</span>`}`;
+  { const T=TIER[ind.tier]; $("#mapProv").innerHTML=T?`<span class="tier ${ind.tier}">${T[0]}</span> ${esc(ind.check||"")} <span class="note">${T[1]}</span>`:""; }
   $("#vExp").disabled=!D.lens[M.code]; $("#vExp").title=D.lens[M.code]?"":"Available for PSLM education and health indicators";
   $("#vVal").setAttribute("aria-pressed",!M.exp); $("#vExp").setAttribute("aria-pressed",M.exp);
   mTlUpdate(); renderScatter(); renderRanks(); renderProfile();
 }
 const tip=$("#tip");
 function tipOn(e,d){ const v=D.vals[d.id]&&D.vals[d.id][M.code]; const ind=D.inds[M.code];
-  let t=`<b>${esc(d.properties.n)}</b>${ind.div&&d.properties.dv?` <i>(${esc(d.properties.dv)} division)</i>`:""}<br>`; if(!v) t+="No estimate"; else { t+=ind.noN?`${fmtU(v[0],ind)} · ${esc(ind.src)}`:`${fmtU(v[0],ind)} · n=${v[1].toLocaleString()}`; if(v[2]!=null&&v[1]>=25) t+=`<br>expected ${fmt(v[2])}`; if(v[1]<100) t+=`<br><i>${relLabel(v[1])}</i>`; }
+  let t=`<b>${esc(d.properties.n)}</b>${ind.div&&d.properties.dv?` <i>(${esc(d.properties.dv)} division)</i>`:""}<br>`; if(!v) t+="No estimate"; else { t+=ind.noN?`${fmtU(v[0],ind)} · ${esc(ind.src)}`:`${fmtU(v[0],ind)}${v[3]!=null?` ±${fmt(v[3])}`:""} · n=${realN(v).toLocaleString()}${v[1]<25?" · too uncertain to map":v[1]<100?" · indicative":""}`; if(v[2]!=null&&v[1]>=25) t+=`<br>expected ${fmt(v[2])}`; if(v[1]<100) t+=`<br><i>${relLabel(v[1])}</i>`; }
   tip.innerHTML=t; tip.hidden=false; const x=Math.min(e.clientX+14,innerWidth-250); tip.style.left=x+"px"; tip.style.top=(e.clientY+14)+"px"; }
 function tipOff(){ tip.hidden=true; }
 function selectDistrict(id){ M.sel=id; renderMap(); distHash(); }
@@ -3340,9 +3358,9 @@ function renderProfile(){
   else {
     let pill="";
     if(s.exp!=null&&s.n>=25){ const r=s.val-s.exp; const sd=D.lens[M.code].sd; const good=ind.hb?r<0:r>0; const z=Math.abs(r)/sd; pill=z<0.5?`<span class="pill flat">As expected</span>`:`<span class="pill ${good?"up":"down"}">${good?"Better":"Worse"} than expected by ${fmt(Math.abs(r))}</span>`; }
-    if(s.n<100) pill+=` <span class="pill warn">${relLabel(s.n)}</span>`;
+    if(s.n<100) pill+=` <span class="pill warn">${s.n<25?"too uncertain":"indicative"}${s.moe!=null?` (±${fmt(s.moe)} pts)`:""}</span>`;
     head=`<p class="h5" style="margin-top:10px">${esc(ind.label)}</p><div class="big">${fmtU(s.val,ind)}</div><div>${pill}</div>
-      <div class="cmp"><span>${esc(PROVKEY[s.prov]||s.prov)}</span><span>${s.pv!=null?fmtU(s.pv,ind):"–"}</span><span>Pakistan</span><span>${s.nat!=null?fmtU(s.nat,ind):"–"}</span>${s.exp!=null&&s.n>=25?`<span>Expected</span><span>${fmtU(s.exp,ind)}</span>`:""}<span>Rank in province</span><span>${s.rank?`${s.rank} of ${s.of}`:"–"}</span>${ind.noN?`<span>Source</span><span>${esc(ind.src)}</span>`:`<span>Observations</span><span>${s.n.toLocaleString()}</span>`}</div>`;
+      <div class="cmp"><span>${esc(PROVKEY[s.prov]||s.prov)}</span><span>${s.pv!=null?fmtU(s.pv,ind):"–"}</span><span>Pakistan</span><span>${s.nat!=null?fmtU(s.nat,ind):"–"}</span>${s.exp!=null&&s.n>=25?`<span>Expected</span><span>${fmtU(s.exp,ind)}</span>`:""}<span>Rank in province</span><span>${s.rank?`${s.rank} of ${s.of}`:"–"}</span>${ind.noN?`<span>Source</span><span>${esc(ind.src)}</span>`:`<span>Observations</span><span>${s.rn.toLocaleString()}</span>${s.moe!=null?`<span>Margin of error</span><span>±${fmt(s.moe)} points (approx., 95%)</span>`:""}`}</div>`;
   }
   const rows=Object.keys(D.inds).filter(c=>c!=="wealth"&&!MTL_OLD.has(c)&&D.vals[M.sel]&&D.vals[M.sel][c]).map(c=>{const i=D.inds[c];const st=dstat(M.sel,c);
     const ex=st.exp!=null&&st.n>=25?(()=>{const r=st.val-st.exp;const good=i.hb?r<0:r>0;return Math.abs(r)/D.lens[c].sd<0.5?"≈":good?"▲":"▼";})():"";
@@ -5626,7 +5644,7 @@ function peerInds(){
 
 /* ---------- load district data ---------- */
 Promise.all([fetch("districts.geojson").then(r=>r.json()),fetch("districts.json").then(r=>r.json())]).then(([g,d])=>{
-  GEO=g; D=d; try{ micsInds(); }catch(e){ console.error(e); } try{ feInds(); }catch(e){ console.error(e); } try{ fwInds(); }catch(e){ console.error(e); } try{ spInds(); }catch(e){ console.error(e); } setTimeout(()=>{ try{ renderGeo(); }catch(e){ console.error(e); } try{ renderMICS(); }catch(e){ console.error(e); } try{ renderFertD(); }catch(e){ console.error(e); } try{ renderFertW(); }catch(e){ console.error(e); } try{ renderSon(); }catch(e){ console.error(e); } try{ renderGuide(); }catch(e){ console.error(e); } },0);
+  GEO=g; D=d; try{ prepRel(); }catch(e){ console.error(e); } try{ micsInds(); }catch(e){ console.error(e); } try{ feInds(); }catch(e){ console.error(e); } try{ fwInds(); }catch(e){ console.error(e); } try{ spInds(); }catch(e){ console.error(e); } setTimeout(()=>{ try{ renderGeo(); }catch(e){ console.error(e); } try{ renderMICS(); }catch(e){ console.error(e); } try{ renderFertD(); }catch(e){ console.error(e); } try{ renderFertW(); }catch(e){ console.error(e); } try{ renderSon(); }catch(e){ console.error(e); } try{ renderGuide(); }catch(e){ console.error(e); } },0);
   const keyset=new Map(); ["n","ps","hs"].forEach(pp=>GEO.features.forEach(f=>{ const n=f.properties[pp]; if(!n) return; const k=n.toLowerCase(); if(!keyset.has(k)) keyset.set(k,{key:k,id:f.id}); }));
   NAMES=[...keyset.values()];
   buildMInd("All");
