@@ -207,3 +207,8 @@
 2025-10-02 page HTTP Error 404: Not Found
 2025-09-25 page HTTP Error 404: Not Found
 
+2026-11-19 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-19.11.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_19.11.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_19.11.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_19.11.2026.pdf
+  got data_raw/spi/2026-11-19__3.-SPI-Report-19.11.2026.xlsx
+  got data_raw/spi/2026-11-19__Annex_19.11.2026.pdf
+  got data_raw/spi/2026-11-19__Annex_19.11.2026.xlsx
+  got data_raw/spi/2026-11-19__Executive-Summary-SPI-Report_19.11.2026.pdf
