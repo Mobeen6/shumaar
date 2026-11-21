@@ -325,9 +325,9 @@ ecodata https://www.sbp.org.pk/assets/document/Productselect.pdf
 ecodata https://www.sbp.org.pk/assets/document/Productselect.xlsx
 ecodata https://www.sbp.org.pk/assets/document/ARC.xls
 ecodata https://www.sbp.org.pk/assets/document/Badla_FinancingContinuous_Funding_System_-_CFS.pdf
-guess KIBOR_Arch.xlsx 220674 b'\n\n\n\n\n\t\n<'
-guess Kibor_Arch.xlsx 220674 b'\n\n\n\n\n\t\n<'
-guess KIBOR-Arch.xlsx 220674 b'\n\n\n\n\n\t\n<'
-guess kibor_arch.xls 220672 b'\n\n\n\n\n\t\n<'
-guess KIBOR_Arch.xls 220672 b'\n\n\n\n\n\t\n<'
-guess Kibor-Rates-Arch.xlsx 220686 b'\n\n\n\n\n\t\n<'
+guess KIBOR_Arch.xlsx 220710 b'\n\n\n\n\n\t\n<'
+guess Kibor_Arch.xlsx 220710 b'\n\n\n\n\n\t\n<'
+guess KIBOR-Arch.xlsx 220710 b'\n\n\n\n\n\t\n<'
+guess kibor_arch.xls 220708 b'\n\n\n\n\n\t\n<'
+guess KIBOR_Arch.xls 220708 b'\n\n\n\n\n\t\n<'
+guess Kibor-Rates-Arch.xlsx 220722 b'\n\n\n\n\n\t\n<'
