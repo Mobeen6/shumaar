@@ -32,6 +32,7 @@
   https://iemis.kpese.gov.pk/ords/r/emis/hrmis/login
   https://iemis.kpese.gov.pk/ords/r/emis/human-resource-management-information-system-hrmis/login
   https://kpese.gov.pk/annual-school-census-2020-21/
+  https://kpese.gov.pk/annual-school-census-2021-22/
   https://kpese.gov.pk/annual-school-census-2022-23/
   https://kpese.gov.pk/annual-school-census-2023-24/
   https://kpese.gov.pk/annual-schools-statistical-report-2024-25/
