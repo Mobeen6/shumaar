@@ -79,12 +79,12 @@ fmd https://www.sbp.org.pk/assets/document/Shariah-OMO-Summary-Hist.xlsx
 fmd https://www.sbp.org.pk/assets/document/Bai-Mujjal.pdf
 fmd https://www.sbp.org.pk/assets/document/OMO-O-IjaraSukuk.pdf
 fmd https://www.sbp.org.pk/assets/document/OMO-OB-MujjalBasis.pdf
-fmd https://www.sbp.org.pk/assets/document/kibor-rates-23-november-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/kibor-rates-24-november-2026.pdf
 fmd https://www.sbp.org.pk/economic-data/kibor-rates
-fmd https://www.sbp.org.pk/assets/document/repo-secondary-market-trading-volume-23-november-2026.pdf
-fmd https://www.sbp.org.pk/assets/document/outright-secondary-market-trading-volume-23-november-2026.pdf
-fmd https://www.sbp.org.pk/assets/document/call-market-trading-volume-23-november-2026.pdf
-fmd https://www.sbp.org.pk/assets/document/islamic-transactions-trading-volume-23-november-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/repo-secondary-market-trading-volume-24-november-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/outright-secondary-market-trading-volume-24-november-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/call-market-trading-volume-24-november-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/islamic-transactions-trading-volume-24-november-2026.pdf
 fmd https://www.sbp.org.pk/assets/document/cumulative-tvgs-Oct_2026.pdf
 fmd https://www.sbp.org.pk/assets/document/maturitywise_nb.pdf
 fmd https://www.sbp.org.pk/assets/document/DailyVolume-Arc-Nov-2020.pdf
@@ -94,9 +94,9 @@ fmd https://www.sbp.org.pk/assets/document/CMPI.pdf
 fmd https://www.sbp.org.pk/assets/document/overnightsreporates2.pdf
 fmd https://www.sbp.org.pk/assets/document/OvernightsRepoRates_Arch2.pdf
 fmd https://www.sbp.org.pk/assets/document/Cumulative-TVGS.pdf
-fmd https://www.sbp.org.pk/assets/document/weighted-average-customer-exchange-rates-23-November-2026.pdf
-fmd https://www.sbp.org.pk/assets/document/mark-to-market-revaluation-exchange-rate-23-november-2026.pdf
-fmd https://www.sbp.org.pk/assets/document/conversion-rates-23-november-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/weighted-average-customer-exchange-rates-24-November-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/mark-to-market-revaluation-exchange-rate-24-november-2026.pdf
+fmd https://www.sbp.org.pk/assets/document/conversion-rates-24-november-2026.pdf
 fmd https://www.sbp.org.pk/assets/document/open-market-closing-exchange-rates-23-November-2026.pdf
 fmd https://www.sbp.org.pk/assets/document/FXIM.pdf
 fmd https://www.sbp.org.pk/assets/document/BankNon-BankHoldingGoP.pdf
@@ -109,7 +109,7 @@ ecodata https://www.sbp.org.pk/assets/document/Auction-Ijara-VRR.pdf
 ecodata https://www.sbp.org.pk/assets/document/Bank-IRC-Activity.pdf
 ecodata https://www.sbp.org.pk/assets/document/IR-Corridor-Hist.xls
 ecodata https://www.sbp.org.pk/assets/document/IR-Corridor-Hist.xls
-ecodata https://www.sbp.org.pk/assets/document/call-market-trading-volume-23-november-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/call-market-trading-volume-24-november-2026.pdf
 ecodata https://www.sbp.org.pk/assets/document/market-treasury-bills-auction-bid-report-10-jun-26.pdf
 ecodata https://www.sbp.org.pk/assets/document/auction-treasurybills.pdf
 ecodata https://www.sbp.org.pk/assets/document/auction-tbills.pdf
@@ -150,7 +150,7 @@ ecodata https://www.sbp.org.pk/assets/document/PS-Statistics.xlsx
 ecodata https://www.sbp.org.pk/assets/document/Access-Facilities.pdf
 ecodata https://www.sbp.org.pk/assets/document/OVR-Repo-History.pdf
 ecodata https://www.sbp.org.pk/economic-data/kibor-rates
-ecodata https://www.sbp.org.pk/assets/document/kibor-rates-23-november-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/kibor-rates-24-november-2026.pdf
 ecodata https://www.sbp.org.pk/assets/document/Lendingdepositrates.pdf
 ecodata https://www.sbp.org.pk/assets/document/Lendingdepositrates_Arch.xls
 ecodata https://www.sbp.org.pk/assets/document/sir.pdf
@@ -165,15 +165,16 @@ ecodata https://www.sbp.org.pk/assets/document/MFSM_Ana_Acc_Sbp.pdf
 ecodata https://www.sbp.org.pk/assets/document/CBArch.xls
 ecodata https://www.sbp.org.pk/assets/document/MFSM_Dep_CS.pdf
 ecodata https://www.sbp.org.pk/assets/document/DCsArch.xls
+ecodata https://www.sbp.org.pk/assets/document/Interim_FOF_2025_26.pdf
 ecodata https://www.sbp.org.pk/assets/document/MFSM_Other_Depository.pdf
 ecodata https://www.sbp.org.pk/assets/document/ODCArch.xls
 ecodata https://www.sbp.org.pk/assets/document/FCS.pdf
 ecodata https://www.sbp.org.pk/assets/document/FCS_Arch.xlsx
 ecodata https://www.sbp.org.pk/assets/document/OFC.pdf
 ecodata https://www.sbp.org.pk/assets/document/OFC_Arch.xls
-ecodata https://www.sbp.org.pk/assets/document/repo-secondary-market-trading-volume-23-november-2026.pdf
-ecodata https://www.sbp.org.pk/assets/document/outright-secondary-market-trading-volume-23-november-2026.pdf
-ecodata https://www.sbp.org.pk/assets/document/islamic-transactions-trading-volume-23-november-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/repo-secondary-market-trading-volume-24-november-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/outright-secondary-market-trading-volume-24-november-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/islamic-transactions-trading-volume-24-november-2026.pdf
 ecodata https://www.sbp.org.pk/assets/document/maturitywise_banks.pdf
 ecodata https://www.sbp.org.pk/assets/document/maturitywise_nb.pdf
 ecodata https://www.sbp.org.pk/assets/document/maturitywise_nb.pdf
@@ -212,8 +213,8 @@ ecodata https://www.sbp.org.pk/assets/document/DailyVolume-Arc-Nov-2020.pdf
 ecodata https://www.sbp.org.pk/assets/document/CMPI.pdf
 ecodata https://www.sbp.org.pk/assets/document/BPM6_c.pdf
 ecodata https://www.sbp.org.pk/assets/document/BPM6_c.xls
-ecodata https://www.sbp.org.pk/assets/document/assets/document/bop.pdf
-ecodata https://www.sbp.org.pk/assets/document/assets/document/bop.xlsx
+ecodata https://www.sbp.org.pk/assets/document/bop.pdf
+ecodata https://www.sbp.org.pk/assets/document/bop.xlsx
 ecodata https://www.sbp.org.pk/assets/document/Balancepayment_BPM6.pdf
 ecodata https://www.sbp.org.pk/assets/document/Balancepayment_BPM6.xls
 ecodata https://www.sbp.org.pk/assets/document/forex.pdf
@@ -225,14 +226,14 @@ ecodata https://www.sbp.org.pk/assets/document/ORA_Arch.xlsx
 ecodata https://www.sbp.org.pk/assets/document/Homeremit_Arch.xlsx
 ecodata https://www.sbp.org.pk/assets/document/BPM6_Ach_M.xlsx
 ecodata https://www.sbp.org.pk/assets/document/Balancepayment_BPM6-Arch.xls
-ecodata https://www.sbp.org.pk/assets/document/mark-to-market-revaluation-exchange-rate-23-november-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/mark-to-market-revaluation-exchange-rate-24-november-2026.pdf
 ecodata https://www.sbp.org.pk/assets/document/BFER_Daily.pdf
 ecodata https://www.sbp.org.pk/assets/document/BFER_Daily_Arch.xlsx
 ecodata https://www.sbp.org.pk/assets/document/IBF_Rates.pdf
 ecodata https://www.sbp.org.pk/assets/document/IBF_Arch.xls
-ecodata https://www.sbp.org.pk/assets/document/weighted-average-customer-exchange-rates-23-November-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/weighted-average-customer-exchange-rates-24-November-2026.pdf
 ecodata https://www.sbp.org.pk/assets/document/open-market-closing-exchange-rates-23-November-2026.pdf
-ecodata https://www.sbp.org.pk/assets/document/conversion-rates-23-november-2026.pdf
+ecodata https://www.sbp.org.pk/assets/document/conversion-rates-24-november-2026.pdf
 ecodata https://www.sbp.org.pk/assets/document/CDIS-Sdds-Invest-Position.pdf
 ecodata https://www.sbp.org.pk/assets/document/CDIS-Sdds-Invest-Position.xls
 ecodata https://www.sbp.org.pk/assets/document/RepatriationprofitDividendCountry.pdf
@@ -325,9 +326,9 @@ ecodata https://www.sbp.org.pk/assets/document/Productselect.pdf
 ecodata https://www.sbp.org.pk/assets/document/Productselect.xlsx
 ecodata https://www.sbp.org.pk/assets/document/ARC.xls
 ecodata https://www.sbp.org.pk/assets/document/Badla_FinancingContinuous_Funding_System_-_CFS.pdf
-guess KIBOR_Arch.xlsx 220748 b'\n\n\n\n\n\t\n<'
-guess Kibor_Arch.xlsx 220748 b'\n\n\n\n\n\t\n<'
-guess KIBOR-Arch.xlsx 220748 b'\n\n\n\n\n\t\n<'
-guess kibor_arch.xls 220746 b'\n\n\n\n\n\t\n<'
-guess KIBOR_Arch.xls 220746 b'\n\n\n\n\n\t\n<'
-guess Kibor-Rates-Arch.xlsx 220760 b'\n\n\n\n\n\t\n<'
+guess KIBOR_Arch.xlsx 220745 b'\n\n\n\n\n\t\n<'
+guess Kibor_Arch.xlsx 220745 b'\n\n\n\n\n\t\n<'
+guess KIBOR-Arch.xlsx 220745 b'\n\n\n\n\n\t\n<'
+guess kibor_arch.xls 220743 b'\n\n\n\n\n\t\n<'
+guess KIBOR_Arch.xls 220743 b'\n\n\n\n\n\t\n<'
+guess Kibor-Rates-Arch.xlsx 220757 b'\n\n\n\n\n\t\n<'
