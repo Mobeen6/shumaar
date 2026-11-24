@@ -1,6 +1,6 @@
 ok Homeremit_Arch.xlsx 213473
 ok BPM6_Ach_M.xlsx 76025
-ok M3-Arch.xlsx 3087636
+ok M3-Arch.xlsx 3131793
 ok BroadMoney_M2_Arch.xls 1069568
 ok Forex_Arch.xlsx 83986
 ok ORA_Arch.xlsx 13749
