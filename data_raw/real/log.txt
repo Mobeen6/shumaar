@@ -7337,3 +7337,22 @@ fail https://www.ocac.org.pk/wp-content/uploads/2022/05/June-2025-Pak-Provinces.
 fail https://www.ocac.org.pk/wp-content/uploads/2025/06/June-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
 fail https://www.ocac.org.pk/wp-content/uploads/2025/07/June-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
 kibor days with rate 41, misses 1, requests 1
+fail https://www.ocac.org.pk/wp-content/uploads/2022/05/Oct-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2026/10/Oct-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2026/11/Oct-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2022/05/October-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2026/10/October-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2026/11/October-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2022/05/Jul-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2026/07/Jul-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2026/08/Jul-2026-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2022/05/Jul-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2025/07/Jul-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2025/08/Jul-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2022/05/Jun-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2025/06/Jun-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2025/07/Jun-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2022/05/June-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2025/06/June-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+fail https://www.ocac.org.pk/wp-content/uploads/2025/07/June-2025-Pak-Provinces.pdf HTTP Error 404: Not Found
+kibor days with rate 42, misses 1, requests 1
