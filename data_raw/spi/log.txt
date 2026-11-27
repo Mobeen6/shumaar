@@ -215,3 +215,8 @@
 
 
 
+2026-11-26 page ok, 4 files: https://www.pbs.gov.pk/wp-content/uploads/2020/07/3.-SPI-Report-26.11.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_26.11.2026.pdf | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Annex_26.11.2026.xlsx | https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.11.2026.pdf
+  got data_raw/spi/2026-11-26__3.-SPI-Report-26.11.2026.xlsx
+  got data_raw/spi/2026-11-26__Annex_26.11.2026.pdf
+  got data_raw/spi/2026-11-26__Annex_26.11.2026.xlsx
+  got data_raw/spi/2026-11-26__Executive-Summary-SPI-Report_26.11.2026.pdf
